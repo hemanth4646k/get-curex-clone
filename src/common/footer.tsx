@@ -1,4 +1,5 @@
 import './footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerLinks = {
@@ -10,9 +11,9 @@ const Footer = () => {
     ],
     column2: [
       { text: 'Learn', href: '#' },
-      { text: 'Immunotherapy 101', href: 'immunotherapy101' },
-      { text: 'Allergy Immunotherapy Science', href: 'immuno-science' },
-      { text: 'Allergy Drops', href: 'allergy-drops' },
+      { text: 'Immunotherapy 101', href: '/immunotherapy101', isInternal: true },
+      { text: 'Allergy Immunotherapy Science', href: '/immuno-science', isInternal: true },
+      { text: 'Allergy Drops', href: '/allergy-drops', isInternal: true },
       { text: 'Allergy Shots', href: '#' },
       { text: 'Allergy Clinic', href: '#' },
       { text: 'Allergy Medicine', href: '#' },
@@ -96,9 +97,20 @@ const Footer = () => {
           <div className="footer-column">
             <div className="footer-links">
               {footerLinks.column2.map((link, index) => (
-                <a key={index} href={link.href} className="footer-link">
-                  {link.text}
-                </a>
+                link.isInternal ? (
+                  <Link 
+                    key={index} 
+                    to={link.href} 
+                    className="footer-link"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  >
+                    {link.text}
+                  </Link>
+                ) : (
+                  <a key={index} href={link.href} className="footer-link">
+                    {link.text}
+                  </a>
+                )
               ))}
             </div>
           </div>

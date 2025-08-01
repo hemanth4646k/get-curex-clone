@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Footer from './common/footer'
 import Navbar from './common/Navbar'
+import ScrollToTop from './common/ScrollToTop'
 import Home from './pages/home'
 import Immunotherapy101 from './pages/Immunotherapy101'
 import ImmunoScience from './pages/ImmunoScience'
@@ -11,6 +12,7 @@ function App() {
   
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
