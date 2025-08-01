@@ -1,0 +1,57 @@
+/* components/CommonMisconceptions/CommonMisconceptions.css */
+
+.new--section {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.new--container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-wrapper {
+  width: 100%;
+}
+
+.section--heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2c2c2c;
+}
+
+.section--heading.smaller {
+  font-size: 1.8rem;
+}
+
+.is-not-center {
+  text-align: left;
+}
+
+.misconception--wrap {
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-left: 4px solid #0077cc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.subheading {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 100%;
+}
+
+.misconception {
+  color: #cc0000;
+  margin-bottom: 0.5rem;
+}
+
+.in--misconception {
+  color: #2e7d32;
+}

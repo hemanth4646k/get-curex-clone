@@ -1,0 +1,252 @@
+.immuno-testimonials-section {
+  width: 100%;
+  background-color: #f8fafc;
+  padding: 100px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.immuno-testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.immuno-testimonials-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.immuno-testimonials-badge {
+  display: inline-block;
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+  border: 1px solid #fbbf24;
+}
+
+.immuno-testimonials-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.immuno-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.immuno-testimonials-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.immuno-testimonials-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.immuno-testimonials-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  overflow: hidden;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.immuno-testimonials-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.immuno-testimonials-name-tag {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.immuno-testimonials-name-tag.green {
+  background-color: #86efac;
+}
+
+.immuno-testimonials-name-tag.yellow {
+  background-color: #fde047;
+}
+
+.immuno-testimonials-name-tag.blue {
+  background-color: #7dd3fc;
+}
+
+.immuno-testimonials-name-tag.pink {
+  background-color: #f9a8d4;
+}
+
+.immuno-testimonials-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.immuno-testimonials-star {
+  color: #1f2937;
+  font-size: 1.25rem;
+}
+
+.immuno-testimonials-quote {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.immuno-testimonials-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.immuno-testimonials-allergies {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.immuno-testimonials-allergy-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.immuno-testimonials-icon {
+  font-size: 1.25rem;
+  width: 32px;
+  height: 32px;
+  background-color: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.immuno-testimonials-allergy-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.immuno-testimonials-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.immuno-testimonials-cta-button {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.immuno-testimonials-cta-button:hover {
+  background-color: #16a34a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15);
+}
+
+.immuno-testimonials-cta-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .immuno-testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  
+  .immuno-testimonials-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .immuno-testimonials-section {
+    padding: 80px 0;
+  }
+  
+  .immuno-testimonials-container {
+    padding: 0 20px;
+  }
+  
+  .immuno-testimonials-header {
+    margin-bottom: 60px;
+  }
+  
+  .immuno-testimonials-title {
+    font-size: 2.25rem;
+  }
+  
+  .immuno-testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .immuno-testimonials-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .immuno-testimonials-section {
+    padding: 60px 0;
+  }
+  
+  .immuno-testimonials-container {
+    padding: 0 16px;
+  }
+  
+  .immuno-testimonials-title {
+    font-size: 2rem;
+  }
+  
+  .immuno-testimonials-quote {
+    font-size: 1rem;
+  }
+  
+  .immuno-testimonials-allergies {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

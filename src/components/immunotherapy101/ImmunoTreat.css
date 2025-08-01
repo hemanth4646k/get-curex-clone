@@ -1,0 +1,182 @@
+.what-allergies-section {
+  width: 100%;
+  background-color: #f0f9ff;
+  padding: 80px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+}
+
+.what-allergies-green-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+}
+
+.what-allergies-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.what-allergies-title {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #1f2937;
+  text-align: center;
+  margin: 0 0 40px 0;
+  line-height: 1.3;
+  font-family: Georgia, serif;
+}
+
+.what-allergies-intro {
+  margin-bottom: 50px;
+}
+
+.what-allergies-paragraph {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.7;
+  margin: 0 0 24px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.what-allergies-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.what-allergies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 60px;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.what-allergies-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.what-allergies-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  border: 2px solid #f1f5f9;
+}
+
+.what-allergies-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.what-allergies-name {
+  font-size: 1.1rem;
+  color: #374151;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.what-allergies-disclaimer {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.what-allergies-disclaimer-text {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .what-allergies-section {
+    padding: 60px 0;
+  }
+  
+  .what-allergies-container {
+    padding: 0 20px;
+  }
+  
+  .what-allergies-title {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+  
+  .what-allergies-paragraph {
+    font-size: 1rem;
+  }
+  
+  .what-allergies-grid {
+    gap: 24px 40px;
+  }
+  
+  .what-allergies-item {
+    gap: 12px;
+  }
+  
+  .what-allergies-icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .what-allergies-icon {
+    font-size: 1.375rem;
+  }
+  
+  .what-allergies-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .what-allergies-section {
+    padding: 40px 0;
+  }
+  
+  .what-allergies-container {
+    padding: 0 16px;
+  }
+  
+  .what-allergies-title {
+    font-size: 1.75rem;
+  }
+  
+  .what-allergies-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 400px;
+  }
+  
+  .what-allergies-item {
+    gap: 14px;
+  }
+  
+  .what-allergies-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .what-allergies-icon {
+    font-size: 1.25rem;
+  }
+  
+  .what-allergies-disclaimer-text {
+    font-size: 0.95rem;
+  }
+}

@@ -9,16 +9,13 @@ import InsuranceProviders from '../components/home/InsuranceProviders'
 import HomeComparisonTable from '../components/home/HomeComparisonTable'
 import Testimonials1 from '../components/home/Testimonials1'
 import HowItWorks from '../components/home/HowItWorks'
-import Faq from '../components/home/Faq'
 import FaqContainer from '../components/home/FaqContainer'
 import Footer from '../common/footer'
-import { Weight } from 'lucide-react'
 import WeightLossPricingComponent from '../components/home/WeightLossPricingComponent'
 
 const Home = () => {
     return (
         <div>
-            <Navbar />
             <Hero />
             <Brands />
             <HomeBenefits />
@@ -34,7 +31,6 @@ const Home = () => {
 
 
 
-            <Footer/>
             <WeightLossPricingComponent/>
         </div>
     )

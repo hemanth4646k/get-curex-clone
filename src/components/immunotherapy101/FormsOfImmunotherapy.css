@@ -1,0 +1,212 @@
+.forms-immunotherapy-section {
+  width: 100%;
+  background-color: #fdf2f8;
+  padding: 80px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.forms-immunotherapy-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.forms-immunotherapy-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #1f2937;
+  text-align: center;
+  margin: 0 0 60px 0;
+  line-height: 1.2;
+  font-family: Georgia, serif;
+}
+
+.forms-immunotherapy-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.forms-immunotherapy-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1fr;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.forms-immunotherapy-header-cell {
+  padding: 20px 16px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+}
+
+.forms-immunotherapy-header-cell:last-child {
+  border-right: none;
+}
+
+.forms-immunotherapy-header-cell.empty {
+  background-color: transparent;
+}
+
+.forms-immunotherapy-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1fr;
+  align-items: center;
+  min-height: 80px;
+}
+
+.white-row {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.green-row {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+}
+
+.forms-immunotherapy-treatment-cell {
+  padding: 20px 16px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.green-row .forms-immunotherapy-treatment-cell {
+  border-right-color: rgba(255, 255, 255, 0.2);
+}
+
+.forms-immunotherapy-treatment-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.forms-immunotherapy-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.forms-immunotherapy-treatment-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.forms-immunotherapy-treatment-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.forms-immunotherapy-treatment-type {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.forms-immunotherapy-cell {
+  padding: 20px 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  border-right: 1px solid #e5e7eb;
+  font-weight: 500;
+}
+
+.green-row .forms-immunotherapy-cell {
+  border-right-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.forms-immunotherapy-cell:last-child,
+.forms-immunotherapy-treatment-cell:last-child {
+  border-right: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .forms-immunotherapy-section {
+    padding: 60px 0;
+  }
+  
+  .forms-immunotherapy-container {
+    padding: 0 16px;
+  }
+  
+  .forms-immunotherapy-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .forms-immunotherapy-header,
+  .forms-immunotherapy-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .forms-immunotherapy-table {
+    border-radius: 8px;
+  }
+  
+  .forms-immunotherapy-header-cell {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    padding: 16px;
+  }
+  
+  .forms-immunotherapy-header-cell.empty {
+    display: none;
+  }
+  
+  .forms-immunotherapy-treatment-cell,
+  .forms-immunotherapy-cell {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    padding: 16px;
+  }
+  
+  .green-row .forms-immunotherapy-treatment-cell,
+  .green-row .forms-immunotherapy-cell {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .forms-immunotherapy-treatment-info {
+    gap: 12px;
+  }
+  
+  .forms-immunotherapy-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forms-immunotherapy-title {
+    font-size: 1.75rem;
+  }
+  
+  .forms-immunotherapy-treatment-info {
+    gap: 10px;
+  }
+  
+  .forms-immunotherapy-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .forms-immunotherapy-treatment-name {
+    font-size: 1rem;
+  }
+  
+  .forms-immunotherapy-treatment-type {
+    font-size: 0.85rem;
+  }
+  
+  .forms-immunotherapy-cell {
+    font-size: 0.9rem;
+  }
+}
