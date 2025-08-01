@@ -3,7 +3,7 @@ import './DoDropsReallyWork.css';
 
 const DoDropsReallyWork: React.FC = () => {
   return (
-    <div className="do-drops-work-container">
+    <div className="do-drops-work-container" id="Do-Allergy-Drops-Really-Work">
       <div className="content-wrapper">
         <div className="image-section">
           <div className="woman-image-container">

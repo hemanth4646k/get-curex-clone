@@ -3,7 +3,7 @@ import './WhereToGetDrops.css';
 
 const WhereToGetDrops: React.FC = () => {
   return (
-    <div className="where-to-get-container">
+    <div className="where-to-get-container" id="Can-I-Get-Allergy-Drops-Near-Me">
       <div className="content-wrapper">
         <div className="text-section">
           <h1 className="main-heading">Where Can I Get Allergy Drops?</h1>
@@ -30,7 +30,7 @@ const WhereToGetDrops: React.FC = () => {
         </div>
       </div>
       
-      <div className="dog-section">
+      <div className="dog-section" id='Allergy-Drops-For-Dog-Allergies'>
         <div className="dog-content">
           <div className="dog-image-container">
             <img src="" alt="Happy dog with person" className="dog-image" />

@@ -3,7 +3,7 @@ import './FDAApproved.css';
 
 const FDAApproved: React.FC = () => {
   return (
-    <div className="fda-approved-container">
+    <div className="fda-approved-container" id="Are-Allergy-Drops-FDA-Approved">
       <div className="content-wrapper">
         <div className="text-section">
           <h1 className="main-heading">Are Allergy Drops FDA Approved?</h1>

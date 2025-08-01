@@ -3,7 +3,7 @@ import './HowLongToWork.css';
 
 const HowLongToWork: React.FC = () => {
   return (
-    <div className="how-long-container">
+    <div className="how-long-container" id="How-Long-Does-it-Take-for-Allergy-Drops-to-Start-Working">
       <div className="content-wrapper">
         <div className="text-section">
           <h1 className="main-heading">
@@ -41,7 +41,7 @@ const HowLongToWork: React.FC = () => {
         </div>
       </div>
       
-      <div className="lower-section">
+      <div className="lower-section" id='Can-You-Get-Allergy-Drops-Over-the-Counter'>
         <div className="food-display">
           <img src="" alt="Healthy foods" className="food-image" />
         </div>

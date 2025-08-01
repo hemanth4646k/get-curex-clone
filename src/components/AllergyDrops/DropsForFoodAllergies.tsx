@@ -3,7 +3,7 @@ import './DropsForFoodAllergies.css';
 
 const DropsForFoodAllergies: React.FC = () => {
   return (
-    <div className="drops-for-food-allergies-container">
+    <div className="drops-for-food-allergies-container" id="Do-Allergy-Drops-Treat-Food-Allergies">
       <div className="header-section">
         <h1 className="main-title">Do Allergy Drops Treat Food Allergies?</h1>
         
@@ -63,7 +63,7 @@ const DropsForFoodAllergies: React.FC = () => {
         </p>
       </div>
 
-      <div className="additional-info">
+      <div className="additional-info" id='Allergy-Drops-Reviews'>
         <h2 className="section-heading">Allergy Drops Reviews</h2>
         
         <p className="reviews-intro">

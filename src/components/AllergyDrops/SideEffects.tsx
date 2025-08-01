@@ -3,7 +3,7 @@ import './SideEffects.css';
 
 const SideEffects: React.FC = () => {
   return (
-    <div className="side-effects-container">
+    <div className="side-effects-container" id="Allergy-Drops-Side-Effects">
       <div className="header-section">
         <h1 className="main-title">Allergy Drops Side Effects</h1>
         <p className="subtitle">

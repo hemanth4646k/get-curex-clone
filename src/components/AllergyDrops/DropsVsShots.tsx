@@ -2,7 +2,7 @@ import './DropsVsShots.css';
 
 const DropsVsShots1 = () => {
   return (
-    <div className="drops-vs-shots-section" id="allergy-drops-vs-shots">
+    <div className="drops-vs-shots-section" id="Allergy-Drops-vs.-Shots">
       <div className="drops-vs-shots-container">
         <div className="drops-vs-shots-header">
           <h1 className="drops-vs-shots-title">Allergy Drops vs. Shots</h1>

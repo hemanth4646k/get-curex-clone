@@ -3,7 +3,7 @@ import './DropsForCats.css';
 
 const DropsForCats: React.FC = () => {
   return (
-    <div className="drops-for-cats-container">
+    <div className="drops-for-cats-container" id="Allergy-Drops-For-Cat-Allergies">
       <div className="content-wrapper">
         <div className="text-section">
           <h1 className="main-heading">Allergy Drops For Cat Allergies</h1>
@@ -36,7 +36,7 @@ const DropsForCats: React.FC = () => {
         </div>
       </div>
       
-      <div className="lower-section">
+      <div className="lower-section" id='Can-You-Use-Allergy-Drops-While-Pregnant'>
         <h2 className="secondary-heading">Can You Use Allergy Drops While Pregnant?</h2>
         
         <p className="pregnancy-intro">
@@ -54,7 +54,7 @@ const DropsForCats: React.FC = () => {
           safe throughout the pregnancy, minimizing any potential risks associated with allergy treatments.
         </p>
         
-        <h2 className="tertiary-heading">Can You Treat Allergic Conjunctivitis With Allergy Drops?</h2>
+        <h2 className="tertiary-heading" id='Can-You-Treat-Allergic-Conjunctivitis-With-Allergy-Drops'>Can You Treat Allergic Conjunctivitis With Allergy Drops?</h2>
         
         <p className="conjunctivitis-intro">
           Yes, allergy drops can be used to treat allergic conjunctivitis. Over-the-counter and prescription anti-allergy eye drops are 

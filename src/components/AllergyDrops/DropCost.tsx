@@ -3,7 +3,7 @@ import './DropCost.css';
 
 const DropCost: React.FC = () => {
   return (
-    <div className="drop-cost-container">
+    <div className="drop-cost-container" id="Allergy-Drops-Cost">
       <div className="content-wrapper">
         <div className="text-section">
           <h1 className="main-heading">Allergy Drops Cost</h1>
