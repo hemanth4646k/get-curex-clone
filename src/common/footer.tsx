@@ -10,9 +10,9 @@ const Footer = () => {
     ],
     column2: [
       { text: 'Learn', href: '#' },
-      { text: 'Immunotherapy 101', href: '#' },
-      { text: 'Allergy Immunotherapy Options', href: '#' },
-      { text: 'Allergy Drops', href: '#' },
+      { text: 'Immunotherapy 101', href: 'immunotherapy101' },
+      { text: 'Allergy Immunotherapy Science', href: 'immuno-science' },
+      { text: 'Allergy Drops', href: 'allergy-drops' },
       { text: 'Allergy Shots', href: '#' },
       { text: 'Allergy Clinic', href: '#' },
       { text: 'Allergy Medicine', href: '#' },

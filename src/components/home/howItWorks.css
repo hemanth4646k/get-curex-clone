@@ -25,6 +25,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
   align-items: start;
+  position: relative;
 }
 
 .step-card {
@@ -96,8 +97,8 @@
   content: '';
   position: absolute;
   top: 100px;
-  left: 25%;
-  right: 25%;
+  left: 16.67%;
+  right: 16.67%;
   height: 2px;
   background: linear-gradient(to right, transparent 0%, #e2e8f0 20%, #e2e8f0 80%, transparent 100%);
   z-index: 0;

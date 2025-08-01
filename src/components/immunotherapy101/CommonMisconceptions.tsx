@@ -1,5 +1,4 @@
-// components/CommonMisconceptions/CommonMisconceptions.tsx
-import React from "react";
+
 import "./CommonMisconceptions.css";
 
 const CommonMisconceptions = () => {

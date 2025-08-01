@@ -1,4 +1,4 @@
-import Navbar from '../common/Navbar'
+
 import Hero from '../components/home/Hero'
 import Brands from '../components/home/Brands'
 import HomeBenefits from '../components/home/HomeBenefits'
@@ -10,7 +10,6 @@ import HomeComparisonTable from '../components/home/HomeComparisonTable'
 import Testimonials1 from '../components/home/Testimonials1'
 import HowItWorks from '../components/home/HowItWorks'
 import FaqContainer from '../components/home/FaqContainer'
-import Footer from '../common/footer'
 import WeightLossPricingComponent from '../components/home/WeightLossPricingComponent'
 
 const Home = () => {
