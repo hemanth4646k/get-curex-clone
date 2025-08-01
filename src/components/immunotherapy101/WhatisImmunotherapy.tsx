@@ -1,5 +1,5 @@
 import React from 'react';
-import './WhatIsImmunotherapy.css';
+import './WhatisImmunotherapy.css';
 
 const WhatIsImmunotherapy: React.FC = () => {
   return (
