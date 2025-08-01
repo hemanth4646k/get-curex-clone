@@ -1,0 +1,133 @@
+.wshots-section {
+  width: 100%;
+  background: #f3faee;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 58px 0 58px 0;
+}
+
+.wshots-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+
+.wshots-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.wshots-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #16334c;
+  margin: 0 0 20px 0;
+  line-height: 1.13;
+}
+
+.wshots-desc {
+  color: #23304a;
+  font-size: 1.10rem;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.wshots-btn {
+  background: linear-gradient(90deg, #fa61b2 0%, #fd89c6 100%);
+  color: #fff;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 26px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 20px 0 rgba(252, 90, 184, 0.12);
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.16s, transform 0.14s;
+}
+.wshots-btn:hover,
+.wshots-btn:focus {
+  background: linear-gradient(90deg, #fd89c6 0%, #fa61b2 100%);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.wshots-visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 280px;
+}
+
+.wshots-img-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.wshots-main-img {
+  width: 325px;
+  max-width: 98vw;
+  border-radius: 20px;
+  box-shadow: 0 8px 36px 0 rgba(60,80,120,0.13);
+  object-fit: cover;
+  background: #e4fbee;
+}
+
+.wshots-logo-wrap {
+  position: absolute;
+  bottom: -22px;
+  right: -20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 16px rgba(55, 90, 185, 0.14);
+  padding: 8px 13px;
+}
+.wshots-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .wshots-inner {
+    flex-direction: column;
+    gap: 44px;
+    align-items: center;
+    padding: 0 8px;
+  }
+  .wshots-content {
+    text-align: center;
+    align-items: center;
+  }
+  .wshots-visual {
+    justify-content: center;
+  }
+  .wshots-title {
+    font-size: 1.45rem;
+  }
+  .wshots-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+  .wshots-main-img {
+    width: 90vw;
+    max-width: 370px;
+  }
+}
+
+@media (max-width: 500px) {
+  .wshots-section {
+    padding: 26px 0 16px 0;
+  }
+  .wshots-inner {
+    gap: 20px;
+  }
+  .wshots-title {
+    font-size: 1.09rem;
+  }
+}

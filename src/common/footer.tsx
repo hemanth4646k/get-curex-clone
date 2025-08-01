@@ -14,7 +14,7 @@ const Footer = () => {
       { text: 'Immunotherapy 101', href: '/immunotherapy101', isInternal: true },
       { text: 'Allergy Immunotherapy Science', href: '/immuno-science', isInternal: true },
       { text: 'Allergy Drops', href: '/allergy-drops', isInternal: true },
-      { text: 'Allergy Shots', href: '#' },
+      { text: 'Allergy Shots', href: '/allergy-shots', isInternal: true },
       { text: 'Allergy Clinic', href: '#' },
       { text: 'Allergy Medicine', href: '#' },
       { text: 'Allergy Testing', href: '#' }

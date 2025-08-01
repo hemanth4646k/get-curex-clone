@@ -1,0 +1,100 @@
+.wai-section {
+  background: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  width: 100%;
+  padding: 64px 0 54px 0;
+}
+
+.wai-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 54px;
+  padding: 0 32px;
+}
+
+.wai-content {
+  flex: 1.45;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.wai-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #191f31;
+  margin-bottom: 28px;
+  line-height: 1.13;
+  letter-spacing: 0.01em;
+}
+
+.wai-para {
+  font-size: 1.12rem;
+  color: #263449;
+  margin-bottom: 24px;
+  line-height: 1.75;
+}
+
+.wai-heading {
+  font-size: 1.37rem;
+  font-weight: 700;
+  color: #183361;
+  margin-top: 14px;
+  margin-bottom: 13px;
+  letter-spacing: 0.01em;
+}
+
+.wai-visual {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.wai-image-main {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(60,180,90,0.14);
+  background: #d2e846;
+}
+
+@media (max-width: 900px) {
+  .wai-inner {
+    flex-direction: column;
+    gap: 36px;
+    padding: 0 14px;
+    align-items: stretch;
+  }
+  .wai-content, .wai-visual {
+    min-width: 0;
+    width: 100%;
+  }
+  .wai-title {
+    font-size: 1.48rem;
+  }
+  .wai-heading {
+    font-size: 1.14rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .wai-section {
+    padding: 27px 0 20px 0;
+  }
+  .wai-title {
+    font-size: 1.05rem;
+  }
+  .wai-para {
+    font-size: 0.97rem;
+  }
+  .wai-image-main {
+    width: 95vw;
+    max-width: 99vw;
+    border-radius: 13px;
+  }
+}

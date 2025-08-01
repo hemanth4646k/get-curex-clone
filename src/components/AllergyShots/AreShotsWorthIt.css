@@ -1,0 +1,100 @@
+.asw-section {
+  background: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 42px 0 42px 0;
+}
+
+.asw-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.asw-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.asw-title {
+  font-size: 2.55rem;
+  font-weight: 800;
+  color: #161f32;
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.asw-desc {
+  font-size: 1.10rem;
+  color: #313850;
+  line-height: 1.68;
+  margin-bottom: 38px;
+}
+
+.asw-btn {
+  background: linear-gradient(90deg, #fd63b8 0%, #fe9ad8 100%);
+  color: #fff;
+  font-size: 1.14rem;
+  font-weight: 700;
+  padding: 17px 34px;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px 0 rgba(252, 90, 184, 0.14);
+  outline: none;
+  transition: background 0.18s, transform 0.14s;
+}
+
+.asw-btn:hover,
+.asw-btn:focus {
+  background: linear-gradient(90deg, #fe9ad8 0%, #fd63b8 100%);
+  transform: translateY(-2px) scale(1.025);
+}
+
+.asw-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 275px;
+}
+
+.asw-image {
+  width: 340px;
+  max-width: 95vw;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 8px 36px 0 rgba(80,90,100,0.12);
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .asw-grid {
+    flex-direction: column;
+    gap: 34px;
+    padding: 0 16px;
+    align-items: stretch;
+  }
+  .asw-right,
+  .asw-left {
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+  }
+  .asw-image {
+    width: 90vw;
+    max-width: 440px;
+  }
+  .asw-title {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .asw-section { padding: 28px 0 22px 0; }
+  .asw-title { font-size: 1.09rem; }
+  .asw-desc { font-size: 1rem; }
+  .asw-image { width: 99vw; max-width: 99vw; }
+}

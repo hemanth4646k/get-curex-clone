@@ -1,0 +1,118 @@
+.hero2-main {
+  background: #fff;
+  padding: 48px 0 24px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.hero2-inner {
+  display: flex;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.hero2-left {
+  flex: 1.1;
+  min-width: 300px;
+}
+
+.hero2-tag {
+  display: inline-block;
+  background: #e1f0ff;
+  color: #1a5fa0;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 4px 16px;
+  border-radius: 5px;
+  margin-bottom: 22px;
+  letter-spacing: 0.02em;
+}
+
+.hero2-paragraph {
+  font-size: 1.06rem;
+  color: #222;
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+
+.hero2-allergies {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.hero2-allergy-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero2-allergy-icon img {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 10px;
+}
+
+.hero2-allergy-label {
+  font-size: 0.97rem;
+  color: #222;
+  text-align: center;
+}
+
+.hero2-footnote {
+  font-size: 0.97rem;
+  color: #282828;
+  margin-top: 24px;
+}
+
+.hero2-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero2-img {
+  width: 310px;
+  max-width: 92vw;
+  border-radius: 16px;
+  box-shadow: 0 3px 24px rgba(20,40,60,0.10);
+}
+
+/* Responsive Styling */
+@media (max-width: 900px) {
+  .hero2-inner {
+    flex-direction: column;
+    gap: 28px;
+    padding: 0 14px;
+  }
+  .hero2-right {
+    justify-content: flex-start;
+  }
+  .hero2-img {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .hero2-allergies {
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero2-inner {
+    padding: 0 5px;
+  }
+  .hero2-img {
+    width: 100%;
+    max-width: 95vw;
+  }
+  .hero2-allergies {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,116 @@
+.dogshots-section {
+  background: #fff;
+  padding: 60px 0 60px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  width: 100%;
+}
+
+.dogshots-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  gap: 54px;
+  padding: 0 28px;
+}
+
+.dogshots-content {
+  flex: 1.05;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+.dogshots-title {
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: #151d28;
+  margin-bottom: 28px;
+  letter-spacing: 0.01em;
+}
+.dogshots-desc {
+  color: #282d3e;
+  font-size: 1.09rem;
+  line-height: 1.7;
+  margin-bottom: 38px;
+  font-weight: 400;
+}
+
+.dogshots-btn {
+  background: linear-gradient(90deg, #fd77cc 0%, #f376b8 100%);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(252, 90, 184, 0.13);
+  outline: none;
+  margin-top: 8px;
+  transition: background 0.16s, transform 0.13s;
+}
+.dogshots-btn:hover,
+.dogshots-btn:focus {
+  background: linear-gradient(90deg, #f376b8 0%, #fd77cc 100%);
+  transform: translateY(-2px) scale(1.015);
+}
+
+.dogshots-imagewrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 265px;
+}
+.dogshots-img {
+  width: 370px;
+  max-width: 98vw;
+  border-radius: 18px;
+  box-shadow: 0 12px 50px rgba(50,55,80,0.15);
+  object-fit: cover;
+  background: #f6f6fa;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .dogshots-inner {
+    flex-direction: column;
+    gap: 34px;
+    align-items: center;
+    padding: 0 12px;
+  }
+  .dogshots-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .dogshots-img {
+    width: 96vw;
+    max-width: 450px;
+    margin-bottom: 16px;
+  }
+  .dogshots-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .dogshots-section {
+    padding: 30px 0;
+  }
+  .dogshots-title {
+    font-size: 1.07rem;
+    margin-bottom: 14px;
+  }
+  .dogshots-desc {
+    font-size: 0.98rem;
+    margin-bottom: 22px;
+  }
+  .dogshots-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,111 @@
+.ahs-section {
+  background: #fff;
+  width: 100%;
+  padding: 64px 0 64px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.ahs-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  gap: 48px;
+  padding: 0 32px;
+}
+
+.ahs-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ahs-img-main {
+  width: 360px;
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(40,48,70,0.11);
+  object-fit: cover;
+}
+
+.ahs-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 0 18px 0;
+  min-width: 280px;
+}
+
+.ahs-title {
+  font-size: 2.55rem;
+  font-weight: 800;
+  color: #2e3e60;
+  margin-bottom: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.ahs-text {
+  color: #2a334a;
+  font-size: 1.14rem;
+  line-height: 1.78;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.ahs-btn {
+  background: linear-gradient(90deg,#ff63a9 0%, #fd88cf 100%);
+  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 700;
+  padding: 18px 44px;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 6px 22px rgba(255,66,164,0.16);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s, transform 0.13s;
+}
+.ahs-btn:hover,
+.ahs-btn:focus {
+  background: linear-gradient(90deg,#fd88cf 0%, #ff63a9 100%);
+  transform: translateY(-2px) scale(1.021);
+}
+
+@media (max-width: 900px) {
+  .ahs-inner {
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    padding: 0 12px;
+  }
+  .ahs-image, .ahs-content {
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    padding: 0;
+  }
+  .ahs-img-main {
+    width: 95vw;
+    max-width: 480px;
+    margin-bottom: 16px;
+  }
+  .ahs-title {
+    font-size: 1.55rem;
+    text-align: center;
+  }
+  .ahs-text {
+    font-size: 1.02rem;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .ahs-section { padding: 30px 0 24px 0; }
+  .ahs-title { font-size: 1.15rem; }
+  .ahs-content { padding: 0; }
+  .ahs-btn { width: 100%; }
+}

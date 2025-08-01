@@ -1,0 +1,172 @@
+.cmp-table-section {
+  background: #fff;
+  padding: 60px 5% 80px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cmp-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1c2331;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.cmp-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 2.5rem;
+  max-width: 100%;
+  text-align: left;
+}
+
+.cmp-table-container {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.cmp-table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  background-color: #fff;
+}
+
+.cmp-header-col {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.cmp-table-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cmp-img-col {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cmp-img-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cmp-curex {
+  background-color: #fffbea; /* Light yellow background for Curex */
+}
+
+.cmp-shots {
+  background-color: #fff;
+}
+
+.cmp-feature-rows {
+  width: 100%;
+}
+
+.cmp-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  border-top: 1px solid #e2e8f0;
+  width: 100%;
+}
+
+.cmp-cell {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.cmp-label {
+  font-weight: 500;
+  color: #2d3748;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.cmp-check {
+  color: #38a169; /* Green checkmark */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cmp-cross {
+  color: #e53e3e; /* Red cross */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cmp-value {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Highlight special rows like time and price */
+.cmp-feature-rows .cmp-row:nth-child(7),
+.cmp-feature-rows .cmp-row:nth-child(8) {
+  background-color: #f7fafc; /* Light gray background for time and price rows */
+}
+
+.cmp-footer-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cmp-cta-btn {
+  background-color: #f472b6; /* Pink button as in image */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(244, 114, 182, 0.25);
+}
+
+.cmp-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(244, 114, 182, 0.35);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .cmp-title {
+    font-size: 2rem;
+  }
+  
+  .cmp-table-header, 
+  .cmp-table-images,
+  .cmp-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .cmp-img-col {
+    height: 180px;
+  }
+  
+  .cmp-cell {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .cmp-header-col:nth-child(1),
+  .cmp-cell.cmp-curex {
+    background-color: #fffbea;
+  }
+}

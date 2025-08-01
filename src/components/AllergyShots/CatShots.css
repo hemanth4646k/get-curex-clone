@@ -1,0 +1,123 @@
+.catshots-section {
+  background: #fff;
+  padding: 62px 0;
+  width: 100%;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.catshots-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  gap: 50px;
+  padding: 0 36px;
+}
+
+.catshots-image-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 330px;
+}
+
+.catshots-img {
+  width: 375px;
+  max-width: 98vw;
+  border-radius: 20px;
+  box-shadow: 0 10px 44px rgba(34,34,80,0.16);
+  object-fit: cover;
+  background: #efeee5;
+  display: block;
+}
+
+.catshots-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0 18px 0;
+  min-width: 330px;
+}
+
+.catshots-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #161b28;
+  letter-spacing: 0.01em;
+}
+
+.catshots-desc {
+  color: #2b3149;
+  font-size: 1.11rem;
+  line-height: 1.74;
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+
+.catshots-btn {
+  background: linear-gradient(90deg, #fd77cc 0%, #f368b7 100%);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  padding: 16px 44px;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(252, 90, 184, 0.13);
+  outline: none;
+  margin-top: 10px;
+  letter-spacing: 0.01em;
+  transition: background 0.14s, transform 0.14s;
+}
+.catshots-btn:hover,
+.catshots-btn:focus {
+  background: linear-gradient(90deg, #f368b7 0%, #fd77cc 100%);
+  transform: translateY(-2px) scale(1.015);
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .catshots-inner {
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .catshots-image-col,
+  .catshots-content {
+    min-width: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .catshots-img {
+    width: 96vw;
+    max-width: 430px;
+    margin-bottom: 18px;
+  }
+  .catshots-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .catshots-section {
+    padding: 30px 0;
+  }
+  .catshots-title {
+    font-size: 1.07rem;
+    margin-bottom: 14px;
+  }
+  .catshots-desc {
+    font-size: 0.98rem;
+    margin-bottom: 22px;
+  }
+  .catshots-btn {
+    width: 100%;
+  }
+}
