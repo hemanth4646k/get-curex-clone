@@ -1,0 +1,251 @@
+/* PricingComponent1 Styles */
+.pricing-component1 {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #7dd3fc 0%, #93c5fd 100%);
+  position: relative;
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pricing-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.pricing-text {
+  color: #1a1a1a;
+}
+
+.pricing-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.pricing-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #374151;
+}
+
+.pricing-offer {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: #374151;
+}
+
+.price-highlight {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.eligibility-button {
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eligibility-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(244, 114, 182, 0.3);
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricing-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.pricing-item:last-child {
+  border-bottom: none;
+}
+
+.pricing-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+.pricing-service {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.pricing-cost {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: right;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #64748b;
+  margin-right: 8px;
+}
+
+.discounted-price {
+  color: #1a1a1a;
+  background-color: #fef3c7;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.insurance-note {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.insurance-link {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.insurance-link:hover {
+  opacity: 0.8;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .pricing-component1 {
+    padding: 60px 0;
+  }
+  
+  .pricing-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .pricing-title {
+    font-size: 36px;
+  }
+  
+  .pricing-description,
+  .pricing-offer {
+    font-size: 16px;
+  }
+  
+  .pricing-card {
+    padding: 24px;
+  }
+  
+  .pricing-item {
+    padding: 16px 0;
+  }
+  
+  .pricing-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .pricing-service,
+  .pricing-cost {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .pricing-component1 {
+    padding: 40px 0;
+  }
+  
+  .pricing-container {
+    padding: 0 16px;
+  }
+  
+  .pricing-content {
+    gap: 30px;
+  }
+  
+  .pricing-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-description,
+  .pricing-offer {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .eligibility-button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+  
+  .pricing-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .pricing-item {
+    gap: 12px;
+    padding: 12px 0;
+  }
+  
+  .pricing-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .pricing-service {
+    font-size: 13px;
+  }
+  
+  .pricing-cost {
+    font-size: 12px;
+  }
+  
+  .discounted-price {
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  
+  .insurance-note {
+    margin-top: 30px;
+  }
+  
+  .insurance-link {
+    font-size: 14px;
+  }
+}

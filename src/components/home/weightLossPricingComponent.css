@@ -1,0 +1,233 @@
+/* WeightLossPricingComponent Styles */
+.weight-loss-pricing {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.weight-loss-pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pricing-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.pricing-image {
+  position: relative;
+}
+
+.exercise-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.pricing-text {
+  padding-left: 20px;
+}
+
+.pricing-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.highlight-text {
+  color: #f472b6;
+}
+
+.pricing-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 32px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.pricing-info {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-radius: 16px;
+  border-left: 4px solid #f472b6;
+}
+
+.pricing-statement {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.price-highlight {
+  font-weight: 700;
+  color: #f472b6;
+  font-size: 20px;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .weight-loss-pricing {
+    padding: 60px 0;
+  }
+  
+  .pricing-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .pricing-text {
+    padding-left: 0;
+  }
+  
+  .pricing-title {
+    font-size: 36px;
+  }
+  
+  .pricing-description {
+    font-size: 16px;
+  }
+  
+  .benefit-text {
+    font-size: 16px;
+  }
+  
+  .pricing-statement {
+    font-size: 16px;
+  }
+  
+  .price-highlight {
+    font-size: 18px;
+  }
+  
+  .pricing-info {
+    padding: 20px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .weight-loss-pricing {
+    padding: 40px 0;
+  }
+  
+  .weight-loss-pricing-container {
+    padding: 0 16px;
+  }
+  
+  .pricing-content {
+    gap: 30px;
+  }
+  
+  .pricing-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-description {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .benefits-list {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .benefit-item {
+    gap: 10px;
+  }
+  
+  .check-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .benefit-text {
+    font-size: 14px;
+  }
+  
+  .pricing-info {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .pricing-statement {
+    font-size: 14px;
+  }
+  
+  .price-highlight {
+    font-size: 16px;
+  }
+  
+  .exercise-image {
+    border-radius: 16px;
+  }
+}
+
+/* Large Desktop Enhancement */
+@media (min-width: 1200px) {
+  .pricing-content {
+    gap: 100px;
+  }
+  
+  .pricing-title {
+    font-size: 52px;
+  }
+  
+  .pricing-description {
+    font-size: 19px;
+  }
+  
+  .benefit-text {
+    font-size: 19px;
+  }
+  
+  .pricing-statement {
+    font-size: 19px;
+  }
+  
+  .price-highlight {
+    font-size: 22px;
+  }
+}

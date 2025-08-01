@@ -1,0 +1,128 @@
+/* Brands Section Styles */
+.brands-container {
+  background-color: #f8fafc;
+  padding: 60px 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.brands-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.brands-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.brands-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.brands-logo:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.brands-logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.brands-logo:hover .brands-logo-image {
+  filter: grayscale(0%);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .brands-grid {
+    gap: 50px;
+  }
+  
+  .brands-logo-image {
+    height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-container {
+    padding: 50px 0;
+  }
+  
+  .brands-grid {
+    gap: 40px;
+    justify-content: space-around;
+  }
+  
+  .brands-logo-image {
+    height: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .brands-container {
+    padding: 40px 0;
+  }
+  
+  .brands-content {
+    padding: 0 16px;
+  }
+  
+  .brands-grid {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  
+  .brands-logo-image {
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-container {
+    padding: 32px 0;
+  }
+  
+  .brands-grid {
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .brands-logo-image {
+    height: 24px;
+  }
+}
+
+/* Alternative: Scrolling Animation for very small screens */
+@media (max-width: 320px) {
+  .brands-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 32px;
+    padding: 0 0 10px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .brands-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .brands-logo {
+    flex-shrink: 0;
+  }
+}

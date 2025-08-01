@@ -1,0 +1,298 @@
+/* Testimonials1 Component Styles */
+.testimonials1 {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fce7f3 0%, #f3e8ff 50%, #e0e7ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials1-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.testimonials1-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.customer-images-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.customer-image-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.customer-image-card:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.customer-image-wrapper {
+  width: 150px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.customer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.decorative-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+/* Unique positioning and colors for each card */
+.card-1 {
+  transform: rotate(-5deg);
+}
+
+.card-1 .shape-1 {
+  width: 40px;
+  height: 40px;
+  background-color: #22c55e;
+  top: -20px;
+  left: -20px;
+}
+
+.card-1 .shape-2 {
+  width: 25px;
+  height: 25px;
+  background-color: #fbbf24;
+  bottom: 10px;
+  right: -15px;
+}
+
+.card-2 {
+  transform: rotate(3deg) translateY(-10px);
+}
+
+.card-2 .shape-1 {
+  width: 35px;
+  height: 35px;
+  background-color: #3b82f6;
+  top: -15px;
+  right: -20px;
+}
+
+.card-2 .shape-2 {
+  width: 30px;
+  height: 30px;
+  background-color: #f472b6;
+  bottom: -10px;
+  left: -15px;
+}
+
+.card-3 {
+  transform: rotate(-2deg) translateY(10px);
+}
+
+.card-3 .shape-1 {
+  width: 45px;
+  height: 45px;
+  background-color: #fbbf24;
+  top: -25px;
+  left: -25px;
+}
+
+.card-3 .shape-2 {
+  width: 20px;
+  height: 20px;
+  background-color: #22c55e;
+  bottom: 20px;
+  right: -10px;
+}
+
+.card-3 .shape-3 {
+  width: 15px;
+  height: 15px;
+  background-color: #3b82f6;
+  top: 30px;
+  right: -25px;
+}
+
+.card-4 {
+  transform: rotate(4deg);
+}
+
+.card-4 .shape-1 {
+  width: 50px;
+  height: 50px;
+  background-color: #f472b6;
+  top: -30px;
+  right: -30px;
+}
+
+.card-4 .shape-2 {
+  width: 25px;
+  height: 25px;
+  background-color: #22c55e;
+  bottom: 15px;
+  left: -20px;
+}
+
+.card-5 {
+  transform: rotate(-3deg) translateY(-5px);
+}
+
+.card-5 .shape-1 {
+  width: 35px;
+  height: 35px;
+  background-color: #60a5fa;
+  top: -20px;
+  left: -20px;
+}
+
+.card-5 .shape-2 {
+  width: 40px;
+  height: 40px;
+  background-color: #fbbf24;
+  bottom: -15px;
+  right: -25px;
+}
+
+.testimonial-quote {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quote-icon {
+  color: #f472b6;
+  margin-bottom: 24px;
+}
+
+.quote-text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.quote-author {
+  display: flex;
+  justify-content: center;
+}
+
+.author-name {
+  background-color: #22c55e;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .testimonials1 {
+    padding: 60px 0;
+  }
+  
+  .testimonials1-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .customer-images-grid {
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+  
+  .customer-image-wrapper {
+    width: 120px;
+    height: 160px;
+  }
+  
+  .quote-text {
+    font-size: 20px;
+  }
+  
+  /* Reduce shape sizes for smaller screens */
+  .shape {
+    transform: scale(0.8);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .testimonials1 {
+    padding: 40px 0;
+  }
+  
+  .testimonials1-container {
+    padding: 0 16px;
+  }
+  
+  .testimonials1-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .customer-images-grid {
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .customer-image-wrapper {
+    width: 80px;
+    height: 110px;
+    border-radius: 12px;
+  }
+  
+  .quote-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .author-name {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+  
+  /* Hide decorative shapes on mobile for cleaner look */
+  .decorative-shapes {
+    display: none;
+  }
+  
+  /* Remove transforms on mobile for better alignment */
+  .customer-image-card {
+    transform: none !important;
+  }
+  
+  .customer-image-card:hover {
+    transform: scale(1.02) !important;
+  }
+}

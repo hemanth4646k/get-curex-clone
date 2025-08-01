@@ -1,0 +1,283 @@
+/* HomeComparisonTable Component Styles */
+.home-comparison-table {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+
+.comparison-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.comparison-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.comparison-table {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  background-color: #f1f5f9;
+}
+
+.feature-header {
+  padding: 0;
+}
+
+.curex-header,
+.allergy-shots-header {
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.curex-header {
+  background-color: #fef3c7; /* Light yellow */
+}
+
+.allergy-shots-header {
+  background-color: #f1f5f9; /* Light gray */
+}
+
+.header-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.header-image {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.curex-image,
+.allergy-shot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.feature-cell {
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.feature-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.curex-cell,
+.allergy-shots-cell {
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.curex-cell {
+  background-color: #fef3c7; /* Light yellow */
+}
+
+.allergy-shots-cell {
+  background-color: #f1f5f9; /* Light gray */
+}
+
+.check-icon,
+.cross-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon.green {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.cross-icon.red {
+  background-color: #fecaca;
+  color: #dc2626;
+}
+
+.cost-row .curex-cell {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+}
+
+.cost-row .allergy-shots-cell {
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+  color: white;
+}
+
+.cost-cell {
+  padding: 20px 16px;
+}
+
+.cost-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cost-amount {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cost-detail {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .home-comparison-table {
+    padding: 60px 0;
+  }
+  
+  .comparison-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .comparison-table {
+    border-radius: 16px;
+  }
+  
+  .comparison-header,
+  .comparison-row {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  
+  .feature-cell {
+    padding: 20px 16px;
+  }
+  
+  .feature-text {
+    font-size: 14px;
+  }
+  
+  .curex-cell,
+  .allergy-shots-cell {
+    padding: 20px 12px;
+  }
+  
+  .header-content h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .header-image {
+    height: 80px;
+  }
+  
+  .check-icon,
+  .cross-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .cost-amount {
+    font-size: 16px;
+  }
+  
+  .cost-detail {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .home-comparison-table {
+    padding: 40px 0;
+  }
+  
+  .comparison-container {
+    padding: 0 16px;
+  }
+  
+  .comparison-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .comparison-header,
+  .comparison-row {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+  
+  .feature-cell {
+    padding: 16px 12px;
+  }
+  
+  .feature-text {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  
+  .curex-cell,
+  .allergy-shots-cell {
+    padding: 16px 8px;
+  }
+  
+  .header-content h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .header-image {
+    height: 60px;
+  }
+  
+  .check-icon,
+  .cross-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .cost-amount {
+    font-size: 14px;
+  }
+  
+  .cost-detail {
+    font-size: 11px;
+  }
+  
+  .cost-cell {
+    padding: 16px 8px;
+  }
+}

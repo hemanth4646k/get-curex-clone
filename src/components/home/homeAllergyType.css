@@ -1,0 +1,160 @@
+/* HomeAllergyType Component Styles */
+.home-allergy-type {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+
+.home-allergy-type-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.home-allergy-type-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+}
+
+.allergy-type-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.allergy-type-card {
+  padding: 40px 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.allergy-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Colors */
+.allergy-type-card.yellow {
+  background-color: #fef08a;
+}
+
+.allergy-type-card.light-blue {
+  background-color: #bae6fd;
+}
+
+.allergy-type-card.blue {
+  background-color: #60a5fa;
+}
+
+.allergy-type-card.green {
+  background-color: #86efac;
+}
+
+.allergy-type-card.pink {
+  background-color: #f9a8d4;
+}
+
+.allergy-type-card.light-yellow {
+  background-color: #fef3c7;
+}
+
+.allergy-type-card.light-gray {
+  background-color: #e2e8f0;
+}
+
+.allergy-type-icon {
+  margin-bottom: 16px;
+}
+
+.icon-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.allergy-type-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .home-allergy-type {
+    padding: 60px 0;
+  }
+  
+  .home-allergy-type-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .allergy-type-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .allergy-type-card {
+    padding: 30px 16px;
+    min-height: 160px;
+  }
+  
+  .allergy-type-name {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .home-allergy-type {
+    padding: 40px 0;
+  }
+  
+  .home-allergy-type-container {
+    padding: 0 16px;
+  }
+  
+  .home-allergy-type-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .allergy-type-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 300px;
+  }
+  
+  .allergy-type-card {
+    padding: 24px 16px;
+    min-height: 140px;
+  }
+  
+  .icon-placeholder {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .allergy-type-name {
+    font-size: 14px;
+  }
+}
