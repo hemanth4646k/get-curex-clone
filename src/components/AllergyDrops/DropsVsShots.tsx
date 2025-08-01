@@ -111,7 +111,6 @@ const DropsVsShots1 = () => {
     </div>
   );
 };
-import './DropsVsShots.css';
 
 const DropsVsShots: React.FC = () => {
   return (

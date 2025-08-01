@@ -9,7 +9,7 @@ import FDAApproved from "../components/AllergyDrops/FDAApproved";
 import AllergyDropsHero from "../components/AllergyDrops/Hero";
 import Hero2 from "../components/AllergyDrops/Hero2";
 import HowLongToWork from "../components/AllergyDrops/HowLongToWork";
-import HowOften from "../components/AllergyDrops/HowOftern";
+import HowOften from "../components/AllergyDrops/HowOften";
 import InsurancePartners from "../components/AllergyDrops/InsurancePartners";
 import SideEffects from "../components/AllergyDrops/SideEffects";
 import TableOfContents from "../components/AllergyDrops/TableOfContent";

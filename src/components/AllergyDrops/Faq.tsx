@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FAQ.css';
+import './Faq.css';
 
 const FAQ: React.FC = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
