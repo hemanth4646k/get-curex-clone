@@ -1,0 +1,278 @@
+.side-effects-container {
+  background: #ffffff;
+  padding: 60px 40px;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header-section {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  text-align: left;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 24px 0;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  text-align: justify;
+}
+
+.warning-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin: 0;
+  text-align: justify;
+}
+
+.comparison-table {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  background: #f8f9fa;
+}
+
+.header-cell {
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-cell {
+  background: #ffffff;
+}
+
+.immunotherapy-header {
+  background: #22c55e;
+}
+
+.drugs-header {
+  background: #f1f5f9;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.drugs-header .header-title {
+  color: #2c3e50;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.feature-label {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+
+.feature-cell {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.immunotherapy-cell {
+  background: #22c55e;
+}
+
+.drugs-cell {
+  background: #f1f5f9;
+}
+
+.checkmark {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.drugs-cell .checkmark {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.cross {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.side-effects-text,
+.potency-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.drugs-cell .side-effects-text,
+.drugs-cell .potency-text {
+  color: #2c3e50;
+}
+
+.cta-section {
+  background: #ff69b4;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-button {
+  background: #ffffff;
+  color: #ff69b4;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.cta-button:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .side-effects-container {
+    padding: 40px 20px;
+  }
+  
+  .main-title {
+    font-size: 36px;
+  }
+  
+  .subtitle,
+  .warning-text {
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+  
+  .header-cell {
+    padding: 20px 12px;
+  }
+  
+  .header-title {
+    font-size: 14px;
+  }
+  
+  .feature-label {
+    padding: 16px 12px;
+    font-size: 14px;
+  }
+  
+  .feature-cell {
+    padding: 16px 8px;
+  }
+  
+  .checkmark,
+  .cross {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+  
+  .side-effects-text,
+  .potency-text {
+    font-size: 14px;
+  }
+  
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 28px;
+  }
+  
+  .table-header,
+  .table-row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header-cell,
+  .feature-label,
+  .feature-cell {
+    width: 100%;
+  }
+  
+  .header-cell {
+    padding: 16px;
+  }
+  
+  .feature-label {
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
+    background: #f8f9fa !important;
+  }
+  
+  .feature-cell {
+    padding: 16px;
+  }
+}

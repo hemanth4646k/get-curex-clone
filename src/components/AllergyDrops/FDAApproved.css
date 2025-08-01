@@ -1,0 +1,215 @@
+
+.fda-approved-container {
+  background: #ffffff;
+  padding: 60px 40px;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.content-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-paragraph,
+.description-paragraph,
+.explanation-paragraph,
+.conclusion-paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin: 0;
+  text-align: justify;
+}
+
+.table-section {
+  position: sticky;
+  top: 60px;
+}
+
+.fda-table {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #f8f9fa;
+}
+
+.header-cell {
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+}
+
+.header-cell:last-child {
+  border-right: none;
+}
+
+.name-header {
+  background: #f8f9fa;
+}
+
+.treats-header {
+  background: #2ecc71;
+  color: white;
+}
+
+.approval-header {
+  background: #f8f9fa;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  padding: 16px 20px;
+  font-size: 16px;
+  color: #2c3e50;
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+.name-cell {
+  background: #ffffff;
+  font-weight: 500;
+}
+
+.treats-cell {
+  background: #2ecc71;
+  color: white;
+  font-weight: 500;
+}
+
+.approval-cell {
+  background: #ffffff;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .table-section {
+    position: static;
+    order: -1;
+  }
+  
+  .main-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fda-approved-container {
+    padding: 40px 20px;
+  }
+  
+  .main-heading {
+    font-size: 32px;
+  }
+  
+  .intro-paragraph,
+  .description-paragraph,
+  .explanation-paragraph,
+  .conclusion-paragraph {
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .fda-table {
+    font-size: 14px;
+  }
+  
+  .header-cell,
+  .table-cell {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 28px;
+  }
+  
+  .intro-paragraph,
+  .description-paragraph,
+  .explanation-paragraph,
+  .conclusion-paragraph {
+    font-size: 14px;
+  }
+  
+  .fda-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .table-header,
+  .table-row {
+    display: flex;
+    min-width: 400px;
+  }
+  
+  .header-cell,
+  .table-cell {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

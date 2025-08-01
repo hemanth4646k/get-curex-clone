@@ -1,0 +1,286 @@
+.end-promo-container {
+  background: linear-gradient(135deg, #87CEEB 0%, #4A90E2 100%);
+  padding: 80px 40px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.woman-container {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.woman-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main-heading {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cta-button {
+  background: #ec4899;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 32px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 24px rgba(236, 72, 153, 0.4);
+  text-shadow: none;
+}
+
+.cta-button:hover {
+  background: #db2777;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(236, 72, 153, 0.5);
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.decorative-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.circle-yellow,
+.circle-blue,
+.circle-pink {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.circle-yellow {
+  width: 120px;
+  height: 120px;
+  background: #fbbf24;
+  top: 10%;
+  left: 5%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-blue {
+  width: 80px;
+  height: 80px;
+  background: #3b82f6;
+  top: 60%;
+  right: 10%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.circle-pink {
+  width: 60px;
+  height: 60px;
+  background: #ec4899;
+  bottom: 20%;
+  left: 15%;
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .image-section {
+    order: -1;
+  }
+  
+  .main-heading {
+    font-size: 48px;
+    text-align: center;
+  }
+  
+  .description {
+    text-align: center;
+  }
+  
+  .cta-button {
+    align-self: center;
+  }
+  
+  .features-list {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .end-promo-container {
+    padding: 60px 20px;
+  }
+  
+  .main-heading {
+    font-size: 40px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+  
+  .cta-button {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
+  
+  .woman-container {
+    padding: 30px;
+  }
+  
+  .feature-text {
+    font-size: 15px;
+  }
+  
+  .circle-yellow {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .circle-blue {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .circle-pink {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 32px;
+  }
+  
+  .description {
+    font-size: 15px;
+  }
+  
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+  
+  .woman-container {
+    padding: 24px;
+  }
+  
+  .feature-text {
+    font-size: 14px;
+  }
+  
+  .promo-content {
+    gap: 24px;
+  }
+  
+  .features-list {
+    gap: 12px;
+  }
+}

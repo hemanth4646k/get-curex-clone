@@ -1,0 +1,232 @@
+.do-drops-work-container {
+  background: linear-gradient(135deg, #7dd3fc 0%, #06b6d4 100%);
+  padding: 60px 40px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.image-section {
+  position: sticky;
+  top: 60px;
+}
+
+.woman-image-container {
+  position: relative;
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.3);
+}
+
+.woman-image {
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+.curex-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo-image {
+  width: 60px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description,
+.effectiveness,
+.timeline {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.effectiveness-section {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.effectiveness-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.effectiveness-intro {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+  text-align: justify;
+}
+
+.cta-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cta-button {
+  background: #ec4899;
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.3);
+}
+
+.cta-button:hover {
+  background: #db2777;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(236, 72, 153, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .image-section {
+    position: static;
+    order: -1;
+  }
+  
+  .woman-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .main-heading {
+    font-size: 40px;
+  }
+  
+  .effectiveness-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .do-drops-work-container {
+    padding: 40px 20px;
+  }
+  
+  .main-heading {
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .effectiveness-title {
+    font-size: 24px;
+  }
+  
+  .description,
+  .effectiveness,
+  .timeline,
+  .effectiveness-intro {
+    font-size: 15px;
+    text-align: left;
+    padding: 16px;
+  }
+  
+  .effectiveness-section {
+    padding: 20px;
+  }
+  
+  .woman-image-container {
+    padding: 30px;
+  }
+  
+  .cta-section {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 28px;
+  }
+  
+  .effectiveness-title {
+    font-size: 20px;
+  }
+  
+  .description,
+  .effectiveness,
+  .timeline,
+  .effectiveness-intro {
+    font-size: 14px;
+    padding: 14px;
+  }
+  
+  .effectiveness-section {
+    padding: 16px;
+  }
+  
+  .cta-button {
+    padding: 16px 28px;
+    font-size: 15px;
+  }
+}
