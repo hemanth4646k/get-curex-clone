@@ -4,6 +4,7 @@ import Footer from './common/footer'
 import Navbar from './common/Navbar'
 import Home from './pages/home'
 import Immunotherapy101 from './pages/Immunotherapy101'
+import ImmunoScience from './pages/ImmunoScience'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/immunotherapy101" element={<Immunotherapy101 />} />
+          <Route path="/immuno-science" element={<ImmunoScience />} />
         </Routes>
       </BrowserRouter>
       <Footer />

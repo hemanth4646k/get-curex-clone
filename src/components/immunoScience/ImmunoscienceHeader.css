@@ -1,0 +1,184 @@
+/* Global padding and container styles */
+.padding-global {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container-large {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.padding-section-small {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Header component layout */
+.header1_component {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 500px;
+}
+
+/* Left content area (text content) */
+.header1_contents-left {
+  position: relative;
+  z-index: 2;
+}
+
+/* Right content area (image) */
+.header1_contents-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background element */
+.immunoscience-header_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f5f5dc 0%, #fafad2 100%);
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+/* Image wrapper */
+.header1_image-wrapper {
+  position: relative;
+  z-index: 2;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+}
+
+.header1_image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  min-height: 300px;
+  background-color: #f0f0f0;
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.text-size-large {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Margin utilities */
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom.margin-small {
+  margin-bottom: 1.5rem;
+}
+
+.margin-bottom.margin-xsmall {
+  margin-bottom: 0.5rem;
+}
+
+/* Decorative elements placeholders */
+.immunoscience-header_decor1 {
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  z-index: 1;
+}
+
+.immunoscience-header_decor2 {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  z-index: 3;
+}
+
+.icon-decor4,
+.icon-decor5 {
+  width: 120px;
+  height: 80px;
+  background-color: #a8d8ff;
+  opacity: 0.7;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .padding-global {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .padding-section-small {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .header1_component {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: auto;
+  }
+  
+  .header1_contents-left {
+    order: 2;
+  }
+  
+  .header1_contents-right {
+    order: 1;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .text-size-large {
+    font-size: 1rem;
+  }
+  
+  .immunoscience-header_decor1,
+  .immunoscience-header_decor2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  .header1_component {
+    gap: 1.5rem;
+  }
+  
+  .icon-decor4,
+  .icon-decor5 {
+    width: 80px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,270 @@
+/* Container and layout styles matching the image */
+.padding-section-medium {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+}
+
+.max-width-large {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.align-center {
+  text-align: center;
+}
+
+/* FAQ component styles */
+.immunoscience-faq_component {
+  width: 100%;
+}
+
+.immunoscience-faq_subsection {
+  margin-bottom: 4rem;
+}
+
+.immunoscience-faq_subsection:last-child {
+  margin-bottom: 0;
+}
+
+/* Section headers - matching the image style */
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom.margin-small {
+  margin-bottom: 2rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.heading-style-h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* FAQ list styles - matching the image layout */
+.faqs-insurance_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+/* Accordion styles - exactly matching the image appearance */
+.immunoscience-faq_accordion {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+  margin-bottom: 0;
+}
+
+.immunoscience-faq_accordion:not(:last-child) {
+  border-bottom: none;
+}
+
+.immunoscience-faq_accordion:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.immunoscience-faq_accordion:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.immunoscience-faq_accordion-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  background-color: #f9fafb;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  min-height: 140px;
+  box-sizing: border-box;
+}
+
+.immunoscience-faq_accordion-header:hover {
+  background-color: #f3f4f6;
+}
+
+.immunoscience-faq_accordion.w--open .immunoscience-faq_accordion-header {
+  background-color: #f9fafb;
+}
+
+.immunoscience-faq_text-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.faqs_accordion-header-index {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  min-width: 2rem;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.immunoscience-faq_accordion-header-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1f2937;
+  flex: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.immunoscience-faq_accordion-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #e5e7eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 18px;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.2s ease;
+  border: 2px solid #d1d5db;
+}
+
+.immunoscience-faq_accordion-icon::before {
+  content: '⌄';
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.immunoscience-faq_accordion.w--open .immunoscience-faq_accordion-icon::before {
+  transform: rotate(180deg);
+}
+
+/* Accordion body styles - matching the expanded content style */
+.immunoscience-faq_accordion-body {
+  display: none;
+  padding: 0 2rem 2rem 2rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.immunoscience-faq_accordion-body.w--open {
+  display: block;
+}
+
+/* Rich text content styles - matching the image formatting */
+.text-rich-text {
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.text-rich-text p {
+  margin-bottom: 1rem;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text-rich-text p:last-child {
+  margin-bottom: 0;
+}
+
+.text-rich-text em {
+  font-style: italic;
+  color: #4b5563;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  display: inline;
+  margin: 0;
+}
+
+/* Link styles - matching the image appearance */
+.link-16 {
+  color: #3b82f6;
+  text-decoration: underline;
+  font-size: 1rem;
+  word-break: break-all;
+  line-height: 1.4;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: inline;
+}
+
+.link-16:hover {
+  color: #2563eb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .max-width-large {
+    padding: 0 1rem;
+  }
+  
+  .padding-section-medium {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .heading-style-h3 {
+    font-size: 2rem;
+  }
+  
+  .immunoscience-faq_accordion-header {
+    padding: 1rem 1.5rem;
+    min-height: 120px;
+  }
+  
+  .immunoscience-faq_accordion-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .immunoscience-faq_accordion-header-text {
+    font-size: 1rem;
+  }
+  
+  .faqs_accordion-header-index {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-style-h3 {
+    font-size: 1.75rem;
+  }
+  
+  .immunoscience-faq_accordion-header {
+    padding: 0.75rem 1rem;
+    min-height: 100px;
+  }
+  
+  .immunoscience-faq_accordion-body {
+    padding: 0 1rem 1rem 1rem;
+  }
+  
+  .immunoscience-faq_text-wrapper {
+    gap: 0.5rem;
+  }
+}
