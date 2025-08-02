@@ -20,8 +20,8 @@ const Footer = () => {
       { text: 'Allergy Testing', href: '/allergy-testing', isInternal: true }
     ],
     column3: [
-      { text: 'Allergy Immunotherapy', href: '#' },
-      { text: 'Allergy Immunotherapy', href: '#' },
+      { text: 'Allergy Immunotherapy', href: '/blog-posts/allergy-immunotherapy', isInternal: true },
+      { text: 'Allergy Immunotherapy Costs', href: '/blog-posts/allergy-immunotherapy-costs', isInternal: true },
       { text: 'Food Allergy Immunotherapy', href: '#' },
       { text: 'Cat Allergy Immunotherapy', href: '#' },
       { text: 'Sublingual Immunotherapy', href: '#' },

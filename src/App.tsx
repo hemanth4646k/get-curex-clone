@@ -11,6 +11,8 @@ import AllergyShots from './components/AllergyShots/AllergyShots'
 import AllergyClinic from './pages/AllergyClinic'
 import AllergyMedicine from './pages/AllergyMedicine'
 import AllergyTesting from './pages/AllergyTesting'
+import AllergyImmunotherapyBlog from './pages/Blogs/AllergyImmunoTherapy'
+import AllergyImmunoCosts from './pages/Blogs/AllergyImmunoCosts'
 
 function App() {
   
@@ -27,6 +29,8 @@ function App() {
         <Route path="/allergy-clinic" element={<AllergyClinic />} />
         <Route path="/allergy-medicine" element={<AllergyMedicine />} />
         <Route path="/allergy-testing" element={<AllergyTesting />} />
+        <Route path="/blog-posts/allergy-immunotherapy" element={<AllergyImmunotherapyBlog />} />
+        <Route path="/blog-posts/allergy-immunotherapy-costs" element={<AllergyImmunoCosts />} />
       </Routes>
       <Footer />
     </BrowserRouter>

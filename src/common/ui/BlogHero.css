@@ -1,0 +1,97 @@
+.blog-hero {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4c430;
+}
+
+.blog-hero__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blog-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-hero__content {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 60px 50px;
+  width: calc(100% - 120px);
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.blog-hero__date {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.blog-hero__title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #2c2c2c;
+  margin: 0;
+  text-align: center;
+  letter-spacing: -0.8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-hero {
+    height: 400px;
+    max-width: 100%;
+  }
+  
+  .blog-hero__content {
+    margin: 0 16px 16px;
+    padding: 32px 32px 36px;
+  }
+  
+  .blog-hero__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-hero {
+    height: 320px;
+  }
+  
+  .blog-hero__content {
+    margin: 0 12px 12px;
+    padding: 24px 24px 28px;
+  }
+  
+  .blog-hero__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  
+  .blog-hero__date {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+}
