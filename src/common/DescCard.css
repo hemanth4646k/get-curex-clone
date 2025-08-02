@@ -1,0 +1,136 @@
+.DescCard {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.DescCard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.DescCard-title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333333;
+  margin: 0 0 48px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.DescCard-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.DescCard-image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DescCard-building-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.DescCard-text-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.DescCard-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 32px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.DescCard-cta {
+  margin-top: 8px;
+}
+
+.DescCard-button {
+  background-color: #22c55e;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.DescCard-button:hover {
+  background-color: #16a34a;
+  transform: translateY(-1px);
+}
+
+.DescCard-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .DescCard {
+    padding: 40px 0;
+  }
+  
+  .DescCard-container {
+    padding: 0 16px;
+  }
+  
+  .DescCard-title {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+  }
+  
+  .DescCard-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .DescCard-text-column {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .DescCard-paragraph {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .DescCard-title {
+    font-size: 2rem;
+  }
+  
+  .DescCard-content {
+    gap: 30px;
+  }
+  
+  .DescCard-paragraph {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .DescCard-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

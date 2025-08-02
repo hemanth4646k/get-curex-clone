@@ -1,0 +1,318 @@
+.nectar-reviews {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.nectar-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.nectar-title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333333;
+  margin: 0 0 48px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nectar-hero {
+  background-color: #f8f8f8;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 48px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nectar-hero-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.nectar-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nectar-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.nectar-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nectar-reviews {
+    padding: 40px 0;
+  }
+  
+  .nectar-container {
+    padding: 0 16px;
+  }
+  
+  .nectar-title {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+  }
+  
+  .nectar-hero {
+    padding: 30px 20px;
+    min-height: 250px;
+  }
+  
+  .nectar-paragraph {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+    text-align: left;
+  }
+  
+  .nectar-content {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nectar-title {
+    font-size: 2rem;
+  }
+  
+  .nectar-hero {
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+  
+  .nectar-paragraph {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+}
+.nectar2 {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.nectar2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.nectar2-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  align-items: stretch;
+}
+
+.nectar2-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nectar2-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.nectar2-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.nectar2-icon.green {
+  background-color: #e6f7e6;
+  color: #22c55e;
+}
+
+.nectar2-icon.pink {
+  background-color: #fce7f3;
+  color: #ec4899;
+}
+
+.nectar2-icon.blue {
+  background-color: #e0f2fe;
+  color: #0ea5e9;
+}
+
+.nectar2-icon-svg {
+  width: 28px;
+  height: 28px;
+}
+
+.nectar2-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nectar2-card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nectar2 {
+    padding: 60px 0;
+  }
+  
+  .nectar2-container {
+    padding: 0 16px;
+  }
+  
+  .nectar2-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .nectar2-card {
+    padding: 24px;
+  }
+  
+  .nectar2-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .nectar2-icon-svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .nectar2-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+  
+  .nectar2-card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nectar2 {
+    padding: 40px 0;
+  }
+  
+  .nectar2-card {
+    padding: 20px;
+  }
+  
+  .nectar2-card-title {
+    font-size: 1.125rem;
+  }
+  
+  .nectar2-card-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+.curex-vs-nectar {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.comparison-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.comparison-title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333333;
+  margin: 0 0 48px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.comparison-content {
+  text-align: center;
+}
+
+.comparison-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 24px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.comparison-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .curex-vs-nectar {
+    padding: 40px 0;
+  }
+  
+  .comparison-container {
+    padding: 0 16px;
+  }
+  
+  .comparison-title {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+  }
+  
+  .comparison-paragraph {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-title {
+    font-size: 2rem;
+  }
+  
+  .comparison-paragraph {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+}

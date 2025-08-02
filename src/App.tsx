@@ -8,6 +8,7 @@ import Immunotherapy101 from './pages/Immunotherapy101'
 import ImmunoScience from './pages/ImmunoScience'
 import AllergyDrops from './pages/AllergyDrops'
 import AllergyShots from './components/AllergyShots/AllergyShots'
+import AllergyClinic from './pages/AllergyClinic'
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
         <Route path="/immuno-science" element={<ImmunoScience />} />
         <Route path="/allergy-drops" element={<AllergyDrops />} />
         <Route path="/allergy-shots" element={<AllergyShots />} />
+        <Route path="/allergy-clinic" element={<AllergyClinic />} />
       </Routes>
       <Footer />
     </BrowserRouter>

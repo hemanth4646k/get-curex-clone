@@ -1,0 +1,221 @@
+.allergy-associates {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.allergy-associates-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.allergy-associates-title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333333;
+  margin: 0 0 48px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.allergy-associates-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.allergy-associates-image-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.allergy-associates-building-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.allergy-associates-text-column {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.allergy-associates-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.table-header {
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border: 1px solid #e5e7eb;
+}
+
+.table-header:first-child {
+  background-color: #f9fafb;
+  color: #374151;
+}
+
+.curex-header {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.online-header {
+  background-color: #ffffff;
+  color: #374151;
+}
+
+.local-header {
+  background-color: #ffffff;
+  color: #374151;
+}
+
+.table-row-alt {
+  background-color: #f9fafb;
+}
+
+.table-row-header {
+  padding: 16px;
+  font-weight: 500;
+  text-align: left;
+  background-color: #f9fafb;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.table-cell {
+  padding: 16px;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #e5e7eb;
+}
+
+.curex-cell {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.online-cell {
+  background-color: #ffffff;
+  color: #374151;
+}
+
+.local-cell {
+  background-color: #ffffff;
+  color: #374151;
+}
+
+.price-affordable {
+  background-color: #22c55e !important;
+  color: #ffffff !important;
+}
+
+.price-expensive {
+  background-color: #ec4899 !important;
+  color: #ffffff !important;
+}
+
+.price-most-expensive {
+  background-color: #ec4899 !important;
+  color: #ffffff !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .allergy-associates {
+    padding: 40px 0;
+  }
+  
+  .allergy-associates-container {
+    padding: 0 16px;
+  }
+  
+  .allergy-associates-title {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+  }
+  
+  .allergy-associates-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .allergy-associates-text-column {
+    padding-top: 0;
+  }
+  
+  .allergy-associates-paragraph {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  
+  .table-header {
+    padding: 12px 8px;
+    font-size: 1rem;
+  }
+  
+  .table-row-header,
+  .table-cell {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .allergy-associates-title {
+    font-size: 2rem;
+  }
+  
+  .allergy-associates-paragraph {
+    font-size: 0.9rem;
+  }
+  
+  .table-header {
+    padding: 10px 6px;
+    font-size: 0.875rem;
+  }
+  
+  .table-row-header,
+  .table-cell {
+    padding: 10px 6px;
+    font-size: 0.8rem;
+  }
+}
+.comparison-table tr {
+  display: table-row;
+}
+.comparison-table th,
+.comparison-table td {
+  display: table-cell;
+  vertical-align: middle;
+}
