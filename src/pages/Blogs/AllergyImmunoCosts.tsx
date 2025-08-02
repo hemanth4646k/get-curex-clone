@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogHero from '../../common/ui/BlogHero';
-import './blogContent.css'; // Adjust the import path as necessary
+import './BlogContent.css'; 
 const AllergyImmunoCosts: React.FC = () => {
   return (
     <div>
