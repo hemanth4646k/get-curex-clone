@@ -1,0 +1,82 @@
+import React from 'react';
+import './InsurancePartners.css';
+
+const InsurancePartners: React.FC = () => {
+  return (
+    <section className="insurance-partners">
+      <div className="insurance-partners-container">
+        {/* Title */}
+        <h2 className="insurance-partners-title">
+          Our lab partners accept insurance.
+        </h2>
+        
+        {/* Insurance Logos Row */}
+        <div className="insurance-logos">
+          <div className="logo-item">
+            <img 
+              src="" 
+              alt="UnitedHealthcare insurance provider logo" 
+              className="logo-image"
+            />
+          </div>
+          <div className="logo-item">
+            <img 
+              src="" 
+              alt="Aetna insurance provider logo in purple" 
+              className="logo-image"
+            />
+          </div>
+          <div className="logo-item">
+            <img 
+              src="" 
+              alt="BlueCross BlueShield insurance provider logo" 
+              className="logo-image"
+            />
+          </div>
+          <div className="logo-item">
+            <img 
+              src="" 
+              alt="Anthem insurance provider logo in blue" 
+              className="logo-image"
+            />
+          </div>
+          <div className="logo-item">
+            <img 
+              src="" 
+              alt="Centene insurance provider logo" 
+              className="logo-image"
+            />
+          </div>
+          <div className="logo-item">
+            <img 
+              src="" 
+              alt="Humana insurance provider logo in green" 
+              className="logo-image"
+            />
+          </div>
+        </div>
+        
+        {/* Insurance Information Text */}
+        <div className="insurance-info">
+          <p className="insurance-coverage-text">
+            Insurance covers clinical consultations.
+          </p>
+          <p className="subscription-text">
+            Subscription fee (from $59/month not billed to insurance) covers immunotherapy, shipping & related costs.
+          </p>
+        </div>
+        
+        {/* HSA/FSA Badge */}
+        <div className="hsa-fsa-badge">
+          <img 
+            src="" 
+            alt="HSA/FSA approved badge - pink circular badge indicating Health Savings Account and Flexible Spending Account compatibility" 
+            className="badge-image"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default InsurancePartners;
