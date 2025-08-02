@@ -14,7 +14,7 @@ import CatShots from "./CatShots";
 import DogShots from "./DogShots";
 import WhatsAllergenImmunoT from "./WhatsAllergenImmunoT";
 import ShotsVsDrops from "./ShotsVsDrops";
-import EndPromo from "../AllergyDrops/EndPromo";
+import EndPromo from "../../common/EndPromo";
 import Faqs from "./Faqs";
 
 export default function AllergyShots() {

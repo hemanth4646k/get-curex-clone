@@ -16,8 +16,8 @@ const Footer = () => {
       { text: 'Allergy Drops', href: '/allergy-drops', isInternal: true },
       { text: 'Allergy Shots', href: '/allergy-shots', isInternal: true },
       { text: 'Allergy Clinic', href: '/allergy-clinic', isInternal: true },
-      { text: 'Allergy Medicine', href: '#' },
-      { text: 'Allergy Testing', href: '#' }
+      { text: 'Allergy Medicine', href: '/allergy-medicine', isInternal: true },
+      { text: 'Allergy Testing', href: '/allergy-testing', isInternal: true }
     ],
     column3: [
       { text: 'Allergy Immunotherapy', href: '#' },

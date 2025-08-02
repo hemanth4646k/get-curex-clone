@@ -1,0 +1,130 @@
+.hero-container {
+  width: 100%;
+  background: #fff;
+  padding: 48px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  width: 100%;
+  gap: 32px;
+}
+
+.hero-text-content {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.hero-cta-button {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 32px;
+  transition: background 0.2s;
+}
+.hero-cta-button:hover {
+  background: #2563eb;
+}
+
+.hero-info-cards {
+  display: flex;
+  gap: 24px;
+}
+
+.hero-image-content {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-product-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-package-image {
+  width: 260px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+.hero-decorative-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+.hero-circle-1 {
+  width: 120px;
+  height: 120px;
+  background: #3b82f6;
+  top: -40px;
+  left: -40px;
+}
+.hero-circle-2 {
+  width: 80px;
+  height: 80px;
+  background: #f59e42;
+  bottom: -30px;
+  right: -30px;
+}
+.hero-circle-3 {
+  width: 60px;
+  height: 60px;
+  background: #f43f5e;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 900px) {
+  .hero-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-image-content {
+    margin-top: 24px;
+  }
+}

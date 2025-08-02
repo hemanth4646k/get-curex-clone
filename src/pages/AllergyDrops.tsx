@@ -3,7 +3,7 @@ import DropCost from "../components/AllergyDrops/DropCost";
 import DropsForCats from "../components/AllergyDrops/DropsForCats";
 import DropsForFoodAllergies from "../components/AllergyDrops/DropsForFoodAllergies";
 import DropsVsShots from "../components/AllergyDrops/DropsVsShots";
-import EndPromo from "../components/AllergyDrops/EndPromo";
+import EndPromo from "../common/EndPromo";
 import FAQ from "../components/AllergyDrops/Faq";
 import FDAApproved from "../components/AllergyDrops/FDAApproved";
 import AllergyDropsHero from "../components/AllergyDrops/Hero";
