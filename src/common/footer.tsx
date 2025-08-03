@@ -23,7 +23,7 @@ const Footer = () => {
       { text: 'Allergy Immunotherapy', href: '/blog-posts/allergy-immunotherapy', isInternal: true },
       { text: 'Allergy Immunotherapy Costs', href: '/blog-posts/allergy-immunotherapy-costs', isInternal: true },
       { text: 'Food Allergy Immunotherapy', href: '#' },
-      { text: 'Cat Allergy Immunotherapy', href: '#' },
+      { text: 'Cat Allergy Immunotherapy', href: '/blog-posts/cat-allergies', isInternal: true },
       { text: 'Sublingual Immunotherapy', href: '#' },
       { text: 'Wynohi Reviews', href: '#' },
       { text: 'Online Reviews', href: '#' },

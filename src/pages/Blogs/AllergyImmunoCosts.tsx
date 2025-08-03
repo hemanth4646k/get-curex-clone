@@ -25,7 +25,7 @@ const AllergyImmunoCosts: React.FC = () => {
         <h2 className="blog-section-title">Is at-home allergy immunotherapy more cost-effective than allergy shots?</h2>
         <div className="blog-content-block">
           <p>It depends! Again, it usually depends on your health insurance, the allergy immunotherapy manufacturer and your doctor.</p>
-          <p>Health insurance doesn’t cover some types of sublingual immunotherapy or <a href="https://getcurex.com/blog-posts/allergy-drops-a-complete-guide-to-sublingual-immunotherapy" target="_blank" rel="noopener noreferrer">allergy drops</a>, though some plans do cover certain sublingual immunotherapy tablets. Some FSA plans cover allergy plans, such as <a href="https://getcurex.com/plans/prevention-plus" target="_blank" rel="noopener noreferrer">Curex’s prevention-plus plan</a>.&nbsp;</p>
+          <p>Health insurance doesn't cover some types of sublingual immunotherapy or <a href="https://getcurex.com/blog-posts/allergy-drops-a-complete-guide-to-sublingual-immunotherapy" target="_blank" rel="noopener noreferrer">allergy drops</a>, though some plans do cover certain sublingual immunotherapy tablets. Some FSA plans cover allergy plans, such as <a href="https://getcurex.com/plans/prevention-plus" target="_blank" rel="noopener noreferrer">Curex's prevention-plus plan</a>.&nbsp;</p>
           <p>If you have health insurance, the upfront costs for allergy shots may be lower than at-home immunotherapy costs. If your health insurance covers allergy shots, you may only need to pay a co-pay, or you may not need to pay anything at all!</p>
           <p>The biggest downsides to allergy shots include the time investment and possible side effects.</p>
         </div>
@@ -36,15 +36,15 @@ const AllergyImmunoCosts: React.FC = () => {
         <div className="blog-content-block">
           <p>Allergy shots are time-and-labor-intensive. Doses are usually administered weekly during the build-up phase and monthly during the maintenance phase.&nbsp;</p>
           <p>Your clinician may ask you to stay for up to 30 minutes after your doses for observation for side effects including anaphylaxis.</p>
-          <p>When considering allergy shots you should ask yourself if you can really steal away from work or home for the time it takes to get your allergy shot, commute to and from the clinician’s office and tack on up to 30 minutes for observation after your appointment.&nbsp;</p>
+          <p>When considering allergy shots you should ask yourself if you can really steal away from work or home for the time it takes to get your allergy shot, commute to and from the clinician's office and tack on up to 30 minutes for observation after your appointment.&nbsp;</p>
           <p>Since it takes 6 to 24 months for immunotherapy to work, this is a major time commitment.</p>
         </div>
         <h2 className="blog-section-title">Is Allergy Immunotherapy Less Expensive Than Allergy Medication?</h2>
         <div className="blog-content-block">
           <p>Not necessarily — though it can be over time.</p>
           <p>Depending on your allergy medication, the severity of your symptoms and your allergy symptoms triggers, you may end up spending more on allergy medication than you do on allergy immunotherapy.</p>
-          <p>Since there are several different types of allergy immunotherapy (we’ll get to that later!), it’s difficult to determine what is more expensive: allergy medication or immunotherapy. Other factors may also lessen the cost of allergy medication or allergy immunotherapy, too, such as whether or not you have health insurance and your health insurance plan, copay, out-of-pocket costs, and more.</p>
-          <p>Also, allergy immunotherapy doesn’t always mean that you will not ever spend on allergy medications. For some, it can lead to a resolution of symptoms. For others, it might be that symptoms are less intense and fewer medications are needed only once in a while.&nbsp;</p>
+          <p>Since there are several different types of allergy immunotherapy (we'll get to that later!), it's difficult to determine what is more expensive: allergy medication or immunotherapy. Other factors may also lessen the cost of allergy medication or allergy immunotherapy, too, such as whether or not you have health insurance and your health insurance plan, copay, out-of-pocket costs, and more.</p>
+          <p>Also, allergy immunotherapy doesn't always mean that you will not ever spend on allergy medications. For some, it can lead to a resolution of symptoms. For others, it might be that symptoms are less intense and fewer medications are needed only once in a while.&nbsp;</p>
           <p>What we can do is look at the costs of different allergy medications and allergy immunotherapy and what these treatments may cost with or without health insurance.</p>
         </div>
         <div className="blog-image-block">
@@ -62,7 +62,7 @@ const AllergyImmunoCosts: React.FC = () => {
         <div className="blog-content-block">
           <p>Antihistamine costs vary, depending on the type of antihistamine. There are several popular antihistamine brands and types available, including Claritin (Loratadine), Zyrtec (Cetirizine HCl), Allegra (Fexofenadine Hydrochloride), and Xyzal (Levocetirizine).&nbsp;</p>
           <p>These are all also available as generic medications for a fraction of the cost of the brand-name antihistamines.&nbsp;&nbsp;</p>
-          <p>You don’t need a prescription to purchase any of these antihistamines, though your doctor may still write a prescription for a different antihistamine, and your doctor can guide you about which antihistamine might be best for your symptoms.</p>
+          <p>You don't need a prescription to purchase any of these antihistamines, though your doctor may still write a prescription for a different antihistamine, and your doctor can guide you about which antihistamine might be best for your symptoms.</p>
           <p>Most over-the-counter brand-name antihistamines cost between $17 and $20 for a 30-day supply.&nbsp;</p>
           <p>The following prices are approximate; medications may cost more or less, depending on the retailer, sales, coupons, etc.</p>
         </div>
@@ -105,46 +105,46 @@ const AllergyImmunoCosts: React.FC = () => {
         <h2 className="blog-section-title">Does prescription allergy medication cost more?</h2>
         <div className="blog-content-block">
           <p>Not necessarily. This depends on the medication and your health insurance plan.</p>
-          <p>Many insurance companies cover the cost of some common generic prescription medications, such as antihistamines and nasal sprays. You may only need to pay your co-pay when purchasing these medications with insurance. If you don’t pay a co-pay for medications and your allergy medication is covered, you won’t need to pay anything!</p>
+          <p>Many insurance companies cover the cost of some common generic prescription medications, such as antihistamines and nasal sprays. You may only need to pay your co-pay when purchasing these medications with insurance. If you don't pay a co-pay for medications and your allergy medication is covered, you won't need to pay anything!</p>
           <p>Many patients prefer to get a prescription for allergy medication because their health insurance covers these meds.&nbsp;</p>
         </div>
         <h2 className="blog-section-title">Allergy Testing Costs</h2>
         <div className="blog-content-block">
           <p>Before starting allergy treatments, your health care provider will test you to identify your allergic triggers. You may be allergic to both indoor and outdoor allergens.&nbsp;</p>
-          <p>There are two ways to detect allergies, including blood and skin scratch tests. Skin scratch tests are performed in a provider’s office by a medical professional, while blood tests may be performed at home or in a clinical lab.</p>
+          <p>There are two ways to detect allergies, including blood and skin scratch tests. Skin scratch tests are performed in a provider's office by a medical professional, while blood tests may be performed at home or in a clinical lab.</p>
           <p>Depending on your insurance, deductible and out-of-pocket expenses, you may need to pay for these tests which can cost a few hundred dollars depending on how many tests your health care provider does or orders.&nbsp;</p>
         </div>
         <h3 className="blog-subsection-title">Skin Scratch Tests</h3>
         <div className="blog-content-block">
-          <p>Skin scratch tests may be performed at a health care provider’s office. Small amounts of allergens are placed and lightly scratched onto the skin and monitored for reactions.&nbsp;</p>
+          <p>Skin scratch tests may be performed at a health care provider's office. Small amounts of allergens are placed and lightly scratched onto the skin and monitored for reactions.&nbsp;</p>
           <p>The costs of these tests can vary, depending on whether or not you have health insurance, your health insurance plan, and your medical provider.</p>
-          <p>If you have health insurance, you could pay as little as nothing for the test if you have no out-of-pocket expenses and the tests are covered by your insurance, (but again, this depends on your health insurance plan). If you don’t have health insurance, you could pay up to $300 or more for the testing depending on how many tests your provider does (not including the cost for the consultation).</p>
+          <p>If you have health insurance, you could pay as little as nothing for the test if you have no out-of-pocket expenses and the tests are covered by your insurance, (but again, this depends on your health insurance plan). If you don't have health insurance, you could pay up to $300 or more for the testing depending on how many tests your provider does (not including the cost for the consultation).</p>
         </div>
         <h3 className="blog-subsection-title">Clinical Labs</h3>
         <div className="blog-content-block">
           <p>Blood tests, such as ImmunoCAP and Immulite tests are highly accurate. These tests are FDA-approved and detect the most common indoor and outdoor allergens.</p>
-          <p>If you don’t have health insurance, blood tests may cost up to $1,000. If you do have health insurance, they may start at $25 plus your copay (again, depending on your plan). Curex accepts both insurance and out-of-pocket payments for allergy testing, and they have partnerships with labs allowing them to offer better deals on allergy testing when paid without insurance.</p>
+          <p>If you don't have health insurance, blood tests may cost up to $1,000. If you do have health insurance, they may start at $25 plus your copay (again, depending on your plan). Curex accepts both insurance and out-of-pocket payments for allergy testing, and they have partnerships with labs allowing them to offer better deals on allergy testing when paid without insurance.</p>
           <p>You also may need to travel to a clinical lab (Quest, LabCorp, etc.) for the blood draw, which also takes time.&nbsp;</p>
           <p>Turnaround time is usually at least three to five days.&nbsp;</p>
         </div>
         <h3 className="blog-subsection-title">At-Home Concierge Allergy Testing</h3>
         <div className="blog-content-block">
-          <p>Another option if you don’t want to do a skin scratch test or go to a clinical lab for a blood draw is an at-home concierge blood test.&nbsp;</p>
-          <a href="https://getcurex.com/what-is-fda-approval" target="_blank" rel="noopener noreferrer">Curex’s FDA-cleared</a> ImmunoCAP at-home concierge blood test is performed in your home or office by a phlebotomist. It tests for the 25 most common allergens, and more allergens can be added.
+          <p>Another option if you don't want to do a skin scratch test or go to a clinical lab for a blood draw is an at-home concierge blood test.&nbsp;</p>
+          <a href="https://getcurex.com/what-is-fda-approval" target="_blank" rel="noopener noreferrer">Curex's FDA-cleared</a> ImmunoCAP at-home concierge blood test is performed in your home or office by a phlebotomist. It tests for the 25 most common allergens, and more allergens can be added.
           <p>Like a blood test performed in a clinical lab, the at-home ImmunoCAP test reports total IgE and specific allergen IgE.</p>
           <p>Results are available in three to five days.&nbsp;</p>
-          <p>Curex’s at-home concierge test is normally priced at $199, but Curex is offering a steep discount through the end of January, with this VIP concierge allergy test available at $49 through January 31, 2022.&nbsp;</p>
+          <p>Curex's at-home concierge test is normally priced at $199, but Curex is offering a steep discount through the end of January, with this VIP concierge allergy test available at $49 through January 31, 2022.&nbsp;</p>
         </div>
         <h2 className="blog-section-title">Allergy Immunotherapy Costs</h2>
         <div className="blog-content-block">
-          <p>Unlike most allergy medications, such as antihistamines and nasal sprays, allergy immunotherapy doesn’t just treat the symptoms of allergies.&nbsp;</p>
-          <p>Small amounts of allergens are introduced to the body, training your body’s immune system to develop a resistance to them.&nbsp;</p>
+          <p>Unlike most allergy medications, such as antihistamines and nasal sprays, allergy immunotherapy doesn't just treat the symptoms of allergies.&nbsp;</p>
+          <p>Small amounts of allergens are introduced to the body, training your body's immune system to develop a resistance to them.&nbsp;</p>
           <p>Allergy immunotherapy is available sublingually or subcutaneously, and costs vary between the different types of immunotherapy.&nbsp;</p>
         </div>
         <h3 className="blog-subsection-title">How much do allergy shots cost?</h3>
         <div className="blog-content-block">
-          <a href="https://getcurex.com/blog-posts/side-effects-of-allergy-shots" target="_blank" rel="noopener noreferrer">Allergy shots</a> may be covered completely by your insurance or can cost thousands of dollars every year depending on your health care provider and copay. Again, this all depends on your health insurance plan, copay and deductible. If you don’t have health insurance, the costs may be higher.
-          <p>Since allergy shots must be administered by a medical professional, one of the major costs of subcutaneous immunotherapy can be the copay if he or she charges one for allergy shots, and the time spent commuting to and from a clinician’s office.&nbsp;</p>
+          <a href="https://getcurex.com/blog-posts/side-effects-of-allergy-shots" target="_blank" rel="noopener noreferrer">Allergy shots</a> may be covered completely by your insurance or can cost thousands of dollars every year depending on your health care provider and copay. Again, this all depends on your health insurance plan, copay and deductible. If you don't have health insurance, the costs may be higher.
+          <p>Since allergy shots must be administered by a medical professional, one of the major costs of subcutaneous immunotherapy can be the copay if he or she charges one for allergy shots, and the time spent commuting to and from a clinician's office.&nbsp;</p>
           <p>Allergy shots are administered usually once a week during the build-up phase (and monthly during the maintenance phase). Once on maintenance shots, the recommended treatment time is three to five years. The time spent getting the shots and remaining in the office for supervision can really add up!</p>
           <p>And if you miss a dose or if you develop a reaction? Your provider will have to scale back on your dose and build you back up, meaning the whole process may take even longer.&nbsp;</p>
         </div>

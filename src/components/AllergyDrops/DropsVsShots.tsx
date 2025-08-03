@@ -1,3 +1,5 @@
+
+import ComparisonTable from '../../common/ui/ComparisonTable';
 import './DropsVsShots.css';
 
 const DropsVsShots1 = () => {
@@ -117,117 +119,34 @@ const DropsVsShots: React.FC = () => {
     <div>
         <DropsVsShots1 />
         <div className="drops-vs-shots-container2">
-      <div className="comparison-table2">
-        <div className="header-row2">
-          <div className="header-cell2 empty-header2"></div>
-          <div className="header-cell2 curex-header2">
-            <div className="header-content2">
-              <div className="header-image2">
-                <img src="" alt="Curex drops" className="curex-image2" />
-              </div>
-              <h2 className="header-title2">Curex</h2>
-            </div>
-          </div>
-          <div className="header-cell2 shots-header2">
-            <div className="header-content2">
-              <div className="header-image2">
-                <img src="" alt="Allergy shots" className="shots-image2" />
-              </div>
-              <h2 className="header-title2">Allergy Shots</h2>
-            </div>
-          </div>
+          {
+            // ComparisonTable usage
+          }
+          {
+            // ComparisonTable usage
+          }
+          <ComparisonTable
+            columns={[
+              { key: 'curex', label: 'Curex', imageSrc: '', imageAlt: 'Curex drops' },
+              { key: 'shots', label: 'Allergy Shots', imageSrc: '', imageAlt: 'Allergy shots' },
+            ]}
+            rows={[
+              { key: 'athome', label: 'At-home treatment', values: [<div className="checkmark2">✓</div>, <div className="cross2">✕</div>] },
+              { key: 'clinician', label: 'Access to clinician via text/call/zoom', values: [<div className="checkmark2">✓</div>, <div className="cross2">✕</div>] },
+              { key: 'noninvasive', label: 'Non-invasive application?', values: [<div className="checkmark2">✓</div>, <div className="cross2">✕</div>] },
+              { key: 'noneedles', label: 'No Scary Needles', values: [<div className="checkmark2">✓</div>, <div className="cross2">✕</div>] },
+              { key: 'noschool', label: 'No Time Away From School', values: [<div className="checkmark2">✓</div>, <div className="cross2">✕</div>] },
+              { key: 'nocommute', label: 'No More Commutes to the Allergist', values: [<div className="checkmark2">✓</div>, <div className="cross2">✕</div>] },
+              { key: 'time', label: 'Time spent per year', values: [<div className="time-text2">Less than 2 hours</div>, <div className="time-text2">Over 52 hours</div>] },
+              { key: 'price', label: 'Price', values: [
+                <><div className="price-text2">$59/month</div><div className="price-subtext2">+ copay</div></>,
+                <div className="price-text2">$2,000 - $5,000</div>
+              ], isPriceRow: true },
+              { key: 'cta', label: '', values: ['', ''], isCtaRow: true },
+            ]}
+            ctaButton={<button className="cta-button2">Start a free Quiz Now</button>}
+          />
         </div>
-
-        <div className="feature-row2">
-          <div className="feature-label2">At-home treatment</div>
-          <div className="feature-value2 curex-value2">
-            <div className="checkmark2">✓</div>
-          </div>
-          <div className="feature-value2 shots-value2">
-            <div className="cross2">✕</div>
-          </div>
-        </div>
-
-        <div className="feature-row2">
-          <div className="feature-label2">Access to clinician via text/call/zoom</div>
-          <div className="feature-value2 curex-value2">
-            <div className="checkmark2">✓</div>
-          </div>
-          <div className="feature-value2 shots-value2">
-            <div className="cross2">✕</div>
-          </div>
-        </div>
-
-        <div className="feature-row2">
-          <div className="feature-label2">Non-invasive application?</div>
-          <div className="feature-value2 curex-value2">
-            <div className="checkmark2">✓</div>
-          </div>
-          <div className="feature-value2 shots-value2">
-            <div className="cross2">✕</div>
-          </div>
-        </div>
-
-        <div className="feature-row2">
-          <div className="feature-label2">No Scary Needles</div>
-          <div className="feature-value2 curex-value2">
-            <div className="checkmark2">✓</div>
-          </div>
-          <div className="feature-value2 shots-value2">
-            <div className="cross2">✕</div>
-          </div>
-        </div>
-
-        <div className="feature-row2">
-          <div className="feature-label2">No Time Away From School</div>
-          <div className="feature-value2 curex-value2">
-            <div className="checkmark2">✓</div>
-          </div>
-          <div className="feature-value2 shots-value2">
-            <div className="cross2">✕</div>
-          </div>
-        </div>
-
-        <div className="feature-row2">
-          <div className="feature-label2">No More Commutes to the Allergist</div>
-          <div className="feature-value2 curex-value2">
-            <div className="checkmark2">✓</div>
-          </div>
-          <div className="feature-value2 shots-value2">
-            <div className="cross2">✕</div>
-          </div>
-        </div>
-
-        <div className="feature-row2 time-row2">
-          <div className="feature-label2">Time spent per year</div>
-          <div className="feature-value2 curex-value2">
-            <div className="time-text2">Less than 2 hours</div>
-          </div>
-          <div className="feature-value2 shots-value2">
-            <div className="time-text2">Over 52 hours</div>
-          </div>
-        </div>
-
-        <div className="price-row2">
-          <div className="price-label2">Price</div>
-          <div className="price-value2 curex-price2">
-            <div className="price-text2">$59/month</div>
-            <div className="price-subtext2">+ copay</div>
-          </div>
-          <div className="price-value2 shots-price2">
-            <div className="price-text2">$2,000 - $5,000</div>
-          </div>
-        </div>
-
-        <div className="cta-row2">
-          <div className="cta-cell2 empty-cta2"></div>
-          <div className="cta-cell2">
-            <button className="cta-button2">Start a free Quiz Now</button>
-          </div>
-          <div className="cta-cell2 empty-cta2"></div>
-        </div>
-      </div>
-    </div>
     </div>
     
   );

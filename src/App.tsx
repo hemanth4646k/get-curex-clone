@@ -13,6 +13,8 @@ import AllergyMedicine from './pages/AllergyMedicine'
 import AllergyTesting from './pages/AllergyTesting'
 import AllergyImmunotherapyBlog from './pages/Blogs/AllergyImmunoTherapy'
 import AllergyImmunoCosts from './pages/Blogs/AllergyImmunoCosts'
+import Food from './pages/Food'
+import CatAllergyBlog from './pages/Blogs/CatAllergies'
 
 function App() {
   
@@ -31,6 +33,8 @@ function App() {
         <Route path="/allergy-testing" element={<AllergyTesting />} />
         <Route path="/blog-posts/allergy-immunotherapy" element={<AllergyImmunotherapyBlog />} />
         <Route path="/blog-posts/allergy-immunotherapy-costs" element={<AllergyImmunoCosts />} />
+        <Route path="/blog-posts/cat-allergies" element={<CatAllergyBlog />} />
+        <Route path="/food" element={<Food />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,0 +1,89 @@
+.small-icon-cards {
+  width: 100%;
+  padding: 48px 0;
+  background: #fff;
+}
+
+.small-icon-cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.small-icon-cards-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.small-icon-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.small-icon-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 24px 24px 24px;
+  min-width: 160px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.small-icon-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.small-icon-card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-icon-card-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #22223b;
+  text-align: center;
+  margin: 0;
+}
+
+/* Example bgColor classes (customize as needed) */
+.yellow { background: #fffbe6; }
+.light-blue { background: #e6f7ff; }
+.blue { background: #e0e7ff; }
+.green { background: #e6fffa; }
+.pink { background: #fff0f6; }
+.light-yellow { background: #fef9c3; }
+.light-gray { background: #f3f4f6; }
+
+@media (max-width: 900px) {
+  .small-icon-cards-grid {
+    gap: 20px;
+  }
+  .small-icon-card {
+    min-width: 120px;
+    max-width: 160px;
+    padding: 20px 10px 16px 10px;
+  }
+}
