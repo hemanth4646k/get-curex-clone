@@ -16,6 +16,7 @@ import AllergyImmunoCosts from './pages/Blogs/AllergyImmunoCosts'
 import Food from './pages/Food'
 import CatAllergyBlog from './pages/Blogs/CatAllergies'
 import SubLingualImmunoTherapy from './pages/SubLingualImmunoTherapy'
+import WyndlyReview from './pages/WindlyReview'
 
 function App() {
   
@@ -36,6 +37,7 @@ function App() {
         <Route path="/blog-posts/allergy-immunotherapy-costs" element={<AllergyImmunoCosts />} />
         <Route path="/blog-posts/cat-allergies" element={<CatAllergyBlog />} />
         <Route path="/food" element={<Food />} />
+        <Route path="/wyndly-reviews" element={<WyndlyReview />} />
         <Route path="/sublingual-immunotherapy" element={<SubLingualImmunoTherapy />} />
       </Routes>
       <Footer />
