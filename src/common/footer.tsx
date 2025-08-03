@@ -24,7 +24,7 @@ const Footer = () => {
       { text: 'Allergy Immunotherapy Costs', href: '/blog-posts/allergy-immunotherapy-costs', isInternal: true },
       { text: 'Food Allergy Immunotherapy', href: '#' },
       { text: 'Cat Allergy Immunotherapy', href: '/blog-posts/cat-allergies', isInternal: true },
-      { text: 'Sublingual Immunotherapy', href: '#' },
+      { text: 'Sublingual Immunotherapy', href: '/sublingual-immunotherapy', isInternal: true },
       { text: 'Wynohi Reviews', href: '#' },
       { text: 'Online Reviews', href: '#' },
       { text: 'About Curex', href: '#' },

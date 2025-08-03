@@ -5,7 +5,7 @@ import './DescCard.css';
 interface DescCardProps {
   heading: string;
   desc: string | ReactNode;
-  imgSrc: string;
+  imgSrc: string | ReactElement;
   buttonEle?: ReactElement;
   imagePosition?: 'left' | 'right';
   id?: string;
@@ -34,7 +34,11 @@ function DescCard({
           }}
         >
           <div className="DescCard-image-column" style={{ flex: '0 1 45%', maxWidth: '50%' }}>
-            <img src={imgSrc} alt={heading} className="DescCard-image" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            {typeof imgSrc === 'string' ? (
+              <img src={imgSrc} alt={heading} className="DescCard-image" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            ) : (
+              imgSrc
+            )}
           </div>
           <div className="DescCard-text-column" style={{ flex: '1 1 55%', maxWidth: '60%' }}>
           <h1 className="DescCard-title">{heading}</h1>
