@@ -11,9 +11,9 @@ const Hero = () => {
           <p className="hero-subtitle">
             Curex is the easiest way to treat allergies at home without allergy shots.
           </p>
-          
+
           <button className="hero-cta-button">Am I eligible?</button>
-          
+
           {/* Stats Cards */}
           <div className="hero-stats">
             <div className="hero-stat-card">
@@ -27,12 +27,12 @@ const Hero = () => {
                 <span className="hero-stat-description">Online Allergy & Asthma Clinic</span>
               </div>
             </div>
-            
+
             <div className="hero-stat-card">
               <div className="hero-stat-people">
-                <img className="hero-person-image" alt="Happy user 1" />
-                <img className="hero-person-image" alt="Happy user 2" />
-                <img className="hero-person-image" alt="Happy user 3" />
+
+
+                <img src="/componentimages/home/home3.png" alt="" />
               </div>
               <div className="hero-stat-text">
                 <span className="hero-stat-number hero-stat-number-pink">50,000+</span>
@@ -41,11 +41,11 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Right side - Hand with bottle */}
         <div className="hero-right">
           <div className="hero-image-container">
-            <img className="hero-hand-image" alt="Hand holding Curex allergy treatment bottle" />
+            <img className="hero-hand-image" src='/componentimages/home/home1.png' alt="Hand holding Curex allergy treatment bottle" />
           </div>
         </div>
       </div>
