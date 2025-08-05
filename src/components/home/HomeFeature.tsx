@@ -7,7 +7,7 @@ const HomeFeature = () => {
         <div className="home-feature-content">
           <div className="home-feature-image">
             <img 
-              src="/src/assets/allergy-drops-woman.jpg" 
+              src="/componentimages/home/home4.png" 
               alt="Woman using allergy drops" 
               className="feature-image"
             />

@@ -43,7 +43,7 @@ const HomeComparisonTable = () => {
                 <h3>Curex Plans</h3>
                 <div className="header-image">
                   <img 
-                    src="/src/assets/curex-package.jpg" 
+                    src="/componentimages/home/home5.png" 
                     alt="Curex package" 
                     className="curex-image"
                   />
@@ -55,7 +55,7 @@ const HomeComparisonTable = () => {
                 <h3>Allergy Shots</h3>
                 <div className="header-image">
                   <img 
-                    src="/src/assets/allergy-shot.jpg" 
+                    src="/componentimages/home/home6.png" 
                     alt="Allergy shot injection" 
                     className="allergy-shot-image"
                   />

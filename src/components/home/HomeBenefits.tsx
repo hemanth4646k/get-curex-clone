@@ -40,7 +40,7 @@ const HomeBenefits = () => {
           
           <div className="home-benefits-image">
             <img 
-              src="/curex-package.jpg" 
+              src="/componentimages/home/home2.png" 
               alt="Curex allergy treatment package with 'Relief is here' message"
               className="home-benefits-img"
             />
