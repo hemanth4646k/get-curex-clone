@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './blogMainHero.css';
+import './BlogMainHero.css';
 import BlogsContainer from "../../components/BlogMain/BlogsContainer";
 interface BlogMainHeroProps {
   onFiltersChange?: (filters: string[]) => void;
