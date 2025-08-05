@@ -26,7 +26,7 @@ const Footer = () => {
       { text: 'Cat Allergy Immunotherapy', href: '/blog-posts/cat-allergies', isInternal: true },
       { text: 'Sublingual Immunotherapy', href: '/sublingual-immunotherapy', isInternal: true },
       { text: 'Wyndly Reviews', href: '/wyndly-reviews', isInternal: true },
-      { text: 'Online Reviews', href: '#' },
+      { text: 'Online Reviews', href: '/reviews', isInternal: true },
       { text: 'About Curex', href: '#' },
       { text: 'Blog', href: '#' },
       { text: 'Clinic', href: '#' },

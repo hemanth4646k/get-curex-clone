@@ -94,7 +94,7 @@ const FaqWR = () => (
           <h2>FAQs</h2>
         </div>
       </div>
-      <Faq faqs={faqData} />
+      <Faq faqs={faqData} title="FAQs"/>
     </div>
   </div>
 );
