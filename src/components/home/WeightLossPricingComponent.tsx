@@ -14,7 +14,7 @@ const WeightLossPricingComponent = () => {
         <div className="pricing-content">
           <div className="pricing-image">
             <img 
-              src="/src/assets/women-exercising.jpg" 
+              src="/componentimages/home/home10.png" 
               alt="Two women exercising outdoors" 
               className="exercise-image"
             />

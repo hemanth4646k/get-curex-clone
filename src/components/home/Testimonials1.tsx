@@ -39,7 +39,7 @@ const Testimonials1 = () => {
             <div key={customer.id} className={`customer-image-card card-${index + 1}`}>
               <div className="customer-image-wrapper">
                 <img 
-                  src={customer.src} 
+                  src='/componentimages/home/home7.png' 
                   alt={customer.alt}
                   className="customer-image"
                 />

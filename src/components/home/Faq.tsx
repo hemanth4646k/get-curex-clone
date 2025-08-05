@@ -16,7 +16,7 @@ const FaqItem = ({ question, answer, isOpen = false }: FaqItemProps) => {
 
   return (
     <div className="faq_accordion">
-      <div 
+      <div
         className={`faqs_accordion-header ${isExpanded ? 'w--open' : ''}`}
         onClick={toggleExpanded}
         role="button"
@@ -31,19 +31,19 @@ const FaqItem = ({ question, answer, isOpen = false }: FaqItemProps) => {
         <div className="faqs_accordion-header-text">{question}</div>
         <div className={`accordion-icon ${isExpanded ? 'expanded' : ''}`}>
           <svg width="26" height="13" viewBox="0 0 26 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path 
-              d="M1 1.17578L10.78 11.1191C11.935 12.2934 13.825 12.2934 14.98 11.1191L24.76 1.17578" 
-              stroke="black" 
-              strokeWidth="1.5" 
-              strokeMiterlimit="10" 
-              strokeLinecap="round" 
+            <path
+              d="M1 1.17578L10.78 11.1191C11.935 12.2934 13.825 12.2934 14.98 11.1191L24.76 1.17578"
+              stroke="black"
+              strokeWidth="1.5"
+              strokeMiterlimit="10"
+              strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
         </div>
       </div>
       <div className={`accordion-body ${isExpanded ? 'w--open' : ''}`}>
-        <div 
+        <div
           className="text-rich-text-faqs"
           dangerouslySetInnerHTML={{ __html: answer }}
         />

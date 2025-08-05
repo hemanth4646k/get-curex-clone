@@ -8,7 +8,7 @@ const HowItWorks = () => {
       description: 'It only takes a few minutes to answer a few questions about your medical history',
       icon: 'form-icon',
       bgColor: 'light-blue',
-      image: '/src/assets/fill-form.jpg'
+      image: '/componentimages/home/home8.png'
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ const HowItWorks = () => {
       description: 'Curex providers can connect with you via Zoom or text',
       icon: 'provider-icon',
       bgColor: 'pink',
-      image: '/src/assets/doctor-provider.jpg'
+      image: '/componentimages/home/home9.png'
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const HowItWorks = () => {
       description: 'Get your allergy treatment delivered to your door',
       icon: 'treatment-icon',
       bgColor: 'yellow',
-      image: '/src/assets/treatment-package.jpg'
+      image: '/componentimages/home/home5.png'
     }
   ];
 
