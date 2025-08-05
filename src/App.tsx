@@ -19,6 +19,8 @@ import SubLingualImmunoTherapy from './pages/SubLingualImmunoTherapy'
 import WyndlyReview from './pages/WindlyReview'
 import Reviews from './pages/Reviews'
 import About from './pages/About'
+import Blogs from './pages/Blogs/BlogMain'
+import BlogsRouter from './pages/RemainingFooter/BlogsRouter'
 
 function App() {
   
@@ -42,6 +44,8 @@ function App() {
         <Route path="/wyndly-reviews" element={<WyndlyReview />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/*" element={<BlogsRouter />} />
         <Route path="/sublingual-immunotherapy" element={<SubLingualImmunoTherapy />} />
       </Routes>
       <Footer />
