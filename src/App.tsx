@@ -18,6 +18,7 @@ import CatAllergyBlog from './pages/Blogs/CatAllergies'
 import SubLingualImmunoTherapy from './pages/SubLingualImmunoTherapy'
 import WyndlyReview from './pages/WindlyReview'
 import Reviews from './pages/Reviews'
+import About from './pages/About'
 
 function App() {
   
@@ -40,6 +41,7 @@ function App() {
         <Route path="/food" element={<Food />} />
         <Route path="/wyndly-reviews" element={<WyndlyReview />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/about" element={<About />} />
         <Route path="/sublingual-immunotherapy" element={<SubLingualImmunoTherapy />} />
       </Routes>
       <Footer />

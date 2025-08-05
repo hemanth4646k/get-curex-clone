@@ -27,7 +27,7 @@ const Footer = () => {
       { text: 'Sublingual Immunotherapy', href: '/sublingual-immunotherapy', isInternal: true },
       { text: 'Wyndly Reviews', href: '/wyndly-reviews', isInternal: true },
       { text: 'Online Reviews', href: '/reviews', isInternal: true },
-      { text: 'About Curex', href: '#' },
+      { text: 'About Curex', href: '/about', isInternal: true },
       { text: 'Blog', href: '#' },
       { text: 'Clinic', href: '#' },
       { text: 'Allergens', href: '#' },
