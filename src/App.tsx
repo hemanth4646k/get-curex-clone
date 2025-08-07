@@ -22,6 +22,7 @@ import About from './pages/About'
 import Blogs from './pages/Blogs/BlogMain'
 import BlogsRouter from './pages/RemainingFooter/BlogsRouter'
 import PlansPrevention from './pages/header/PlansPrevention'
+import InsuranceFaqs from './pages/header/InsuranceFaqs'
 
 function App() {
   
@@ -49,6 +50,7 @@ function App() {
         <Route path="/blogs/*" element={<BlogsRouter />} />
         <Route path="/sublingual-immunotherapy" element={<SubLingualImmunoTherapy />} />
         <Route path="/plans/prevention-plus" element={<PlansPrevention />} />
+        <Route path="/insurance-faqs" element={<InsuranceFaqs />} />
       </Routes>
       <Footer />
     </BrowserRouter>
