@@ -7,7 +7,7 @@ const Navbar = () => {
   const immunotherapyItems = [
     { label: 'How it works', href: '/plans/prevention-plus' },
     { label: 'Insurance', href: '/insurance-faqs' },
-    { label: 'Science', href: '/immunotherapy-science' },
+    { label: 'Science', href: '/immuno-science' },
     { label: 'Kids', href: '/kids-allergy-care' },
     { label: 'Pets', href: '/pets' },
     { label: 'Safety', href: '/safety' },

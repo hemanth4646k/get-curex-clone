@@ -1,3 +1,26 @@
+
+function Part2(){
+  return(
+    <div
+        style={{
+          backgroundColor: "#f6f6f6",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: "20px",
+          borderRadius: "1rem",
+          padding: "0 2rem",
+          paddingBottom: "2rem",       }}
+      >
+        <img style={{borderRadius: "1rem",}} src="/partners.png" alt="" />
+        <h1 style={{ fontSize: "18px", marginBottom: "10px" }}>
+          “Immunotherapy can be amazing”
+        </h1>
+        <br />
+        <img src="/NewYorkTimesLogo.png" alt="" width={150} />
+      </div>
+  )
+}
 function Review2() {
   return (
     <div style={{
@@ -28,23 +51,9 @@ function Review2() {
           allowFullScreen
         ></iframe>
       </div>
-      <div
-        style={{
-          backgroundColor: "#f6f6f6",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginTop: "20px",
-        }}
-      >
-        <img src="/partners.png" alt="" />
-        <h1 style={{ fontSize: "18px", marginBottom: "10px" }}>
-          “Immunotherapy can be amazing”
-        </h1>
-        <br />
-        <img src="/NewYorkTimesLogo.png" alt="" width={150} />
-      </div>
+      <Part2 />
     </div>
   );
 }
 export default Review2;
+export {Part2};

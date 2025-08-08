@@ -23,6 +23,7 @@ import Blogs from './pages/Blogs/BlogMain'
 import BlogsRouter from './pages/RemainingFooter/BlogsRouter'
 import PlansPrevention from './pages/header/PlansPrevention'
 import InsuranceFaqs from './pages/header/InsuranceFaqs'
+import KidsAllergyCare from './pages/header/KidsAllergyCare'
 
 function App() {
   
@@ -51,6 +52,7 @@ function App() {
         <Route path="/sublingual-immunotherapy" element={<SubLingualImmunoTherapy />} />
         <Route path="/plans/prevention-plus" element={<PlansPrevention />} />
         <Route path="/insurance-faqs" element={<InsuranceFaqs />} />
+        <Route path="/kids-allergy-care" element={<KidsAllergyCare />} />
       </Routes>
       <Footer />
     </BrowserRouter>
