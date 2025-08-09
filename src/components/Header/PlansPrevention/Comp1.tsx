@@ -188,7 +188,7 @@ export function HowCurexWorks() {
       </div>
   );
 }
-function UnderstandingCurex(){
+export function UnderstandingCurex(){
   return (
     <div style={{ padding: "2rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
       <h1>Understanding Curex</h1>

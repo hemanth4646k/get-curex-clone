@@ -1,0 +1,178 @@
+.table-container {
+  background-color: #f8fbff;
+  border-radius: 12px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.table_component {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 
+.table_head {
+  background-color: #fff9c4;
+} */
+
+.table_row.is-header th {
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.table_row.is-header th:first-child {
+  width: 40%;
+  text-align: left;
+}
+
+.table_header.is-yellow {
+  background-color: #fff9c4;
+  width: 30%;
+}
+
+.table_header {
+  width: 30%;
+}
+
+.table_row {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table_row-header {
+  padding: 15px 20px;
+  text-align: left;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.table_row-header.is-subrow {
+  padding-left: 40px;
+  font-weight: normal;
+}
+
+.table_row-header.has-subrows {
+  vertical-align: top;
+}
+
+.table_cell {
+  padding: 15px 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.table_cell.is-yellow {
+  background-color: #fff9c4;
+  font-weight: bold;
+}
+
+.table_cell.is-subrow {
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.prices-pricing_icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.prices-pricing_icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.table_bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #333;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.table_cell_pricing-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pricing-global {
+  font-weight: bold;
+  color: #333;
+}
+
+.text-display-inline {
+  display: inline;
+}
+
+.hide-mobile-portrait {
+  display: inline;
+}
+
+.show-mobile-portrait {
+  display: none;
+}
+
+.promotion-note {
+  margin-top: 15px;
+  font-size: 13px;
+  text-align: center;
+  color: #555;
+  font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .table-container {
+    padding: 15px;
+  }
+  
+  .table_row-header,
+  .table_cell {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .table_row-header.is-subrow {
+    padding-left: 30px;
+  }
+  
+  .hide-mobile-portrait {
+    display: none;
+  }
+  
+  .show-mobile-portrait {
+    display: inline;
+  }
+  
+  .prices-pricing_icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table_component {
+    font-size: 12px;
+  }
+  
+  .table_row-header,
+  .table_cell {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  
+  .table_row.is-header th {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+}
