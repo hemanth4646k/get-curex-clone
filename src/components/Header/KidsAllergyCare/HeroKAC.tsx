@@ -10,137 +10,175 @@ function HeroKAC() {
         ctaText="Take out Free quiz"
         imageSrc="/alternative_allergy_shots.webp"
       />
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 2fr 1fr",
-          gap: "20px",
-          padding: "2rem 4rem",
-        }}
-      >
-        <img src="/female_with_dog.webp" alt="" />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            height: "100%",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "#dbe36cff",
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-              minWidth: "14rem",
-              paddingTop: ".5rem",
-              paddingBottom: ".5rem",
-              paddingLeft: "1rem",
-              paddingRight: "1rem",
-              fontFamily: "Lausanne",
-              fontSize: "20px",
-              fontWeight: 500,
-              lineHeight: 1.5,
-              transform: "rotate(-5deg)",
-            }}
-          >
-            CJ Morgan
-          </div>
-          <br />
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1.25fr 1fr",
-              gap: "10px",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                textAlign: "center",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#a7e3ffff",
-                padding: "1rem 1.5rem",
-                paddingBottom: "2.5rem",
-                borderRadius: "0.5rem",
-              }}
-            >
-              “My kids and I were sick of the weekly allergy shot appointments,
-              and the thousands of dollars we were paying for treatment.”
+      <KidsTestimonials />
+    </div>
+  );
+}
+
+export function KidsTestimonials() {
+  return (
+    <div className="section_testimonials2">
+      <div className="padding-global">
+        <div className="container-medium">
+          <div className="padding-section-medium">
+            <div className="testimonials-grid_wrapper" style={{ display: 'flex', flexDirection: 'column' }}>
+              {/* Main testimonials grid */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+                {/* Left column with image */}
+                <div className="curexwyndly-testimonials_content-left-wrapper" style={{ flex: '1', minWidth: '250px' }}>
+                  <div className="curexwyndly-testimonials_image1-wrapper" style={{ position: 'relative' }}>
+                    <img 
+                      src="/componentimages/home/home7.png" 
+                      alt="Person with Curex box" 
+                      style={{ width: '100%', borderRadius: '8px' }}
+                      className="curexwyndly-testimonials_image1"
+                    />
+                  </div>
+                </div>
+                
+                {/* Center column with testimonials */}
+                <div className="curexwyndly-testimonials_content-centre-wrapper" style={{ flex: '2', minWidth: '300px' }}>
+                  {/* Top row testimonials */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginBottom: '15px' }}>
+                    {/* Blue testimonial */}
+                    <div className="curexwyndly-testimonials_item1" style={{ 
+                      flex: '1', 
+                      backgroundColor: '#a7e3ffff', 
+                      padding: '20px',
+                      borderRadius: '8px',
+                      minWidth: '250px',
+                      position: 'relative'
+                    }}>
+                      <div className="box-card-label-wrapper" style={{ marginBottom: '10px' }}>
+                        <div style={{ 
+                          backgroundColor: '#FFF176', 
+                          display: 'inline-block',
+                          padding: '5px 15px',
+                          borderRadius: '4px',
+                          fontWeight: '500'
+                        }}>
+                          <p className="curexshots4-testimonials_customer-name">Tiffany</p>
+                        </div>
+                      </div>
+                      <p className="curexwyndly-testimonials_review" style={{ fontSize: '14px' }}>
+                        "Curex has greatly improved my daughters allergies and asthma... The process and care team has been to work wtih. After a year on CUREX there is a big improvement... Im looking forward to seeing what results she'll have in another year of using the drops. Now that I have an HSA, I'M going to also sign myself up and see if I can get rid of my year round allergies and puffy eyes!"
+                      </p>
+                    </div>
+                    
+                    {/* Pink testimonial */}
+                    <div className="curexwyndly-testimonials_item1 is-pink" style={{ 
+                      flex: '1', 
+                      backgroundColor: '#f3a7ffff', 
+                      padding: '20px',
+                      borderRadius: '8px',
+                      minWidth: '250px'
+                    }}>
+                      <div className="box-card-label-wrapper" style={{ marginBottom: '10px' }}>
+                        <div style={{ 
+                          backgroundColor: '#FFF176', 
+                          display: 'inline-block',
+                          padding: '5px 15px',
+                          borderRadius: '4px',
+                          fontWeight: '500'
+                        }}>
+                          <p className="curexshots4-testimonials_customer-name">Helen</p>
+                        </div>
+                      </div>
+                      <p className="curexwyndly-testimonials_review" style={{ fontSize: '14px' }}>
+                        My son has been using these drops for two years. It's been life changing. He no longer has to take allergy medication everyday and can enjoy being a kid outside without itching the whole time!
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Bottom row testimonials */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px' }}>
+                    {/* Yellow testimonial */}
+                    <div className="curexwyndly-testimonials_item1 is-yellow" style={{ 
+                      flex: '1', 
+                      backgroundColor: '#FFF176', 
+                      padding: '20px',
+                      borderRadius: '8px',
+                      minWidth: '250px'
+                    }}>
+                      <div className="box-card-label-wrapper" style={{ marginBottom: '10px' }}>
+                        <div style={{ 
+                          backgroundColor: '#f3a7ffff', 
+                          display: 'inline-block',
+                          padding: '5px 15px',
+                          borderRadius: '4px',
+                          fontWeight: '500'
+                        }}>
+                          <p className="curexshots4-testimonials_customer-name">Simone</p>
+                        </div>
+                      </div>
+                      <p className="curexwyndly-testimonials_review" style={{ fontSize: '14px' }}>
+                        "We have noticed an improvement with our son's allergies in just the 4 months we have started the program. Very easy and convenient to use."
+                      </p>
+                    </div>
+                    
+                    {/* Green testimonial */}
+                    <div className="curexwyndly-testimonials_item1 is-green" style={{ 
+                      flex: '1', 
+                      backgroundColor: '#76f194ff', 
+                      padding: '20px',
+                      borderRadius: '8px',
+                      minWidth: '250px',
+                      position: 'relative'
+                    }}>
+                      <div className="box-card-label-wrapper" style={{ marginBottom: '10px' }}>
+                        <div style={{ 
+                          backgroundColor: '#f3a7ffff', 
+                          display: 'inline-block',
+                          padding: '5px 15px',
+                          borderRadius: '4px',
+                          fontWeight: '500'
+                        }}>
+                          <p className="curexshots4-testimonials_customer-name">CJ Morgan</p>
+                        </div>
+                      </div>
+                      <p className="curexwyndly-testimonials_review" style={{ fontSize: '14px' }}>
+                        "My kids and I were sick of the weekly allergy shot appointments... We actually were sitting in the waiting room on one of our weekly appointments when we saw an ad for Curex allergy drops!.. The drops are quick and easy - much better than getting poked every week. And the communication with Curex has been top notch. Overall a great experience for us the last few months!"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Right column with image */}
+                <div className="curexwyndly-testimonials_content-right-wrapper" style={{ flex: '1', minWidth: '250px' }}>
+                  <div className="curexwyndly-testimonials_image2-wrapper" style={{ position: 'relative' }}>
+                    <img 
+                      src="/componentimages/home/home10.png" 
+                      alt="Person using allergy drops" 
+                      style={{ width: '100%', borderRadius: '8px' }}
+                      className="curexwyndly-testimonials_image1"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Button section */}
+              <div className="testimonials2_button-wrapper" style={{ 
+                display: 'flex', 
+                justifyContent: 'center',
+                marginTop: '30px'
+              }}>
+                <Link to="/reviews" className="button is-link" style={{
+                  backgroundColor: 'transparent',
+                  color: '#fd1ebeff',
+                  textDecoration: 'underline',
+                  fontWeight: '500',
+                  fontSize: '16px',
+                  padding: '10px 20px',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}>Read More Verified Reviews</Link>
+              </div>
             </div>
-            <div
-              style={{
-                display: "flex",
-                textAlign: "center",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#f3a7ffff",
-                padding: "1rem 1.5rem",
-                borderRadius: "0.5rem",
-                paddingBottom: "2.5rem",
-              }}
-            >
-              “The drops are quick and easy”
-            </div>
-          </div>
-          <br />
-          <div
-            style={{
-              backgroundColor: "#76f194ff",
-              padding: "1rem 1.5rem",
-              paddingBottom: "2.5rem",
-              borderRadius: "0.5rem",
-              width: "60%",
-            }}
-          >
-            “The price is much lower, everything was handled online- even the
-            consultation with the allergist!”
           </div>
         </div>
-        <img src="/female_with_box.webp" alt="" />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginTop: 24,
-        }}
-      >
-        <div style={{ display: "flex", gap: 2, marginBottom: 2 }}>
-          {Array.from({ length: 5 }).map((_, i) => (
-            <svg
-              key={i}
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="#1ea7fd"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 2l2.917 6.26L22 9.27l-5 4.87L18.834 22 12 18.27 5.166 22 7 14.14l-5-4.87 7.083-1.01z" />
-            </svg>
-          ))}
-        </div>
-        <span style={{ fontSize: 16, fontWeight: 400, marginTop: 2 }}>
-          Reviewed on
-          <img src="/icons/google_logo.svg"  alt="Google Logo" style={{display: "inline-block", marginLeft: "4px"}}/>
-        </span>
-      </div>
-      <br />
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <Link to="/reviews" style={{
-            textDecoration: "underline",
-            color: "#fd1ebeff",
-            fontWeight: 500,
-            fontSize: 16,
-          }}>Read More Verified Reviews</Link>
       </div>
     </div>
   );
 }
+
 export default HeroKAC;

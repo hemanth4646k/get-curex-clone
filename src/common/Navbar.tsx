@@ -28,12 +28,12 @@ const Navbar = () => {
     { label: 'Sign Up for a Free Webinar', href: 'https://calendly.com/webinar-curex/allergy-immunotherapy' },
     { label: 'Reviews', href: '/see-our-reviews' },
     { label: 'Immunotherapy 101', href: '/immunotherapy-101' },
-    { label: 'Science', href: '/immunotherapy-science' },
+    { label: 'Science', href: '/immuno-science' },
     { label: 'Allergy Drops', href: '/allergy-drops' },
     { label: 'Allergy Shots', href: '/allergy-shots' },
     { label: 'Allergy Clinic', href: '/best-allergy-clinic' },
     { label: 'Allergy Medicine', href: '/allergy-medicine' },
-    { label: 'Blog', href: '/blog' },
+    { label: 'Blog', href: '/blogs' },
     { label: 'For Doctors', href: '/partners' }
   ];
 

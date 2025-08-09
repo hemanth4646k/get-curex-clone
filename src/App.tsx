@@ -28,6 +28,10 @@ import Pets from './pages/header/Pets'
 import Safety from './pages/header/Safety'
 import AllergyTest from './pages/header/AllergyTest'
 import GettingStarted from './pages/header/GettingStarted'
+import Pricing from './pages/header/Pricing'
+import ImmunoSciKids from './pages/header/ImmunoSciKids'
+import KidsReviews from './pages/header/KidsReviews'
+import GettingStartedKids from './pages/header/GettingStartedKids'
 
 function App() {
   
@@ -61,6 +65,10 @@ function App() {
         <Route path="/safety" element={<Safety />} />
         <Route path="/allergy-test" element={<AllergyTest />} />
         <Route path="/getting-started" element={<GettingStarted />} />
+        <Route path="/getting-started-kids" element={<GettingStartedKids />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/immunotherapy-science-kids" element={<ImmunoSciKids />} />
+        <Route path="/see-our-reviews-kids" element={<KidsReviews />} />
       </Routes>
       <Footer />
     </BrowserRouter>
