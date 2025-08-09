@@ -1,0 +1,141 @@
+.testimonialsSection {
+  width: 100%;
+  background: #fff;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonialsLabel {
+  color: #a5a81d;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #222;
+}
+
+.cardsContainer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  background: #f8fafd;
+  border-radius: 1.1rem;
+  box-shadow: 0 6px 24px rgba(52,52,52,0.04), 0 1.5px 6px rgba(52,52,52,0.02);
+  width: 270px;
+  padding: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 110px;
+  background: #1a1b22;
+  border-radius: 1.1rem 1.1rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.videoIcon {
+  background: #fc4b86;
+  width: 45px;
+  height: 45px;
+  mask: url('play_icon.svg') center/cover no-repeat;
+  /* Add your play icon SVG in mask src or use an <img> in the videoPlaceholder */
+  display: inline-block;
+}
+
+.nameTag {
+  margin-top: -16px;
+  background: #c5f0c0;
+  color: #222;
+  font-weight: 600;
+  padding: 0.19rem 0.87rem;
+  border-radius: 0.36rem;
+  font-size: 1.07rem;
+  align-self: flex-start;
+  margin-left: 1.1rem;
+  box-shadow: 0 2px 6px rgba(165,168,29,0.07);
+  position: relative;
+  z-index: 2;
+  transform: rotate(-5deg);
+}
+
+.quoteBox {
+  background: #cce8fd;
+  padding: 1.1rem 1.1rem 1.5rem 1.1rem;
+  margin-top: 1rem;
+  border-radius: 0.75rem;
+  min-height: 130px;
+  text-align: left;
+  width: calc(100% - 2.2rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stars {
+  color: #222;
+  font-size: 1.26rem;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1.6px;
+  margin-bottom: 0.6rem;
+}
+
+.quoteText {
+  color: #222;
+  font-size: 1.06rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.allergyInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.32rem;
+  margin-top: 1rem;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1.7px solid #a5a81d;
+  display: inline-block;
+  /* You can add icon SVGs or images here; for now, it's just a placeholder circle */
+}
+
+.allergyText {
+  color: #222;
+  font-size: 0.93rem;
+  margin-left: 0.34rem;
+}
+
+@media (max-width: 1080px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}

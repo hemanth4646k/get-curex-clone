@@ -24,6 +24,8 @@ import BlogsRouter from './pages/RemainingFooter/BlogsRouter'
 import PlansPrevention from './pages/header/PlansPrevention'
 import InsuranceFaqs from './pages/header/InsuranceFaqs'
 import KidsAllergyCare from './pages/header/KidsAllergyCare'
+import Pets from './pages/header/Pets'
+import Safety from './pages/header/Safety'
 
 function App() {
   
@@ -53,6 +55,8 @@ function App() {
         <Route path="/plans/prevention-plus" element={<PlansPrevention />} />
         <Route path="/insurance-faqs" element={<InsuranceFaqs />} />
         <Route path="/kids-allergy-care" element={<KidsAllergyCare />} />
+        <Route path="/pets" element={<Pets />} />
+        <Route path="/safety" element={<Safety />} />
       </Routes>
       <Footer />
     </BrowserRouter>
