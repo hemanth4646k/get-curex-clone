@@ -26,6 +26,8 @@ import InsuranceFaqs from './pages/header/InsuranceFaqs'
 import KidsAllergyCare from './pages/header/KidsAllergyCare'
 import Pets from './pages/header/Pets'
 import Safety from './pages/header/Safety'
+import AllergyTest from './pages/header/AllergyTest'
+import GettingStarted from './pages/header/GettingStarted'
 
 function App() {
   
@@ -57,6 +59,8 @@ function App() {
         <Route path="/kids-allergy-care" element={<KidsAllergyCare />} />
         <Route path="/pets" element={<Pets />} />
         <Route path="/safety" element={<Safety />} />
+        <Route path="/allergy-test" element={<AllergyTest />} />
+        <Route path="/getting-started" element={<GettingStarted />} />
       </Routes>
       <Footer />
     </BrowserRouter>

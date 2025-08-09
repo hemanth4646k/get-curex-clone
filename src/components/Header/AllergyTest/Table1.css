@@ -1,0 +1,178 @@
+.table-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+.medical-tests-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-family: 'Segoe UI', 'Inter', 'Roboto', Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+
+
+.medical-tests-table thead {
+  background-color: #f6f6f6;
+}
+
+
+.medical-tests-table th {
+  padding: 10px 8px;
+  text-align: left;
+  font-weight: 700;
+  color: #22223b;
+  border-bottom: 2.5px solid #bfc0c0;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1.08em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, #f6f6f6 80%, #e9ecef 100%);
+  box-shadow: 0 1px 0 #e5e7eb;
+  max-width: 120px;
+}
+
+.medical-tests-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+  color: #22223b;
+  font-size: 1em;
+  font-weight: 500;
+  background-clip: padding-box;
+  transition: background 0.2s, color 0.2s;
+  word-break: break-word;
+  max-width: 140px;
+}
+
+
+.row-grey {
+  background-color: #f6f6f6;
+}
+.row-yellow {
+  background-color: #fffde7;
+}
+
+.medical-tests-table tbody tr:hover td {
+  background: #e0e7ff;
+  color: #22223b;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(60,60,120,0.06);
+}
+
+.test-name-cell {
+  min-width: 200px;
+}
+
+.test-name-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.test-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #f3e8ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.test-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.test-name {
+  font-weight: 700;
+  color: #2d3142;
+  font-size: 1.05em;
+  letter-spacing: 0.01em;
+}
+
+.icon-cell {
+  text-align: center;
+  width: 80px;
+}
+
+.check-icon {
+  color: #10b981;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #d1fae5;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.x-icon {
+  color: #ef4444;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #fee2e2;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .medical-tests-table {
+    font-size: 12px;
+  }
+  
+  .medical-tests-table th,
+  .medical-tests-table td {
+    padding: 12px 8px;
+  }
+  
+  .test-name-container {
+    gap: 8px;
+  }
+  
+  .test-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .test-icon img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    margin: 0 -16px;
+  }
+  
+  .medical-tests-table {
+    font-size: 11px;
+  }
+  
+  .medical-tests-table th,
+  .medical-tests-table td {
+    padding: 8px 6px;
+  }
+}

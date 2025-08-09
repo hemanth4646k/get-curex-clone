@@ -168,7 +168,7 @@ function Comp5() {
   );
 }
 
-function HowCurexWorks() {
+export function HowCurexWorks() {
   return (
     <div >
         <h1>How Curex works</h1>

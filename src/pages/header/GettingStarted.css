@@ -1,0 +1,213 @@
+.getting-started-container {
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.getting-started-content {
+  width: 100%;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.tabs-section {
+  width: 100%;
+}
+
+.tabs-menu {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.tab-button {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tab-button:first-child {
+  border-radius: 50px 0 0 50px;
+}
+
+.tab-button:last-child {
+  border-radius: 0 50px 50px 0;
+}
+
+.tab-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.tab-button:not(.active) {
+  background-color: #e9ecef;
+  color: #666;
+}
+
+.tab-button:not(.active):hover {
+  background-color: #dee2e6;
+}
+
+.tab-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.steps-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.step-number-wrapper {
+  flex-shrink: 0;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ff6b9d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.step-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  padding-top: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .getting-started-container {
+    padding: 20px 16px;
+  }
+  
+  .main-title {
+    font-size: 28px;
+    font-weight: normal;
+    width: 100%;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .tabs-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 400px;
+    margin: 0 auto 40px auto;
+  }
+  
+  .tab-button {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+  
+  .tab-button:first-child {
+    border-radius: 50px 50px 0 0;
+  }
+  
+  .tab-button:last-child {
+    border-radius: 0 0 50px 50px;
+  }
+  
+  .steps-container {
+    padding: 24px 20px;
+    margin: 0 -16px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .step-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
+  }
+  
+  .tab-button {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+  
+  .steps-container {
+    padding: 20px 16px;
+  }
+  
+  .step-item {
+    gap: 12px;
+  }
+  
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .step-description {
+    font-size: 14px;
+  }
+}
