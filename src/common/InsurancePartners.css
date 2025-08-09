@@ -3,16 +3,18 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
 }
 
 .insurance-partners-title {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   line-height: 1.3;
 }
 
@@ -30,8 +32,7 @@
   height: 40px;
   width: auto;
   object-fit: contain;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .insurance-logo:hover {
@@ -39,45 +40,46 @@
 }
 
 .insurance-info {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .insurance-coverage-text {
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 
 .subscription-fee-text {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.4;
-  max-width: 600px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .hsa-fsa-badge {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .hsa-fsa-logo {
-  height: 60px;
+  height: 70px;
   width: auto;
   object-fit: contain;
 }
 
 .start-quiz-button {
-  background: linear-gradient(135deg, #ff6b9d, #ff8cc8);
+  background: #ff6b9d;
   color: white;
   border: none;
-  padding: 16px 32px;
-  border-radius: 25px;
-  font-size: 16px;
+  padding: 16px 40px;
+  border-radius: 35px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  margin-bottom: 20px;
 }
 
 .start-quiz-button:hover {

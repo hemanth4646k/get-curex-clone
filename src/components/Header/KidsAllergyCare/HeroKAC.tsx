@@ -8,7 +8,7 @@ function HeroKAC() {
         heading="#1 Pediatrician-Approved Alternative to Allergy Shots"
         subtitle="Control your child's allergies without the hassle of shots."
         ctaText="Take out Free quiz"
-        imageSrc="/YellowSyringes.avif"
+        imageSrc="/alternative_allergy_shots.webp"
       />
       <KidsTestimonials />
     </div>

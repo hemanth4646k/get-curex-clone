@@ -89,7 +89,7 @@ import DescCard from "../../../common/ui/DescCard";
                 borderRadius: "14px",
                 display: "block",
               }}
-              src="with-curex-img.jpg"
+              src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/61f2ed67945c4f8383541d95_Curex%20cat%20allergies-1.avif"
               alt="Person holding cat outdoors, blue sky"
             />
           </div>
@@ -190,7 +190,7 @@ import DescCard from "../../../common/ui/DescCard";
                 borderRadius: "14px",
                 display: "block",
               }}
-              src="without-curex-img.jpg"
+              src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/61f2ef0c2643780655d1ecbb_Triggers-curex.avif"
               alt="Person holding cat, bright pink background"
             />
           </div>
@@ -256,7 +256,7 @@ function Comp1() {
       <DescCard
         heading="The Science of Immunotherapy to the Rescue!"
         desc="Curex helps reduce your pet allergies over time through immunotherapy - Our clinicians will formulate a treatment for you to develop immunity to cats, dogs or other allergens."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/61bcf0c424785479fdefedb3_feature-3.svg"
         imagePosition="right"
       />
       <InsurancePartnersCommon/>

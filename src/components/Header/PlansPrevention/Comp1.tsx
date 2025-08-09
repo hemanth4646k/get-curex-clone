@@ -13,7 +13,7 @@ function Comp1() {
       <DescCard
         heading="Stop allergies at the source."
         desc="Curex is a convenient alternative to time-consuming allergy shots."
-        imgSrc=""
+        imgSrc="/Curex-science.webp"
         buttonEle={
           <button
             style={{
@@ -54,6 +54,9 @@ function BundleComp() {
       <Comp4 />
       <div style={{ textAlign: "center", padding: "2rem 0" }}>
         <h1>Immunotherapy's Natural Ingredients: Farm to Pharmacy</h1>
+       
+        
+
         <DescCard
           heading=""
           desc={
@@ -68,7 +71,7 @@ function BundleComp() {
               </p>
             </>
           }
-          imgSrc=""
+          imgSrc="/harvesting_img.jpg"
           imagePosition="right"
         />
 
@@ -85,7 +88,7 @@ function BundleComp() {
               </p>
             </>
           }
-          imgSrc=""
+          imgSrc="/preparation_img.avif"
         />
         <DescCard
           heading=""
@@ -100,7 +103,7 @@ function BundleComp() {
               </p>
             </>
           }
-          imgSrc=""
+          imgSrc="/testing_img.avif"
           imagePosition="right"
         />
       </div>
@@ -142,23 +145,60 @@ function BundleComp() {
 function Comp5() {
   return (
     <div style={{ padding: "2rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <h2>Why prevention is more effective than allergy medicine</h2>
-      <br />
-      <div style={{display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px", width:"80%"}}>
-        <div style={{width:"60%", textAlign: "center", margin: "0 auto"}}>
-          <b>Exposure therapy:</b>
-          <p>Train your immune system to fight allergies rather than treat them with medications</p>
-          <img src="" alt="person-svg" />
+      <h1 style={{ fontSize: "2rem", fontWeight: "bold", textAlign: "center", marginBottom: "2rem" }}>
+        Why prevention is more effective than allergy medicine
+      </h1>
+      <div style={{
+        display: "grid", 
+        gridTemplateColumns: "repeat(3,1fr)", 
+        gap: "40px", 
+        width:"90%", 
+        maxWidth: "1200px"
+      }}>
+        <div style={{textAlign: "center"}}>
+          <b style={{ color: "#555", fontSize: "1.2rem", display: "block", marginBottom: "0.5rem" }}>Exposure therapy:</b>
+          <p style={{ fontSize: "1rem", marginBottom: "1.5rem" }}>
+            Train your immune system to fight allergies rather than treat them with medications
+          </p>
+          <img 
+            src="/icons/exposure_theraphy.png" 
+            alt="Exposure therapy illustration" 
+            style={{ 
+              width: "100px", 
+              height: "auto",
+              margin: "0 auto" 
+            }} 
+          />
         </div>
-        <div style={{width:"80%", textAlign: "center", margin: "0 auto"}}>
-          <b>Desensitization:</b>
-          <p>Symptoms subside as your body desensitized to allergies reducing or eliminating the need for daily medication</p>
-          <img src="" alt="person-svg" />
+        <div style={{textAlign: "center"}}>
+          <b style={{ color: "#555", fontSize: "1.2rem", display: "block", marginBottom: "0.5rem" }}>Desensitization:</b>
+          <p style={{ fontSize: "1rem", marginBottom: "1.5rem" }}>
+            Symptoms subside as your body desensitized to allergies reducing or eliminating the need for daily medication
+          </p>
+          <img 
+            src="/icons/desensitization.png" 
+            alt="Desensitization illustration" 
+            style={{ 
+              width: "100px", 
+              height: "auto",
+              margin: "0 auto" 
+            }} 
+          />
         </div>
-        <div style={{width:"60%", textAlign: "center", margin: "0 auto"}}>
-          <b>Exposure Prevention:</b>
-          <p> Immunotherapy helps prevent and fight allergies at the source</p>
-          <img src="" alt="person-svg" />
+        <div style={{textAlign: "center"}}>
+          <b style={{ color: "#555", fontSize: "1.2rem", display: "block", marginBottom: "0.5rem" }}>Prevention:</b>
+          <p style={{ fontSize: "1rem", marginBottom: "1.5rem" }}>
+            Immunotherapy helps prevent and fight allergies at the source
+          </p>
+          <img 
+            src="/icons/prevention.png" 
+            alt="Prevention illustration" 
+            style={{ 
+              width: "100px", 
+              height: "auto",
+              margin: "0 auto" 
+            }} 
+          />
         </div>
       </div>
       <InsurancePartnersCommon/>
@@ -174,15 +214,15 @@ export function HowCurexWorks() {
         <h1>How Curex works</h1>
         <br />
         <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-          <img src="/YellowSyringes.avif" alt="Curex process" style={{width: "30%", borderRadius: "1rem"}} />
+          <img src="/get_your_allergy_test.webp" alt="Curex process" style={{width: "23rem",height: "21rem",borderRadius: "1rem"}} />
           <h2 style={{fontWeight: "lighter", margin: "0 1rem"}}>Get Your Allergy Test</h2>
         </div><br />
         <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
           <h2 style={{fontWeight: "lighter", margin: "0 1rem"}}>Consult with an Expert Online</h2>
-          <img src="/YellowSyringes.avif" alt="Curex process" style={{width: "30%", borderRadius: "1rem"}} />
+          <img src="/consult_with_expert.webp" alt="Curex process" style={{width: "23rem",height: "21rem",borderRadius: "1rem"}} />
         </div><br />
         <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-          <img src="/YellowSyringes.avif" alt="Curex process" style={{width: "30%", borderRadius: "1rem"}} />
+                <img src="/start_treatment_at_home.jpg" alt="Curex process" style={{width: "24rem",height: "16rem",borderRadius: "1rem"}} />
           <h2 style={{fontWeight: "lighter", margin: "0 1rem"}}>Start Treatment at Home</h2>
         </div>
       </div>
@@ -197,17 +237,17 @@ export function UnderstandingCurex(){
         <div style={{width:"60%", textAlign: "center", margin: "0 auto"}}>
           <b>Allergy Testing:</b>
           <p>Allows Curex clinicians to effectively prescribe personalized treatment plans based on specific allergy results.</p>
-          <img src="" alt="person-svg" />
+          <img src="/icons/exposure_theraphy.png" alt="person-svg" />
         </div>
         <div style={{width:"80%", textAlign: "center", margin: "0 auto"}}>
           <b>Desensitization:</b>
           <p>immunotherapy helps symptoms subside as you desensitizes to allergens reducing the need for medications</p>
-          <img src="" alt="person-svg" />
+          <img src="/icons/desensitization.png" alt="person-svg" />
         </div>
         <div style={{width:"60%", textAlign: "center", margin: "0 auto"}}>
           <b>Prevention:</b>
           <p>Continued immunotherapy helps prevent and fight allergies at the source providing long-term allergy relief.</p>
-          <img src="" alt="person-svg" />
+          <img src="/icons/prevention.png" alt="person-svg" />
         </div>
       </div>
     </div>

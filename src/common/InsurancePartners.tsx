@@ -25,7 +25,7 @@ const InsuranceInfo: React.FC = () => (
       Insurance covers clinical consultations.
     </p>
     <p className="subscription-fee-text">
-      Subscription fee ($149/month not billed to insurance) covers immunotherapy, shipping &related costs.
+      Subscription fee (from $59/month not billed to insurance) covers immunotherapy, shipping & related costs.
     </p>
   </div>
 );
