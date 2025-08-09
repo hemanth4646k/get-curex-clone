@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({
             </div>
             <div className="info-card users-card">
               <div className="card-icon">
-                <img src="" alt="Happy users" className="users-image" />
+                <img src="/happy_users.webp" alt="Happy users" className="users-image" style={{height:"70px", width:"100px"}}/>
               </div>
               <div className="card-text">
                 <span className="card-number">50,000+</span>

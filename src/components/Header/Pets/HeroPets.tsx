@@ -7,6 +7,7 @@ function HeroPets() {
             heading="Finally, a solution to your pet allergies"
             subtitle="Join thousands of Curex users preventing their allergic reactions to pets."
             ctaText="Take out free quiz"
+            imageSrc="/male_with_cat.avif"
         />
     </div>
   )

@@ -24,7 +24,7 @@ const Comp2: React.FC = () => {
               <div className="value1_item">
                 <div className="value1_item-icon-wrapper">
                   <div className="icon-decor4 w-embed">
-                    <img src="" alt="At-home treatment icon" />
+                    <img src="/icons/green_cloud.png" style={{objectFit:"cover"}} alt="At-home treatment icon" />
                   </div>
                 </div>
                 <h3>At-home treatment</h3>
@@ -34,7 +34,7 @@ const Comp2: React.FC = () => {
               <div className="value1_item">
                 <div className="value1_item-icon-wrapper">
                   <div className="icon-decor5 text-color-pink w-embed">
-                    <img src="" alt="Higher dose icon" />
+                    <img src="/icons/pink_spring.png" style={{objectFit:"cover"}} alt="Higher dose icon" />
                   </div>
                 </div>
                 <h3>5-30x higher cumulative dose vs allergy shots</h3>
@@ -44,7 +44,7 @@ const Comp2: React.FC = () => {
               <div className="value1_item">
                 <div className="value1_item-icon-wrapper">
                   <div className="icon-decor2 text-color-blue w-embed">
-                    <img src="" alt="Quick results icon" />
+                    <img src="/icons/blue_flower.png" style={{objectFit:"cover"}} alt="Quick results icon" />
                   </div>
                 </div>
                 <h3>Potential for results in as few as 6 months</h3>
@@ -54,7 +54,7 @@ const Comp2: React.FC = () => {
               <div className="value1_item">
                 <div className="value1_item-icon-wrapper">
                   <div className="icon-decor5 text-color-lightblue w-embed">
-                    <img src="" alt="Safety profile icon" />
+                    <img src="/icons/blue_spring.png" style={{objectFit:"cover"}} alt="Safety profile icon" />
                   </div>
                 </div>
                 <h3>Excellent safety profile</h3>

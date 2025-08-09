@@ -122,7 +122,7 @@ function Comp1() {
             borderRadius: "1rem",
           }}
         >
-          <img src="" alt="" />
+          <img src="/icons/green_cloud.png" alt="" style={{justifySelf: "center"}}/>
           <h3>No In-Person Visits</h3>
           <p>
             Take treatment at-home. See your clinician online & stop wasting
@@ -137,7 +137,7 @@ function Comp1() {
             borderRadius: "1rem",
           }}
         >
-          <img src="" alt="" />
+           <img src="/icons/pink_spring.png" alt="" style={{justifySelf: "center"}}/>
           <h3>No missed school days</h3>
           <p>
             Your kids no longer have to miss out on important school time due to
@@ -152,7 +152,7 @@ function Comp1() {
             borderRadius: "1rem",
           }}
         >
-          <img src="" alt="" />
+           <img src="/icons/blue_flower.png" alt="" style={{justifySelf: "center"}}/>
           <h3>Superior safety profile</h3>
           <p>
             Even people suffering from severe reactions choose sublingual
@@ -167,7 +167,7 @@ function Comp1() {
             borderRadius: "1rem",
           }}
         >
-          <img src="" alt="" />
+           <img src="/icons/blue_spring.png" alt="" style={{justifySelf: "center"}}/>
           <h3>No painful injections.</h3>
           <p>
             Treatment is applied under-the-tongue daily, no needles or painful
@@ -207,7 +207,7 @@ function Comp1() {
             </p>
           </>
         }
-        imgSrc={""}
+        imgSrc={"/white_packet_in_hand.webp"}
         imagePosition="right"
       />
       <Comp4 />
@@ -272,7 +272,7 @@ function GetStarted() {
         }}
       >
         <img
-          src="/YellowSyringes.avif"
+          src="/get_your_allergy_test.webp"
           alt="Curex process"
           style={{ width: "30%", borderRadius: "1rem" }}
         />
@@ -306,7 +306,7 @@ function GetStarted() {
           Consult with Curex clinician online
         </h3>
         <img
-          src="/YellowSyringes.avif"
+          src="/consult_with_expert.webp"
           alt="Curex process"
           style={{ width: "30%", borderRadius: "1rem" }}
         />
@@ -320,7 +320,7 @@ function GetStarted() {
         }}
       >
         <img
-          src="/YellowSyringes.avif"
+          src="/start_treatment_at_home.jpg"
           alt="Curex process"
           style={{ width: "30%", borderRadius: "1rem" }}
         />

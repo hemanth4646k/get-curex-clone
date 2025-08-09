@@ -8,7 +8,7 @@ function HeroKAC() {
         heading="#1 Pediatrician-Approved Alternative to Allergy Shots"
         subtitle="Control your child's allergies without the hassle of shots."
         ctaText="Take out Free quiz"
-        imageSrc="/YellowSyringes.avif"
+        imageSrc="/alternative_allergy_shots.webp"
       />
       <div
         style={{
@@ -18,7 +18,7 @@ function HeroKAC() {
           padding: "2rem 4rem",
         }}
       >
-        <img src="/YellowSyringes.avif" alt="" />
+        <img src="/female_with_dog.webp" alt="" />
         <div
           style={{
             display: "flex",
@@ -102,7 +102,7 @@ function HeroKAC() {
             consultation with the allergist!”
           </div>
         </div>
-        <img src="/YellowSyringes.avif" alt="" />
+        <img src="/female_with_box.webp" alt="" />
       </div>
       <div
         style={{
@@ -128,7 +128,7 @@ function HeroKAC() {
         </div>
         <span style={{ fontSize: 16, fontWeight: 400, marginTop: 2 }}>
           Reviewed on
-          <img src="/GoogleLogo.svg" alt="Google Logo" />
+          <img src="/icons/google_logo.svg"  alt="Google Logo" style={{display: "inline-block", marginLeft: "4px"}}/>
         </span>
       </div>
       <br />

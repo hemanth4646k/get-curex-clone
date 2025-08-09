@@ -3,7 +3,7 @@ import './Comp4.css';
 
 const Comp4: React.FC = () => {
   return (
-    <div className="getting-started-container">
+    <div className="getting-started-container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <h1 className="main-title">Getting Started is Easy!</h1>
       <p className="subtitle">
         Curex makes it easier than ever to treat allergies, even if you need an allergy test or have existing results!

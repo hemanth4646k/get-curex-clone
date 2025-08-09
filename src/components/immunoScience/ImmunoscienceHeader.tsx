@@ -14,11 +14,11 @@ const ImmunotherapyHeader: React.FC<ImmunotherapyHeaderProps> = ({
     <div className="padding-global">
       <div className="container-large">
         <div className="padding-section-small">
-          <div className="header1_component">
+          <div className="header1_component" style={{backgroundColor: "#f4eb9eff", padding: "2rem", borderRadius: "12px"}}>
             <div className="header1_contents-left">
               <div className="immunoscience-header_decor1">
                 <div className="icon-decor4">
-                  {/* Icon will be added later */}
+                  <img src="/icons/green_cloud.png" style={{ width: "100%", height: "100%" }} alt="Green cloud icon" className="decor-icon" />
                 </div>
               </div>
               
@@ -38,15 +38,17 @@ const ImmunotherapyHeader: React.FC<ImmunotherapyHeaderProps> = ({
               
               <div className="header1_image-wrapper">
                 <img 
+                  src="/Curex-science.webp"
                   loading="lazy" 
                   alt="" 
                   className="header1_image"
+                  style={{ width: "100%", height: "100%", zIndex: 1000 }}
                 />
               </div>
               
               <div className="immunoscience-header_decor2">
                 <div className="icon-decor5">
-                  {/* Icon will be added later */}
+                  <img src="/icons/blue_spring.png" style={{ width: "100%", height: "100%" }} alt="Green cloud icon" className="decor-icon" />
                 </div>
               </div>
             </div>
