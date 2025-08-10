@@ -32,6 +32,7 @@ import Pricing from './pages/header/Pricing'
 import ImmunoSciKids from './pages/header/ImmunoSciKids'
 import KidsReviews from './pages/header/KidsReviews'
 import GettingStartedKids from './pages/header/GettingStartedKids'
+import Partners from './pages/header/Partners'
 
 function App() {
   
@@ -69,6 +70,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/immunotherapy-science-kids" element={<ImmunoSciKids />} />
         <Route path="/see-our-reviews-kids" element={<KidsReviews />} />
+        <Route path="/partners" element={<Partners />} />
       </Routes>
       <Footer />
     </BrowserRouter>

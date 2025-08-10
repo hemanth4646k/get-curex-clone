@@ -149,6 +149,92 @@ const OurTeam: React.FC = () => {
           </div>
         </div>
       ))}
+      <div style={{ display: "flex", justifyContent: "center", width: "100%", margin: "24px 0" }}>
+            <div
+              style={{
+                background: "white",
+                borderRadius: "24px",
+                boxShadow: "0 0 0 2px #e1e1e1",
+                maxWidth: "490px",
+                width: "100%",
+                padding: "24px",
+                display: "flex",
+                alignItems: "flex-start",
+                flexDirection: "row",
+                minWidth: "360px",
+                minHeight: "220px",
+                boxSizing: "border-box",
+                margin: "12px",
+              }}
+            >
+              {/* Left Avatar Side */}
+              <div
+                style={{
+                  minWidth: "100px",
+                  width: "100px",
+                  height: "100px",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  marginRight: "24px",
+                  flexShrink: 0,
+                  background: "#eb599b",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/62217a7b4dd6bfc48ef9c281_61e036bf25358710fa34bef4_Curex%20clinician%20headshots-08-1.jpg"
+                  alt="Kayla Mardaga, NP"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </div>
+              {/* Right Content Side */}
+              <div style={{ flex: 1, position: "relative" }}>
+                <div
+                  style={{
+                    fontSize: "32px",
+                    fontWeight: "bold",
+                    color: "#222",
+                    lineHeight: "18px",
+                    marginBottom: "8px",
+                    marginLeft: "-8px",
+                  }}
+                >
+                  &ldquo;
+                </div>
+                <p
+                  style={{
+                    fontSize: "17px",
+                    color: "#222",
+                    margin: "0 0 16px 0",
+                    fontFamily: "Arial, sans-serif",
+                    minHeight: "78px",
+                  }}
+                >
+                  Curex offers convenient at-home allergy testing options. Our goal is to determine if a patient would benefit from immunotherapy and then customize a treatment plan that can reduce both the symptoms and the reliance on allergy medications.
+                </p>
+                {/* Badge */}
+                <div
+                  style={{
+                    display: "inline-block",
+                    background: "#f3a7ffff",
+                    color: "#222",
+                    fontWeight: "bold",
+                    fontSize: "16px",
+                    borderRadius: "8px",
+                    padding: "8px 18px 8px 12px",
+                    position: "absolute",
+                    bottom: "0",
+                    left: "0",
+                    boxShadow: "0 4px 10px 0 rgba(0,0,0,.02)",
+                  }}
+                >
+                  Kayla Mardaga, NP
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
   );
 };
@@ -281,92 +367,7 @@ function KidsReviews() {
       </div>
         <OurTeam/>
           {/* Clinician Testimonial Card - Centered */}
-          <div style={{ display: "flex", justifyContent: "center", width: "100%", margin: "24px 0" }}>
-            <div
-              style={{
-                background: "white",
-                borderRadius: "24px",
-                boxShadow: "0 0 0 2px #e1e1e1",
-                maxWidth: "490px",
-                width: "100%",
-                padding: "24px",
-                display: "flex",
-                alignItems: "flex-start",
-                flexDirection: "row",
-                minWidth: "360px",
-                minHeight: "220px",
-                boxSizing: "border-box",
-                margin: "12px",
-              }}
-            >
-              {/* Left Avatar Side */}
-              <div
-                style={{
-                  minWidth: "100px",
-                  width: "100px",
-                  height: "100px",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  marginRight: "24px",
-                  flexShrink: 0,
-                  background: "#eb599b",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/62217a7b4dd6bfc48ef9c281_61e036bf25358710fa34bef4_Curex%20clinician%20headshots-08-1.jpg"
-                  alt="Kayla Mardaga, NP"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
-              {/* Right Content Side */}
-              <div style={{ flex: 1, position: "relative" }}>
-                <div
-                  style={{
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    color: "#222",
-                    lineHeight: "18px",
-                    marginBottom: "8px",
-                    marginLeft: "-8px",
-                  }}
-                >
-                  &ldquo;
-                </div>
-                <p
-                  style={{
-                    fontSize: "17px",
-                    color: "#222",
-                    margin: "0 0 16px 0",
-                    fontFamily: "Arial, sans-serif",
-                    minHeight: "78px",
-                  }}
-                >
-                  Curex offers convenient at-home allergy testing options. Our goal is to determine if a patient would benefit from immunotherapy and then customize a treatment plan that can reduce both the symptoms and the reliance on allergy medications.
-                </p>
-                {/* Badge */}
-                <div
-                  style={{
-                    display: "inline-block",
-                    background: "#f3a7ffff",
-                    color: "#222",
-                    fontWeight: "bold",
-                    fontSize: "16px",
-                    borderRadius: "8px",
-                    padding: "8px 18px 8px 12px",
-                    position: "absolute",
-                    bottom: "0",
-                    left: "0",
-                    boxShadow: "0 4px 10px 0 rgba(0,0,0,.02)",
-                  }}
-                >
-                  Kayla Mardaga, NP
-                </div>
-              </div>
-            </div>
-          </div>
+          
       {/* FAQ Section */}
       <div style={{ maxWidth: 900, margin: '0 auto', marginTop: 48, marginBottom: 48 }}>
         <Faq
