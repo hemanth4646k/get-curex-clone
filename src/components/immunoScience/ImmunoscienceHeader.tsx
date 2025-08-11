@@ -14,11 +14,11 @@ const ImmunotherapyHeader: React.FC<ImmunotherapyHeaderProps> = ({
     <div className="padding-global">
       <div className="container-large">
         <div className="padding-section-small">
-          <div className="header1_component" style={{backgroundColor: "#f4eb9eff", padding: "2rem", borderRadius: "12px"}}>
+          <div className="header1_component" style={{backgroundColor: "#fff9e6", padding: "2rem", borderRadius: "12px"}}>
             <div className="header1_contents-left">
               <div className="immunoscience-header_decor1">
                 <div className="icon-decor4">
-                  <img src="/icons/green_cloud.png" style={{ width: "100%", height: "100%" }} alt="Green cloud icon" className="decor-icon" />
+                  <img src="/icons/blue_flower.png" style={{ width: "100%", height: "100%" }} alt="Blue flower icon" className="decor-icon" />
                 </div>
               </div>
               
@@ -48,7 +48,7 @@ const ImmunotherapyHeader: React.FC<ImmunotherapyHeaderProps> = ({
               
               <div className="immunoscience-header_decor2">
                 <div className="icon-decor5">
-                  <img src="/icons/blue_spring.png" style={{ width: "100%", height: "100%" }} alt="Green cloud icon" className="decor-icon" />
+                  <img src="/icons/blue_spring.png" style={{ width: "120px", height: "120px", position: "absolute", bottom: "-40px", right: "-40px" }} alt="Blue spring icon" className="decor-icon" />
                 </div>
               </div>
             </div>

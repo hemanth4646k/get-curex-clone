@@ -23,12 +23,15 @@
   gap: 4rem;
   align-items: center;
   min-height: 500px;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Left content area (text content) */
 .header1_contents-left {
   position: relative;
   z-index: 2;
+  padding: 2rem 0;
 }
 
 /* Right content area (image) */
@@ -46,7 +49,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #f5f5dc 0%, #fafad2 100%);
   border-radius: 1rem;
   z-index: 1;
 }
@@ -63,20 +65,21 @@
 
 .header1_image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border-radius: 1rem;
-  min-height: 300px;
-  background-color: #f0f0f0;
+  object-fit: cover;
+  min-height: 400px;
 }
 
 /* Typography */
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
   color: #1a1a1a;
   margin: 0;
+  font-family: 'Merriweather', serif;
 }
 
 .text-size-large {
@@ -117,13 +120,10 @@ h1 {
 .icon-decor5 {
   width: 120px;
   height: 80px;
-  background-color: #a8d8ff;
-  opacity: 0.7;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
   font-size: 0.875rem;
 }
 
@@ -159,11 +159,6 @@ h1 {
   
   .text-size-large {
     font-size: 1rem;
-  }
-  
-  .immunoscience-header_decor1,
-  .immunoscience-header_decor2 {
-    display: none;
   }
 }
 
