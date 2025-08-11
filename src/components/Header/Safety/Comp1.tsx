@@ -1,9 +1,7 @@
-
 import DescCard from '../../../common/ui/DescCard';
 import ComparisonTable from '../../../common/ui/ComparisonTable';
 import SafetyCard from './SafetyCard';
 import InsurancePartnersCommon from '../../../common/InsurancePartners';
-
 import EndPromo from '../../../common/EndPromo';
 import Faq from '../../../common/ui/Faq';
 
@@ -18,9 +16,6 @@ function Comp1() {
         textAlign: "center"
       }}
     >
-
-      
-
       <div style={{ backgroundColor: "#a1d9ff" }}>AT-HOME IMMUNOTHERAPY</div>
       <h1>What makes Curex the top choice</h1>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem" }}>
@@ -71,44 +66,38 @@ superior safety profile</h2>
           desc="Statistics highlight the safety of Curex's approach. Millions have been treated with at-home immunotherapy safely. Notably, there hasn't been a single recorded fatality among the billions of doses administered. In the rare cases where allergic reactions have occurred, there are well-established protocols to minimize and manage such incidents."
         />
         <div style={{ marginBottom: '2rem', width: '100%' }}>
+        </div>
       </div>
-      </div>
-        <DescCard
-          imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/654517ebf0a32c22301aafb3_Woman%20curex%20outline.webp"
-          heading={"Curex's Commitment to Safety:\nThe Science of At-Home Immunotherapy"}
-          desc={
-            <>
-              <p>Navigating the world of allergy treatments can be overwhelming, especially when considering at-home solutions. Yet, Curex's at-home immunotherapy stands as a beacon of safety and efficacy. But what measures underpin this assurance?</p>
-            </>
-          }
-          imagePosition="left"
-        />
-        <h2>Why is At-Home Immunotherapy Safe?</h2>
-        <p>Sublingual immunotherapy offers superior safety</p>
-        {/* here */}
-      {/* Comparison Table Section */}
+      <DescCard
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/654517ebf0a32c22301aafb3_Woman%20curex%20outline.webp"
+        heading={"Curex's Commitment to Safety:\nThe Science of At-Home Immunotherapy"}
+        desc={
+          <>
+            <p>Navigating the world of allergy treatments can be overwhelming, especially when considering at-home solutions. Yet, Curex's at-home immunotherapy stands as a beacon of safety and efficacy. But what measures underpin this assurance?</p>
+          </>
+        }
+        imagePosition="left"
+      />
+      <h2>Why is At-Home Immunotherapy Safe?</h2>
+      <p>Sublingual immunotherapy offers superior safety</p>
+
+      {/* Enhanced Comparison Table Section */}
       <div style={{ marginTop: '3rem', width: '100%' }}>
         <ComparisonTable
           columns={[
             {
               key: 'sublingual',
-              label: (
-                <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  Sublingual immunotherapy
-                </span>
-              ),
+              label: 'Sublingual immunotherapy',
               imageSrc: 'https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/664ed4b61927cf0588acef5b_image%201.webp',
-              imageAlt: 'Curex user having an online consultation with a clinician.'
+              imageAlt: 'Curex user having an online consultation with a clinician.',
+              isPreferred: true // This makes it the green preferred column
             },
             {
               key: 'shots',
-              label: (
-                <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  Allergy Shots
-                </span>
-              ),
+              label: 'Allergy Shots',
               imageSrc: 'https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/629f7e905eabc4379a47eeed_image1.webp',
-              imageAlt: 'doctor giving patient a shot'
+              imageAlt: 'doctor giving patient a shot',
+              isPreferred: false // This makes it the pink alternative column
             },
           ]}
           rows={[
@@ -116,47 +105,80 @@ superior safety profile</h2>
               key: 'gentle',
               label: 'Gentle Build-up',
               values: [
-                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" alt="Yes" style={{ width: 28 }} />, 
-                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/667952685a6e5c978eb80c14_red-x.svg" alt="No" style={{ width: 28 }} />
+                <img 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" 
+                  alt="Yes" 
+                  style={{ width: 18, height: 18 }} 
+                />, 
+                <img 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/667952685a6e5c978eb80c14_red-x.svg" 
+                  alt="No" 
+                  style={{ width: 18, height: 18 }} 
+                />
               ],
             },
             {
               key: 'reaction',
               label: 'Rate of Severe Reaction',
-              values: [<div>&lt;0.03%</div>, <div>&lt;1%</div>],
+              values: ['<0.03%', '<1%'],
             },
             {
               key: 'users',
               label: 'Millions of Users',
               values: [
-                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" alt="Yes" style={{ width: 28 }} />,
-                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" alt="Yes" style={{ width: 28 }} />
+                <img 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" 
+                  alt="Yes" 
+                  style={{ width: 18, height: 18 }} 
+                />,
+                <img 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" 
+                  alt="Yes" 
+                  style={{ width: 18, height: 18 }} 
+                />
               ],
             },
             {
               key: 'epipen',
               label: 'EpiPen Prescribed',
               values: [
-                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" alt="Yes" style={{ width: 28 }} />,
-                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" alt="Yes" style={{ width: 28 }} />
+                <img 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" 
+                  alt="Yes" 
+                  style={{ width: 18, height: 18 }} 
+                />,
+                <img 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" 
+                  alt="Yes" 
+                  style={{ width: 18, height: 18 }} 
+                />
               ],
             },
             {
               key: 'waiting',
               label: 'Post Use Waiting Period',
-              values: [<div>Not necessary</div>, <div>30 mins</div>],
+              values: ['Not necessary', '30 mins'],
             },
             {
               key: 'home',
               label: 'Safe for Home Use',
               values: [
-                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" alt="Yes" style={{ width: 28 }} />,
-                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/667952685a6e5c978eb80c14_red-x.svg" alt="No" style={{ width: 28 }} />
+                <img 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795290a52ec565f12713c1_green-tick.svg" 
+                  alt="Yes" 
+                  style={{ width: 18, height: 18 }} 
+                />,
+                <img 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/667952685a6e5c978eb80c14_red-x.svg" 
+                  alt="No" 
+                  style={{ width: 18, height: 18 }} 
+                />
               ],
             },
           ]}
         />
       </div>
+
       <h2>How does Curex ensure patient safety?</h2>
       <div style={{
         display: 'grid',
@@ -187,7 +209,7 @@ superior safety profile</h2>
         />
         <SafetyCard
           imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/62273a15a1e4613ea10c1d35_61c5f0edff51f019b65e8098_Rectangle%2053%20(3).webp"
-          heading="We Provide “First Drop Appointments”."
+          heading="We Provide a Video Drop Appointment."
           desc="For those seeking an added layer of assurance, Curex offers a video drop appointment, providing a watchful eye during the treatment's initial stages."
         />
         <SafetyCard
@@ -199,7 +221,8 @@ superior safety profile</h2>
       <p>Curex's at-home immunotherapy goes beyond mere convenience. With a rigorous, multi-faceted approach to safety, those seeking relief can trust they are in reliable hands.</p>
       <InsurancePartnersCommon/>
       <EndPromo/>
-      {/* faqs here */}
+      
+      {/* FAQs */}
       <Faq
         faqs={[
           {
@@ -214,9 +237,9 @@ superior safety profile</h2>
             question: "What is Curex?",
             answer: (
               <>
-                Curex is America’s #1 Online Allergy Clinic and the place to go for all your allergy questions and needs. We believe that true allergy care should have only one goal: zero allergies. We believe in a world without allergies, and we offer the easiest and most affordable treatment to get you to zero-allergies: sublingual immunotherapy.<br/>
+                Curex is America's #1 Online Allergy Clinic and the place to go for all your allergy questions and needs. We believe that true allergy care should have only one goal: zero allergies. We believe in a world without allergies, and we offer the easiest and most affordable treatment to get you to zero-allergies: sublingual immunotherapy.<br/>
                 Sublingual immunotherapy is a form of allergy treatment that involves placing drops containing allergenic extracts under the tongue. This method helps build the body's tolerance to allergens over time, just like allergy shots. The treatment is customized based on an individual's specific allergies, as determined by allergy testing and medical history.<br/>
-                Curex offers comprehensive services that include at-home allergy testing, online consultations, symptom management, and personalized sublingual immunotherapy plans. Our goal is to improve access to quality allergy care for anyone who needs it. If you’re ready to finally get rid of your allergies, you’re in the right place. Together with our partners we have treated more patients with allergy drops than anyone else in the U.S.
+                Curex offers comprehensive services that include at-home allergy testing, online consultations, symptom management, and personalized sublingual immunotherapy plans. Our goal is to improve access to quality allergy care for anyone who needs it. If you're ready to finally get rid of your allergies, you're in the right place. Together with our partners we have treated more patients with allergy drops than anyone else in the U.S.
               </>
             ),
           },
@@ -308,4 +331,5 @@ superior safety profile</h2>
     </div>
   );
 }
+
 export default Comp1;

@@ -1,126 +1,284 @@
-.comparison-table2 {
+.comparison-table-modern {
   width: 100%;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   margin: 32px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
-.header-row2 {
+
+.header-row-modern {
   display: flex;
-  background: #f3f4f6;
-  border-bottom: 1px solid #e5e7eb;
+  background: #f8fafc;
 }
-.header-cell2 {
+
+.header-cell-modern {
   flex: 1 1 0;
-  padding: 24px 0 16px 0;
+  padding: 32px 16px 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  position: relative;
 }
-.empty-header2 {
-  flex: 0.7 1 0;
+
+.empty-header-modern {
+  flex: 0.6 1 0;
+  background: #f8fafc;
 }
-.header-title2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #22223b;
-  margin-top: 8px;
+
+.preferred-column {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
 }
-.header-image2 img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+
+.alternative-column {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
 }
-.feature-row2, .price-row2, .cta-row2 {
+
+.header-content-modern {
   display: flex;
-  align-items: stretch;
-  border-bottom: 1px solid #f3f4f6;
-}
-.feature-label2, .price-label2 {
-  flex: 0.7 1 0;
-  padding: 18px 16px;
-  font-size: 1rem;
-  color: #374151;
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  background: #f9fafb;
-  font-weight: 500;
+  gap: 16px;
 }
-.feature-value2, .price-value2 {
-  flex: 1 1 0;
-  padding: 18px 0;
+
+.header-image-modern {
+  width: 80px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  backdrop-filter: blur(10px);
 }
-.checkmark2 {
-  color: #22c55e;
+
+.header-image-modern img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.header-title-modern {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  max-width: 180px;
+}
+
+.feature-row-modern, .price-row-modern, .cta-row-modern {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.feature-row-modern:last-child {
+  border-bottom: none;
+}
+
+.feature-label-modern, .price-label-modern {
+  flex: 0.6 1 0;
+  padding: 20px 16px;
+  font-size: 0.95rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  font-weight: 500;
+}
+
+.feature-value-modern, .price-value-modern {
+  flex: 1 1 0;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.preferred-value {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.alternative-value {
+  background: #fdf2f8;
+  color: #9d174d;
+}
+
+.icon-wrapper-modern {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.icon-wrapper-modern svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+.preferred-value .icon-wrapper-modern {
+  background: #10b981;
+}
+
+.alternative-value .icon-wrapper-modern {
+  background: #ec4899;
+}
+
+.checkmark-modern {
+  color: #10b981;
   font-size: 1.5rem;
   font-weight: bold;
 }
-.cross2 {
+
+.cross-modern {
   color: #ef4444;
   font-size: 1.5rem;
   font-weight: bold;
 }
-.time-row2 .feature-label2 {
+
+.time-row-modern .feature-label-modern {
   font-weight: 600;
 }
-.time-text2 {
-  font-size: 1rem;
+
+.time-text-modern {
+  font-size: 0.95rem;
   color: #6366f1;
   font-weight: 500;
 }
-.price-row2 {
-  background: #f3f4f6;
+
+.price-row-modern {
+  background: #f1f5f9;
 }
-.price-label2 {
-  font-weight: 700;
-}
-.price-text2 {
-  font-size: 1.2rem;
+
+.price-label-modern {
   font-weight: 600;
-  color: #22223b;
+  background: #f1f5f9;
 }
-.price-subtext2 {
-  font-size: 0.95rem;
-  color: #6b7280;
+
+.price-text-modern {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
 }
-.cta-row2 {
+
+.price-subtext-modern {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.cta-row-modern {
   background: #fff;
+  padding: 24px 0;
 }
-.cta-cell2 {
+
+.cta-cell-modern {
   flex: 1 1 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 0;
 }
-.cta-button2 {
-  background: #3b82f6;
+
+.cta-button-modern {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 14px 36px;
-  font-size: 1.1rem;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
-.cta-button2:hover {
-  background: #2563eb;
+
+.cta-button-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
 }
-@media (max-width: 900px) {
-  .comparison-table2 {
-    font-size: 0.95rem;
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .comparison-table-modern {
+    margin: 16px 0;
+    border-radius: 12px;
   }
-  .header-row2, .feature-row2, .price-row2, .cta-row2 {
+  
+  .header-cell-modern {
+    padding: 20px 12px 16px 12px;
+  }
+  
+  .header-title-modern {
+    font-size: 1rem;
+  }
+  
+  .header-image-modern {
+    width: 60px;
+    height: 40px;
+  }
+  
+  .feature-label-modern, .feature-value-modern, .price-label-modern, .price-value-modern {
+    padding: 16px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .icon-wrapper-modern {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .icon-wrapper-modern svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-table-modern {
+    font-size: 0.85rem;
+  }
+  
+  .header-row-modern, .feature-row-modern, .price-row-modern, .cta-row-modern {
     flex-direction: column;
   }
-  .header-cell2, .feature-label2, .feature-value2, .price-label2, .price-value2, .cta-cell2 {
-    padding: 12px 0;
+  
+  .header-cell-modern, .feature-label-modern, .feature-value-modern, .price-label-modern, .price-value-modern, .cta-cell-modern {
+    flex: none;
+  }
+  
+  .empty-header-modern {
+    display: none;
+  }
+  
+  .feature-label-modern, .price-label-modern {
+    background: #e2e8f0;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .preferred-value, .alternative-value {
+    border-left: 4px solid;
+  }
+  
+  .preferred-value {
+    border-left-color: #10b981;
+  }
+  
+  .alternative-value {
+    border-left-color: #ec4899;
   }
 }

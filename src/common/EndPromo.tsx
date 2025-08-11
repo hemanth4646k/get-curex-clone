@@ -3,12 +3,9 @@ import './EndPromo.css';
 
 const EndPromo: React.FC = () => {
   return (
-    <div className="end-promo-container">
-      <div className="content-wrapper">
+    <div className="content-wrapper">
         <div className="image-section">
-          <div className="woman-container">
-            <img src="" alt="Happy woman enjoying allergy relief" className="woman-image" />
-          </div>
+          <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66eae464a466c8608f598e51_mobile-curex-quiz.avif" alt="Happy woman enjoying allergy relief" className="woman-image" />
         </div>
         
         <div className="text-section">
@@ -50,13 +47,6 @@ const EndPromo: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      <div className="decorative-elements">
-        <div className="circle-yellow"></div>
-        <div className="circle-blue"></div>
-        <div className="circle-pink"></div>
-      </div>
-    </div>
   );
 };
 
