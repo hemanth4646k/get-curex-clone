@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Hero from "../../../common/ui/Hero";
 import './Testimonials.css'
 
