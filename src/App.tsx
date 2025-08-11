@@ -33,6 +33,7 @@ import ImmunoSciKids from './pages/header/ImmunoSciKids'
 import KidsReviews from './pages/header/KidsReviews'
 import GettingStartedKids from './pages/header/GettingStartedKids'
 import Partners from './pages/header/Partners'
+import FoodAnaphylaxis from './pages/header/FoodAnaphylaxis'
 
 function App() {
   
@@ -71,6 +72,7 @@ function App() {
         <Route path="/immunotherapy-science-kids" element={<ImmunoSciKids />} />
         <Route path="/see-our-reviews-kids" element={<KidsReviews />} />
         <Route path="/partners" element={<Partners />} />
+        <Route path="/food-anaphylaxis" element={<FoodAnaphylaxis />} />
       </Routes>
       <Footer />
     </BrowserRouter>

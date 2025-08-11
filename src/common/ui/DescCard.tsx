@@ -3,12 +3,13 @@ import type { ReactElement, ReactNode } from 'react';
 import './DescCard.css';
 
 interface DescCardProps {
-  heading: string;
+  heading: string|ReactNode;
   desc: string | ReactNode;
   imgSrc: string | ReactElement;
   buttonEle?: ReactElement;
   imagePosition?: 'left' | 'right';
   id?: string;
+  noPadding?: boolean;
 }
 
 function DescCard({
@@ -18,10 +19,11 @@ function DescCard({
   buttonEle,
   imagePosition = 'left',
   id = '',
+  noPadding = false,
 }: DescCardProps) {
   const isImageLeft = imagePosition === 'left';
   return (
-    <section className="DescCard">
+    <section className={` ${noPadding ? '' : 'DescCard'}`}>
       <div className="DescCard-container" id={id}>
         <div
           className="DescCard-content"
@@ -35,7 +37,7 @@ function DescCard({
         >
           <div className="DescCard-image-column" style={{ flex: '0 1 45%', maxWidth: '50%' }}>
             {typeof imgSrc === 'string' ? (
-              <img src={imgSrc} alt={heading} className="DescCard-image" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src={imgSrc} alt={typeof heading === 'string' ? heading : ''} className="DescCard-image" style={{ width: '100%', height: 'auto', display: 'block' }} />
             ) : (
               imgSrc
             )}
