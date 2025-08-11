@@ -1,0 +1,193 @@
+.section_testimonials2 {
+  display: block;
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.padding-global {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .padding-global {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .padding-global {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .padding-global {
+    padding-right: 112px;
+    padding-left: 112px;
+  }
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.container-medium {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.padding-section-medium {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.testimonials-grid_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.curexwyndly-testimonials_content-left-wrapper,
+.curexwyndly-testimonials_content-right-wrapper {
+  display: none;
+}
+
+.curexwyndly-testimonials_content-centre-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.w-layout-vflex {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+}
+
+.providers-kids-testimonials_row1,
+.curexwyndly-testimonials_row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.curexwyndly-testimonials_item1 {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 45%;
+  position: relative;
+  text-align: left;
+  border: none;
+}
+
+.card-image-with-tag {
+  display: none;
+}
+
+.curexwyndly-testimonials_tag1-wrapper {
+  display: none;
+}
+
+.box-card-label-wrapper {
+  display: none;
+}
+
+.curexshots4-testimonials_customer-name {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background-color: #ffcc00;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.curexwyndly-testimonials_review {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.curexwyndly-testimonials_quote-icon1,
+.curexwyndly-testimonials_quote-icon2 {
+  display: none;
+}
+
+.curexwyndly-testimonials_item1.is-pink {
+  background-color: #ffe6f0;
+}
+
+.curexwyndly-testimonials_item1.is-pink .curexshots4-testimonials_customer-name {
+  background-color: #ff9999;
+  color: #fff;
+}
+
+.curexwyndly-testimonials_item1.is-yellow {
+  background-color: #fff3e6;
+}
+
+.curexwyndly-testimonials_item1.is-yellow .curexshots4-testimonials_customer-name {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.curexwyndly-testimonials_item1.is-green {
+  background-color: #e6ffe6;
+}
+
+.curexwyndly-testimonials_item1.is-green .curexshots4-testimonials_customer-name {
+  background-color: #99cc99;
+  color: #fff;
+}
+
+.testimonials2_button-wrapper {
+  margin-top: 20px;
+}
+
+.button.is-link {
+  color: #007bff;
+  background-color: transparent;
+  border: 2px solid #007bff;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.button.is-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid_wrapper {
+    grid-template-columns: 1fr;
+  }
+  .providers-kids-testimonials_row1,
+  .curexwyndly-testimonials_row2 {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .curexwyndly-testimonials_item1 {
+    width: 100%;
+  }
+}

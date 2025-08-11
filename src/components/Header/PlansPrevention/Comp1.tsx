@@ -210,19 +210,19 @@ function Comp5() {
 
 export function HowCurexWorks() {
   return (
-    <div >
+    <div>
         <h1>How Curex works</h1>
         <br />
         <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-          <img src="/get_your_allergy_test.webp" alt="Curex process" style={{width: "23rem",height: "21rem",borderRadius: "1rem"}} />
+          <img src="/get_your_allergy_test.webp" alt="Curex process" style={{width: "23rem",height: "21rem",borderRadius: "1rem", margin: "2rem"}} />
           <h2 style={{fontWeight: "lighter", margin: "0 1rem"}}>Get Your Allergy Test</h2>
         </div><br />
         <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
           <h2 style={{fontWeight: "lighter", margin: "0 1rem"}}>Consult with an Expert Online</h2>
-          <img src="/consult_with_expert.webp" alt="Curex process" style={{width: "23rem",height: "21rem",borderRadius: "1rem"}} />
+          <img src="/consult_with_expert.webp" alt="Curex process" style={{width: "23rem",height: "21rem",borderRadius: "1rem", margin: "2rem"}} />
         </div><br />
         <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-                <img src="/start_treatment_at_home.jpg" alt="Curex process" style={{width: "24rem",height: "16rem",borderRadius: "1rem"}} />
+                <img src="/start_treatment_at_home.jpg" alt="Curex process" style={{width: "24rem",height: "16rem",borderRadius: "1rem", margin: "2rem"}} />
           <h2 style={{fontWeight: "lighter", margin: "0 1rem"}}>Start Treatment at Home</h2>
         </div>
       </div>

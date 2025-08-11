@@ -196,9 +196,10 @@ const ReviewsTest: React.FC = () => {
 
   return (
     <div style={{
+      marginTop: 40,
       padding: '40px 20px',
       backgroundColor: '#f8f9fa',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     }}>
       <h1 style={{
         textAlign: 'center',

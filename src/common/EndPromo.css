@@ -22,6 +22,8 @@
 }
 
 .image-section {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,10 +40,9 @@
 }
 
 .woman-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  object-fit: cover;
+  width: 600px;
+  height: 100%;
+  object-fit:cover;
   border-radius: 16px;
 }
 
@@ -188,10 +189,6 @@
   .content-wrapper {
     grid-template-columns: 1fr;
     gap: 60px;
-  }
-  
-  .image-section {
-    order: -1;
   }
   
   .main-heading {
