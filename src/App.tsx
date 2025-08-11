@@ -34,6 +34,8 @@ import KidsReviews from './pages/header/KidsReviews'
 import GettingStartedKids from './pages/header/GettingStartedKids'
 import Partners from './pages/header/Partners'
 import FoodAnaphylaxis from './pages/header/FoodAnaphylaxis'
+import FoodAllergiesAndSensitivities from './pages/header/FoodAllergiesAndSensitivities'
+import Quickie from './pages/header/Quickie'
 
 function App() {
   
@@ -73,6 +75,8 @@ function App() {
         <Route path="/see-our-reviews-kids" element={<KidsReviews />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/food-anaphylaxis" element={<FoodAnaphylaxis />} />
+        <Route path="/quickie" element={<Quickie />} />
+        <Route path="/food-allergies-and-sensitivities" element={<FoodAllergiesAndSensitivities />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -87,10 +87,14 @@ const Navbar = () => {
             <Dropdown title="Learn" items={learnItems} className="nav-menu-item" />
             <Dropdown title="Food Allergies" items={foodAllergiesItems} className="nav-menu-item" />
             <div className="nav-menu-item">
-              <span>Quickie</span>
+              <Link to="/quickie">
+                <span>Quickie</span>
+              </Link>
             </div>
             <div className="nav-menu-item">
-              <span>Pricing</span>
+              <Link to="/pricing">
+                <span>Pricing</span>
+              </Link>
             </div>
           </div>
 
