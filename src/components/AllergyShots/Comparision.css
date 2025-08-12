@@ -46,12 +46,16 @@
 }
 
 .cmp-table-images {
+  padding-left: 180px;
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
 }
 
 .cmp-img-col {
   height: 200px;
+  max-width: 300px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;

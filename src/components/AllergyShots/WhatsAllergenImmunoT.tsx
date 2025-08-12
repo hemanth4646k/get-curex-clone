@@ -21,7 +21,7 @@ const WhatsAllergenImmunoT: React.FC = () => (
       {/* Right: Image */}
       <div className="wai-visual">
         <img
-          src=""
+          src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/65573d6cd0de7397c78a586a_health-care-medicine-concept%201-p-1080.webp"
           alt="Curex allergy immunotherapy drops bottle, kit, and packaging on green background"
           className="wai-image-main"
         />

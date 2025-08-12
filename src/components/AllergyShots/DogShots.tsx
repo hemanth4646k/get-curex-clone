@@ -15,7 +15,7 @@ const DogShots: React.FC = () => (
       {/* Right: Image */}
       <div className="dogshots-imagewrap">
         <img
-          src=""
+          src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/64d4aa5ca8b65943ddc1d1e5_Rectangle%201886-p-800.webp"
           alt="Woman kneeling on grass holding dog and branded box"
           className="dogshots-img"
         />

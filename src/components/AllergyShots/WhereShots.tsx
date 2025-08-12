@@ -16,17 +16,10 @@ const WhereShots: React.FC = () => (
       <div className="wshots-visual">
         <div className="wshots-img-wrap">
           <img
-            src=""
+            src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/654517ebf0a32c22301aafb3_Woman%20curex%20outline-p-800.webp"
             alt="Person holding branded Curex allergy treatment boxes"
             className="wshots-main-img"
           />
-          <div className="wshots-logo-wrap">
-            <img
-              src=""
-              alt="Curex bee logo"
-              className="wshots-logo"
-            />
-          </div>
         </div>
       </div>
     </div>

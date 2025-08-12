@@ -7,7 +7,7 @@ const AtHomeShots: React.FC = () => (
       {/* Left: Professional arrival illustration */}
       <div className="ahs-image">
         <img
-          src=""
+          src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/63d28d24ba70d63f87bb63a3_how-it-works-1.webp"
           alt="Healthcare professional arriving at home with kit, greeted by homeowner"
           className="ahs-img-main"
         />

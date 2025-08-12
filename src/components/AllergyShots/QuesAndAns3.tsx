@@ -50,11 +50,6 @@ const QuesAndAns3: React.FC = () => (
     <div className="qna3-inner">
       {qaItems.map((item) => (
         <div className="qna3-block" id={formatId(item.title)} key={item.title}>
-          {item.withImg && (
-            <div className="qna3-img">
-              <img src="" alt={item.imgAlt || "Related icon"} />
-            </div>
-          )}
           <div className="qna3-content">
             <h2 className="qna3-title">{item.title.replace(/([A-Z])/g, ' $1').trim()}</h2>
             <div className="qna3-text">{item.content}</div>
