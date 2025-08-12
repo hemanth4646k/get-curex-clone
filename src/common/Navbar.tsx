@@ -26,7 +26,7 @@ const Navbar = () => {
 
   const learnItems = [
     { label: 'Sign Up for a Free Webinar', href: 'https://calendly.com/webinar-curex/allergy-immunotherapy' },
-    { label: 'Reviews', href: '/see-our-reviews' },
+    { label: 'Reviews', href: '/reviews' },
     { label: 'Immunotherapy 101', href: '/immunotherapy-101' },
     { label: 'Science', href: '/immuno-science' },
     { label: 'Allergy Drops', href: '/allergy-drops' },
