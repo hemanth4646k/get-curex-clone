@@ -59,7 +59,7 @@
   background: #fc4b86;
   width: 45px;
   height: 45px;
-  /* mask: url('play_icon.svg') center/cover no-repeat; */
+  mask: url('play_icon.svg') center/cover no-repeat;
   /* Add your play icon SVG in mask src or use an <img> in the videoPlaceholder */
   display: inline-block;
 }
