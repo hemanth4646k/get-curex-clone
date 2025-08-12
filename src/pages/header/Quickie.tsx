@@ -1,16 +1,55 @@
-import React from 'react';
+import React, { useState, useCallback, useRef, useEffect } from "react";
 
-// Minimal internal components to satisfy references and keep layout.
-type ButtonWithArrowProps = { text: string; href: string; variant?: 'nav' | 'default' };
-const ButtonWithArrow: React.FC<ButtonWithArrowProps> = ({ text, href, variant }) => (
-  <a href={href} className={`btn2_main_wrap ${variant === 'nav' ? 'is-nav-text' : ''}`}>
-    <div className="btn2_main_text">{text}</div>
-    <div className="btn2_main_icon" aria-hidden>
-      →
-    </div>
-  </a>
+// Restored rich button + icon components to match original design structure
+const ArrowCartIcon: React.FC = () => (
+  <svg
+    width=" 100%"
+    height=" 100%"
+    viewBox="0 0 21 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_btn_arrow)">
+      <path
+        d="M5.13672 17.5003C5.13672 16.5799 5.88241 15.8335 6.80273 15.8333C7.72321 15.8333 8.46973 16.5798 8.46973 17.5003C8.46957 18.4207 7.72311 19.1663 6.80273 19.1663C5.88251 19.1661 5.13687 18.4205 5.13672 17.5003ZM14.3027 17.5003C14.3027 16.5799 15.0484 15.8335 15.9688 15.8333C16.8892 15.8333 17.6357 16.5798 17.6357 17.5003C17.6356 18.4207 16.8891 19.1663 15.9688 19.1663C15.0485 19.1661 14.3029 18.4205 14.3027 17.5003ZM3.51172 0.875309L3.65625 0.888004C3.98534 0.945945 4.2541 1.19758 4.32617 1.53351L5.07715 5.04132H18.5449C18.7976 5.04138 19.0362 5.15674 19.1943 5.35382C19.3525 5.55096 19.4132 5.80924 19.3584 6.05597L17.9834 12.2474L17.9824 12.2464C17.86 12.8017 17.5523 13.2989 17.1094 13.6556C16.6662 14.0123 16.1147 14.2074 15.5459 14.2083H7.39453V14.2073C6.81971 14.2158 6.25902 14.0268 5.80762 13.6702C5.35146 13.3098 5.03503 12.8012 4.91309 12.2327L2.83691 2.54132H1.84473C1.38449 2.54132 1.01172 2.16855 1.01172 1.70832C1.01172 1.24808 1.38449 0.875309 1.84473 0.875309H3.51172ZM6.54297 11.8831L6.58496 12.0218C6.63888 12.1549 6.72688 12.2726 6.84082 12.3626C6.99286 12.4827 7.18226 12.5466 7.37598 12.5423C7.38209 12.5422 7.38842 12.5413 7.39453 12.5413H15.543C15.7325 12.541 15.9168 12.4765 16.0645 12.3577C16.2122 12.2388 16.3147 12.0722 16.3555 11.887L16.3564 11.8861L17.5059 6.70832H5.43457L6.54297 11.8831Z"
+        fill="currentColor"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_btn_arrow">
+        <rect width={20} height={20} fill="currentColor" />
+      </clipPath>
+    </defs>
+  </svg>
 );
 
+interface ButtonWithArrowProps {
+  text: string;
+  href: string;
+  variant?: 'nav' | 'hero';
+}
+const ButtonWithArrow: React.FC<ButtonWithArrowProps> = ({ text, href, variant = 'hero' }) => {
+  const wrapClass = variant === 'nav' ? 'is-nav' : 'is-hero';
+  return (
+    <div data-trigger="" className={`btn2_main_wrap ${wrapClass}`}>
+      <div aria-hidden="true" className={`btn2_main_layout ${wrapClass}`}>
+        <div className="btn_main_text">{text}</div>
+        <div className={`btn2_main_icon ${wrapClass}`}>
+          <div className="icon-arrow w-embed">
+            <ArrowCartIcon />
+          </div>
+        </div>
+      </div>
+      <div className="btn_clickable_wrap">
+        <a href={href} className="btn_clickable_link is-nav w-inline-block">
+          <span className="btn_clickable_text">{text}</span>
+        </a>
+      </div>
+    </div>
+  );
+};
+
+// Keep existing simplified QuickieHeaderItem (not part of order button styling)
 type QuickieHeaderItemProps = React.PropsWithChildren<{ id?: string }>;
 const QuickieHeaderItem: React.FC<QuickieHeaderItemProps> = ({ children, id }) => (
   <div id={id} className="quickie_header_list-item">
@@ -1129,46 +1168,7 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                 <div className="quickie_research_decor" />
               </div>
               <div className="quickie_research_button-wrapper">
-                <div data-trigger="" className="btn2_main_wrap is-hero">
-                  <div aria-hidden="true" className="btn2_main_layout is-hero">
-                    <div className="btn_main_text">Order Now $49</div>
-                    <div className="btn2_main_icon is-hero">
-                      <div className="icon-arrow w-embed">
-                        <svg
-                          width=" 100%"
-                          height=" 100%"
-                          viewBox="0 0 21 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g clipPath="url(#clip0_254_350)">
-                            <path
-                              d="M5.13672 17.5003C5.13672 16.5799 5.88241 15.8335 6.80273 15.8333C7.72321 15.8333 8.46973 16.5798 8.46973 17.5003C8.46957 18.4207 7.72311 19.1663 6.80273 19.1663C5.88251 19.1661 5.13687 18.4205 5.13672 17.5003ZM14.3027 17.5003C14.3027 16.5799 15.0484 15.8335 15.9688 15.8333C16.8892 15.8333 17.6357 16.5798 17.6357 17.5003C17.6356 18.4207 16.8891 19.1663 15.9688 19.1663C15.0485 19.1661 14.3029 18.4205 14.3027 17.5003ZM3.51172 0.875309L3.65625 0.888004C3.98534 0.945945 4.2541 1.19758 4.32617 1.53351L5.07715 5.04132H18.5449C18.7976 5.04138 19.0362 5.15674 19.1943 5.35382C19.3525 5.55096 19.4132 5.80924 19.3584 6.05597L17.9834 12.2474L17.9824 12.2464C17.86 12.8017 17.5523 13.2989 17.1094 13.6556C16.6662 14.0123 16.1147 14.2074 15.5459 14.2083H7.39453V14.2073C6.81971 14.2158 6.25902 14.0268 5.80762 13.6702C5.35146 13.3098 5.03503 12.8012 4.91309 12.2327L2.83691 2.54132H1.84473C1.38449 2.54132 1.01172 2.16855 1.01172 1.70832C1.01172 1.24808 1.38449 0.875309 1.84473 0.875309H3.51172ZM6.54297 11.8831L6.58496 12.0218C6.63888 12.1549 6.72688 12.2726 6.84082 12.3626C6.99286 12.4827 7.18226 12.5466 7.37598 12.5423C7.38209 12.5422 7.38842 12.5413 7.39453 12.5413H15.543C15.7325 12.541 15.9168 12.4765 16.0645 12.3577C16.2122 12.2388 16.3147 12.0722 16.3555 11.887L16.3564 11.8861L17.5059 6.70832H5.43457L6.54297 11.8831Z"
-                            />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_254_350">
-                              <rect
-                                width={20}
-                                height={20}
-                                fill="currentColor"
-                                transform="translate(0.134766 3.8147e-06)"
-                              />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="btn_clickable_wrap">
-                    <a
-                      href="/quiz"
-                      className="btn_clickable_link is-nav w-inline-block"
-                    >
-                      <span className="btn_clickable_text">Order Now $49</span>
-                    </a>
-                  </div>
-                </div>
+                <ButtonWithArrow text="Order Now $49" href="/quiz" />
               </div>
             </div>
           </div>
@@ -1331,46 +1331,7 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                 </div>
               </div>
               <div className="quickie_how_button-wrapper">
-                <div data-trigger="" className="btn2_main_wrap is-hero">
-                  <div aria-hidden="true" className="btn2_main_layout is-hero">
-                    <div className="btn_main_text">Order Now $49</div>
-                    <div className="btn2_main_icon is-hero">
-                      <div className="icon-arrow w-embed">
-                        <svg
-                          width=" 100%"
-                          height=" 100%"
-                          viewBox="0 0 21 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g clipPath="url(#clip0_254_350)">
-                            <path
-                              d="M5.13672 17.5003C5.13672 16.5799 5.88241 15.8335 6.80273 15.8333C7.72321 15.8333 8.46973 16.5798 8.46973 17.5003C8.46957 18.4207 7.72311 19.1663 6.80273 19.1663C5.88251 19.1661 5.13687 18.4205 5.13672 17.5003ZM14.3027 17.5003C14.3027 16.5799 15.0484 15.8335 15.9688 15.8333C16.8892 15.8333 17.6357 16.5798 17.6357 17.5003C17.6356 18.4207 16.8891 19.1663 15.9688 19.1663C15.0485 19.1661 14.3029 18.4205 14.3027 17.5003ZM3.51172 0.875309L3.65625 0.888004C3.98534 0.945945 4.2541 1.19758 4.32617 1.53351L5.07715 5.04132H18.5449C18.7976 5.04138 19.0362 5.15674 19.1943 5.35382C19.3525 5.55096 19.4132 5.80924 19.3584 6.05597L17.9834 12.2474L17.9824 12.2464C17.86 12.8017 17.5523 13.2989 17.1094 13.6556C16.6662 14.0123 16.1147 14.2074 15.5459 14.2083H7.39453V14.2073C6.81971 14.2158 6.25902 14.0268 5.80762 13.6702C5.35146 13.3098 5.03503 12.8012 4.91309 12.2327L2.83691 2.54132H1.84473C1.38449 2.54132 1.01172 2.16855 1.01172 1.70832C1.01172 1.24808 1.38449 0.875309 1.84473 0.875309H3.51172ZM6.54297 11.8831L6.58496 12.0218C6.63888 12.1549 6.72688 12.2726 6.84082 12.3626C6.99286 12.4827 7.18226 12.5466 7.37598 12.5423C7.38209 12.5422 7.38842 12.5413 7.39453 12.5413H15.543C15.7325 12.541 15.9168 12.4765 16.0645 12.3577C16.2122 12.2388 16.3147 12.0722 16.3555 11.887L16.3564 11.8861L17.5059 6.70832H5.43457L6.54297 11.8831Z"
-                            />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_254_350">
-                              <rect
-                                width={20}
-                                height={20}
-                                fill="currentColor"
-                                transform="translate(0.134766 3.8147e-06)"
-                              />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="btn_clickable_wrap">
-                    <a
-                      href="/quiz"
-                      className="btn_clickable_link is-nav w-inline-block"
-                    >
-                      <span className="btn_clickable_text">Order Now $49</span>
-                    </a>
-                  </div>
-                </div>
+                <ButtonWithArrow text="Order Now $49" href="/quiz" />
                 <div>Quick Relief. Real Results.</div>
               </div>
             </div>
@@ -1898,10 +1859,97 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                   </div>
                 </div>
               </div>
-              <div
-                id="w-node-_155cd401-6f0a-67b7-5eb6-a67cc12f76e9-99ff2d34"
-                className="quickie_price_card is-popular"
-              >
+              {/* Monthly (Most Popular) Plan */}
+              <div className="quickie_price_card is-popular">
+                <div className="quickie_price_card-content">
+                  <div className="quickie_price_content-top">
+                    <div className="quickie_price_heading">Monthly</div>
+                    <div>
+                      <em>Ongoing support, monthly convenience.</em>
+                    </div>
+                    <div className="quickie_price_price-wrapper is-2">
+                      <div className="quickie_price_price-old">
+                        <div>$59</div>
+                        <div className="quickie_price_strikethrough">‍<br />‍</div>
+                      </div>
+                      <div className="text-display-inline">
+                        <span className="quickie_price_price">$49</span> / Month
+                        <br />
+                        <span className="quickie_price_discount">17% SAVINGS</span>
+                      </div>
+                    </div>
+                    <div className="quickie_price_divider" />
+                  </div>
+                  <div className="quickie_price_badges-wrapper">
+                    <div className="quickie_price_badge">
+                      <img src="/Curex _ Quickie_files/68751505a3865b3824a7fcce_icon-guarantee.svg" loading="lazy" alt="" />
+                      <div>Curex Guarantee</div>
+                    </div>
+                    <div className="quickie_price_badge">
+                      <img src="/Curex _ Quickie_files/68751505a3865b3824a7fcce_icon-guarantee.svg" loading="lazy" alt="" />
+                      <div>HSA / FSA eligible</div>
+                    </div>
+                  </div>
+                  <div className="quickie_price_list">
+                    <div className="quickie_price_item">
+                      <div className="quickie_header_item-icon-wrapper">
+                        <div className="quickie_header_item-icon w-embed">
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
+                        </div>
+                      </div>
+                      <div className="quickie_header_item-text-wrapper">
+                        <p className="no-margin-bottom">Free Shipping</p>
+                      </div>
+                    </div>
+                    <div className="quickie_price_item">
+                      <div className="quickie_header_item-icon-wrapper">
+                        <div className="quickie_header_item-icon w-embed">
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
+                        </div>
+                      </div>
+                      <div className="quickie_header_item-text-wrapper">
+                        <p className="no-margin-bottom">Unlimited Online Consults</p>
+                      </div>
+                    </div>
+                    <div className="quickie_price_item">
+                      <div className="quickie_header_item-icon-wrapper">
+                        <div className="quickie_header_item-icon w-embed">
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
+                        </div>
+                      </div>
+                      <div className="quickie_header_item-text-wrapper">
+                        <p className="no-margin-bottom">Personalized Formula Tailored to Your Symptoms</p>
+                      </div>
+                    </div>
+                    <div className="quickie_price_item">
+                      <div className="quickie_header_item-icon-wrapper">
+                        <div className="quickie_header_item-icon w-embed">
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
+                        </div>
+                      </div>
+                      <div className="quickie_header_item-text-wrapper">
+                        <p className="no-margin-bottom">Up to 5 Prescription-Strength Ingredients</p>
+                      </div>
+                    </div>
+                    <div className="quickie_price_item">
+                      <div className="quickie_header_item-icon-wrapper">
+                        <div className="quickie_header_item-icon w-embed">
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
+                        </div>
+                      </div>
+                      <div className="quickie_header_item-text-wrapper">
+                        <p className="no-margin-bottom">Change or Cancel Anytime</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="quickie_price_popular">
+                  <img src="/Curex _ Quickie_files/68752619a9e60b61d5bdd6b7_star-popular.svg" loading="lazy" alt="" />
+                  <div>Most Popular</div>
+                </div>
+              </div>
+              {/* Annual Plan (Best Value) */}
+              <div className="quickie_price_card">
                 <div className="quickie_price_card-content">
                   <div className="quickie_price_tag">
                     <div>Best Value</div>
@@ -1914,167 +1962,75 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                     <div className="quickie_price_price-wrapper is-2">
                       <div className="quickie_price_price-old">
                         <div>$708</div>
-                        <div className="quickie_price_strikethrough">
-                          ‍<br />‍
-                        </div>
+                        <div className="quickie_price_strikethrough">‍<br />‍</div>
                       </div>
                       <div className="text-display-inline">
                         <span className="quickie_price_price">$490</span> / Year
                         <br />
-                        <span className="quickie_price_discount">
-                          41% SAVINGS
-                        </span>
+                        <span className="quickie_price_discount">41% SAVINGS</span>
                       </div>
                     </div>
                     <div className="quickie_price_divider" />
                   </div>
                   <div className="quickie_price_badges-wrapper">
                     <div className="quickie_price_badge">
-                      <img
-                        src="/Curex _ Quickie_files/68751505a3865b3824a7fcce_icon-guarantee.svg"
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="/Curex _ Quickie_files/68751505a3865b3824a7fcce_icon-guarantee.svg" loading="lazy" alt="" />
                       <div>Curex Guarantee</div>
                     </div>
                     <div className="quickie_price_badge">
-                      <img
-                        src="/Curex _ Quickie_files/68751505a3865b3824a7fcce_icon-guarantee.svg"
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="/Curex _ Quickie_files/68751505a3865b3824a7fcce_icon-guarantee.svg" loading="lazy" alt="" />
                       <div>HSA / FSA eligible</div>
                     </div>
                   </div>
                   <div className="quickie_price_list">
-                    <div
-                      id="w-node-_8ef9ccb8-7ecc-6f9d-99d7-63038d4f7ead-99ff2d34"
-                      className="quickie_price_item"
-                    >
+                    <div className="quickie_price_item">
                       <div className="quickie_header_item-icon-wrapper">
                         <div className="quickie_header_item-icon w-embed">
-                          <svg
-                            width=" 100%"
-                            height=" 100%"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
                         </div>
                       </div>
                       <div className="quickie_header_item-text-wrapper">
-                        <p className="no-margin-bottom">
-                          Free Shipping on 12 Monthly Sets
-                        </p>
+                        <p className="no-margin-bottom">Free Shipping on 12 Monthly Sets</p>
                       </div>
                     </div>
-                    <div
-                      id="w-node-_8ef9ccb8-7ecc-6f9d-99d7-63038d4f7eb3-99ff2d34"
-                      className="quickie_price_item"
-                    >
+                    <div className="quickie_price_item">
                       <div className="quickie_header_item-icon-wrapper">
                         <div className="quickie_header_item-icon w-embed">
-                          <svg
-                            width=" 100%"
-                            height=" 100%"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
                         </div>
                       </div>
                       <div className="quickie_header_item-text-wrapper">
-                        <p className="no-margin-bottom">
-                          Unlimited Online Consults
-                        </p>
+                        <p className="no-margin-bottom">Unlimited Online Consults</p>
                       </div>
                     </div>
-                    <div
-                      id="w-node-_8ef9ccb8-7ecc-6f9d-99d7-63038d4f7eb9-99ff2d34"
-                      className="quickie_price_item"
-                    >
+                    <div className="quickie_price_item">
                       <div className="quickie_header_item-icon-wrapper">
                         <div className="quickie_header_item-icon w-embed">
-                          <svg
-                            width=" 100%"
-                            height=" 100%"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
                         </div>
                       </div>
                       <div className="quickie_header_item-text-wrapper">
-                        <p className="no-margin-bottom">
-                          Personalized Formula Tailored to Your Symptoms
-                        </p>
+                        <p className="no-margin-bottom">Personalized Formula Tailored to Your Symptoms</p>
                       </div>
                     </div>
-                    <div
-                      id="w-node-_8ef9ccb8-7ecc-6f9d-99d7-63038d4f7ebf-99ff2d34"
-                      className="quickie_price_item"
-                    >
+                    <div className="quickie_price_item">
                       <div className="quickie_header_item-icon-wrapper">
                         <div className="quickie_header_item-icon w-embed">
-                          <svg
-                            width=" 100%"
-                            height=" 100%"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
                         </div>
                       </div>
                       <div className="quickie_header_item-text-wrapper">
-                        <p className="no-margin-bottom">
-                          Up to 5 Prescription-Strength Ingredients
-                        </p>
+                        <p className="no-margin-bottom">Up to 5 Prescription-Strength Ingredients</p>
                       </div>
                     </div>
-                    <div
-                      id="w-node-_3dbdff78-2a7d-b7bc-79f7-41e2733f7de7-99ff2d34"
-                      className="quickie_price_item"
-                    >
+                    <div className="quickie_price_item">
                       <div className="quickie_header_item-icon-wrapper">
                         <div className="quickie_header_item-icon w-embed">
-                          <svg
-                            width=" 100%"
-                            height=" 100%"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z"
-                              fill="currentColor"
-                            />
-                          </svg>
+                          <svg width=" 100%" height=" 100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2731 5.21025C19.8589 4.62463 20.8085 4.62452 21.3942 5.21025C21.9798 5.796 21.9798 6.7456 21.3942 7.33135L9.93522 18.7894C9.34943 19.3751 8.39991 19.3751 7.81413 18.7894L2.60612 13.5813C2.02033 12.9956 2.02033 12.046 2.60612 11.4603C3.15514 10.9112 4.0238 10.8766 4.61295 11.3567L4.72721 11.4603L8.87467 15.6077L19.2731 5.21025Z" fill="currentColor" /></svg>
                         </div>
                       </div>
                       <div className="quickie_header_item-text-wrapper">
-                        <p className="no-margin-bottom">
-                          Change or Cancel Anytime
-                        </p>
+                        <p className="no-margin-bottom">Change or Cancel Anytime</p>
                       </div>
                     </div>
                   </div>
@@ -2086,46 +2042,7 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                 Quickie Spray trial is included for free with your subscription
                 to Curex allergy immunotherapy.
               </div>
-              <div data-trigger="" className="btn2_main_wrap is-hero">
-                <div aria-hidden="true" className="btn2_main_layout is-hero">
-                  <div className="btn_main_text">Order Now</div>
-                  <div className="btn2_main_icon is-hero">
-                    <div className="icon-arrow w-embed">
-                      <svg
-                        width=" 100%"
-                        height=" 100%"
-                        viewBox="0 0 21 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g clipPath="url(#clip0_254_350)">
-                          <path
-                            d="M5.13672 17.5003C5.13672 16.5799 5.88241 15.8335 6.80273 15.8333C7.72321 15.8333 8.46973 16.5798 8.46973 17.5003C8.46957 18.4207 7.72311 19.1663 6.80273 19.1663C5.88251 19.1661 5.13687 18.4205 5.13672 17.5003ZM14.3027 17.5003C14.3027 16.5799 15.0484 15.8335 15.9688 15.8333C16.8892 15.8333 17.6357 16.5798 17.6357 17.5003C17.6356 18.4207 16.8891 19.1663 15.9688 19.1663C15.0485 19.1661 14.3029 18.4205 14.3027 17.5003ZM3.51172 0.875309L3.65625 0.888004C3.98534 0.945945 4.2541 1.19758 4.32617 1.53351L5.07715 5.04132H18.5449C18.7976 5.04138 19.0362 5.15674 19.1943 5.35382C19.3525 5.55096 19.4132 5.80924 19.3584 6.05597L17.9834 12.2474L17.9824 12.2464C17.86 12.8017 17.5523 13.2989 17.1094 13.6556C16.6662 14.0123 16.1147 14.2074 15.5459 14.2083H7.39453V14.2073C6.81971 14.2158 6.25902 14.0268 5.80762 13.6702C5.35146 13.3098 5.03503 12.8012 4.91309 12.2327L2.83691 2.54132H1.84473C1.38449 2.54132 1.01172 2.16855 1.01172 1.70832C1.01172 1.24808 1.38449 0.875309 1.84473 0.875309H3.51172ZM6.54297 11.8831L6.58496 12.0218C6.63888 12.1549 6.72688 12.2726 6.84082 12.3626C6.99286 12.4827 7.18226 12.5466 7.37598 12.5423C7.38209 12.5422 7.38842 12.5413 7.39453 12.5413H15.543C15.7325 12.541 15.9168 12.4765 16.0645 12.3577C16.2122 12.2388 16.3147 12.0722 16.3555 11.887L16.3564 11.8861L17.5059 6.70832H5.43457L6.54297 11.8831Z"
-                            />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_254_350">
-                            <rect
-                              width={20}
-                              height={20}
-                              fill="currentColor"
-                              transform="translate(0.134766 3.8147e-06)"
-                            />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div className="btn_clickable_wrap">
-                  <a
-                    href="/quiz"
-                    className="btn_clickable_link is-nav w-inline-block"
-                  >
-                    <span className="btn_clickable_text">Order Now</span>
-                  </a>
-                </div>
-              </div>
+              <ButtonWithArrow text="Order Now" href="/quiz" />
             </div>
           </div>
         </div>
@@ -2144,449 +2061,117 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                       </div>
                     </div>
                   </div>
-                  <div className="weight-loss_faq_list">
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          How fast does the Quickie Nasal Spray work?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                  {(() => {
+                    // FAQ data kept outside of JSX mapping logic for readability
+                    const faqs: { q: string; a: string }[] = [
+                      {
+                        q: "How fast does the Quickie Nasal Spray work?",
+                        a: "Most patients feel relief within 15 minutes. We have both short-term relief ingredients as well as longer-term relief to keep you feeling better, longer. Some say it’s like turning off their allergies.",
+                      },
+                      {
+                        q: "What symptoms does the Nasal Spray treat?",
+                        a: "Sneezing runny nose, nasal congestion, post-nasal drip, sinus pressure, itchy nose. Great for outdoor allergies, indoor dust, or when pollen spikes unexpectedly.",
+                      },
+                      {
+                        q: "Will it cause rebound congestion like Afrin?",
+                        a: "No, this formula uses a microdose of oxymetazoline, balanced with anti-inflammatory and moisturizing ingredients to reduce the risk of rebound congestion. Clinical studies over the last decade show that when oxymetazoline is combined with a corticosteroid, it can be used safely over the long term without causing rebound symptoms.",
+                      },
+                      {
+                        q: "What’s the difference between this and over-the-counter sprays?",
+                        a: "Quickie Spray combines up to five prescription-strength ingredients into a single, personalized formula — targeting multiple symptoms like congestion, post-nasal drip, and inflammation. OTC sprays typically address just one symptom and lack the synergy of a customized blend.",
+                      },
+                      {
+                        q: "Does it have a bad taste or drip down the throat?",
+                        a: "Some ingredients like azelastine may cause a slight taste, but many patients find it milder than traditional OTC sprays. Proper spray technique (head forward, not tilted back) helps minimize drip. We also offer an alternative formulation with olopatadine, which has a gentler taste profile and may be preferred by taste-sensitive patients.",
+                      },
+                      {
+                        q: "Can I use it with my other allergy meds?",
+                        a: "Quickie is designed to replace most other allergy medications. But it is designed to compliment allergy immunotherapy for long-term relief. If you’re currently taking other antihistamines or nasal sprays, tell your Curex provider, so we can adjust your formula to avoid overlap or interactions.",
+                      },
+                      {
+                        q: "Is this FDA-approved?",
+                        a: "No, Quickie is a personalized compounded prescription prepared by licensed U.S. pharmacies based on your doctor’s evaluation. Compounded medications are not FDA-approved as commercial products, but they are regulated under federal and state pharmacy laws.",
+                      },
+                      {
+                        q: "Are there any side effects?",
+                        a: "Possible side effects include nasal dryness, mild irritation, or occasional nosebleeds. These are typically mild and manageable. Let your Curex provider know about any bothersome or serious effects, so we can fine-tune your prescription if needed.",
+                      },
+                      {
+                        q: "How long should I use it for?",
+                        a: "Quickie is safe for daily use, especially during the first 3–6 months of allergy immunotherapy, when symptoms are still active. Your Curex provider may adjust your dose or frequency as your immune system builds tolerance.",
+                      },
+                      {
+                        q: "Will it make me drowsy?",
+                        a: "Quickie is designed to be non-sedating, so you can use it before work, school, or exercise without feeling groggy or foggy. In rare cases where drowsiness is reported, let your Curex provider know—we can easily adjust the formula to better suit your needs.",
+                      },
+                      {
+                        q: "Can my child use Quickie Nasal Spray?",
+                        a: "Yes, Quickie Spray can be prescribed for children aged 6 and up, based on your provider’s clinical evaluation.",
+                      },
+                      {
+                        q: "How often should I use it?",
+                        a: "Follow the instructions from your Curex provider. Most patients are advised to use one spray per nostril, twice daily — morning and evening — for consistent relief.",
+                      },
+                    ];
+                    const [openIndex, setOpenIndex] = useState<number | null>(0);
+                    const answerRefs = useRef<(HTMLDivElement | null)[]>([]);
+                    const [heights, setHeights] = useState<number[]>([]);
+                    useEffect(() => {
+                      const newHeights = answerRefs.current.map(el => el ? el.scrollHeight : 0);
+                      setHeights(newHeights);
+                    }, [faqs.length]);
+                    const toggle = useCallback((i: number) => {
+                      setOpenIndex(prev => prev === i ? null : i);
+                    }, []);
+                    const onKey = (e: React.KeyboardEvent, i: number) => {
+                      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(i); }
+                    };
+                    return (
+                      <div className="weight-loss_faq_list">
+                        {faqs.map((item, i) => {
+                          const open = openIndex === i;
+                          return (
+                            <div key={item.q} className="weight-loss_faq_accordion">
+                              <div
+                                className="weight-loss_faq_question"
+                                role="button"
+                                tabIndex={0}
+                                aria-expanded={open}
+                                aria-controls={`faq-answer-${i}`}
+                                id={`faq-question-${i}`}
+                                onClick={() => toggle(i)}
+                                onKeyDown={(e) => onKey(e, i)}
+                                style={{ cursor: 'pointer' }}
+                              >
+                                <div className="text-size-medium2 text-weight-semibold">{item.q}</div>
+                                <div className="weight-loss_faq_icon-wrapper" style={{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform .3s ease' }}>
+                                  <div className="weight-loss_faq_icon w-embed">
+                                    <svg width="100%" height="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z" fill="currentColor" /></svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                id={`faq-answer-${i}`}
+                                role="region"
+                                aria-labelledby={`faq-question-${i}`}
+                                className="weight-loss_faq_answer"
+                                style={{ width: '100%', overflow: 'hidden', height: open ? (heights[i] ?? 'auto') : 0, transition: 'height .35s ease' }}
+                              >
+                                <div
+                                  className="weight-loss_faq_answer-wrapper"
+                                  ref={(el) => { answerRefs.current[i] = el; }}
+                                >
+                                  <div className="text-rich-text2 w-richtext">
+                                    <p>{item.a}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Most patients feel relief within 15 minutes. We
-                              have both short-term relief ingredients as well as
-                              longer-term relief to keep you feeling better,
-                              longer. Some say it’s like turning off their
-                              allergies.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          What symptoms does the Nasal Spray treat?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Sneezing runny nose, nasal congestion, post-nasal
-                              drip, sinus pressure, itchy nose. Great for
-                              outdoor allergies, indoor dust, or when pollen
-                              spikes unexpectedly.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          Will it cause rebound congestion like Afrin?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              No, this formula uses a microdose of
-                              oxymetazoline, balanced with anti-inflammatory and
-                              moisturizing ingredients to reduce the risk of
-                              rebound congestion. Clinical studies over the last
-                              decade show that when oxymetazoline is combined
-                              with a corticosteroid, it can be used safely over
-                              the long term without causing rebound symptoms.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          What’s the difference between this and
-                          over-the-counter sprays?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Quickie Spray combines up to five
-                              prescription-strength ingredients into a single,
-                              personalized formula — targeting multiple symptoms
-                              like congestion, post-nasal drip, and
-                              inflammation. OTC sprays typically address just
-                              one symptom and lack the synergy of a customized
-                              blend.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          Does it have a bad taste or drip down the throat?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Some ingredients like azelastine may cause a
-                              slight taste, but many patients find it milder
-                              than traditional OTC sprays. Proper spray
-                              technique (head forward, not tilted back) helps
-                              minimize drip.We also offer an alternative
-                              formulation with olopatadine, which has a gentler
-                              taste profile and may be preferred by
-                              taste-sensitive patients.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          Can I use it with my other allergy meds?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Quickie is designed to replace most other allergy
-                              medications. But it is designed to compliment
-                              allergy immunotherapy for long-term relief. If
-                              you’re currently taking other antihistamines or
-                              nasal sprays, tell your Curex provider, so we can
-                              adjust your formula to avoid overlap or
-                              interactions.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          Is this FDA-approved?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              No, Quickie is a personalized compounded
-                              prescription prepared by licensed U.S. pharmacies
-                              based on your doctor’s evaluation. Compounded
-                              medications are not FDA-approved as commercial
-                              products, but they are regulated under federal and
-                              state pharmacy laws.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          Are there any side effects?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Possible side effects include nasal dryness, mild
-                              irritation, or occasional nosebleeds. These are
-                              typically mild and manageable. Let your Curex
-                              provider know about any bothersome or serious
-                              effects, so we can fine-tune your prescription if
-                              needed.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          How long should I use it for?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Quickie is safe for daily use, especially during
-                              the first 3–6 months of allergy immunotherapy,
-                              when symptoms are still active. Your Curex
-                              provider may adjust your dose or frequency as your
-                              immune system builds tolerance.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          Will it make me drowsy?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Quickie is designed to be non-sedating, so you can
-                              use it before work, school, or exercise without
-                              feeling groggy or foggy. In rare cases where
-                              drowsiness is reported, let your Curex provider
-                              know—we can easily adjust the formula to better
-                              suit your needs.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          Can my child use Quickie Nasal Spray?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Yes, Quickie Spray can be prescribed for children
-                              aged 6 and up, based on your provider’s clinical
-                              evaluation.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weight-loss_faq_accordion">
-                      <div className="weight-loss_faq_question">
-                        <div className="text-size-medium2 text-weight-semibold">
-                          How often should I use it?
-                        </div>
-                        <div className="weight-loss_faq_icon-wrapper">
-                          <div className="weight-loss_faq_icon w-embed">
-                            <svg
-                              width="100%"
-                              height="100%"
-                              viewBox="0 0 40 40"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="weight-loss_faq_answer">
-                        <div className="weight-loss_faq_answer-wrapper">
-                          <div className="text-rich-text2 w-richtext">
-                            <p>
-                              Follow the instructions from your Curex
-                              provider.Most patients are advised to use one
-                              spray per nostril, twice daily — morning and
-                              evening — for consistent relief.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    );
+                  })()}
                 </div>
               </div>
             </div>
