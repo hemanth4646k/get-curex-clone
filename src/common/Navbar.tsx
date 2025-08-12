@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
 import Dropdown from "./ui/Dropdown";
 
@@ -42,7 +42,7 @@ const Navbar = () => {
     { label: 'Anaphylaxis', href: '/food-anaphylaxis' },
     { label: 'Food Sensitivities', href: '/food-allergies-and-sensitivities' }
   ];
-
+const navigator = useNavigate();
   return (
     <div className="nav-container">
       {/* Main Header */}
@@ -71,7 +71,7 @@ const Navbar = () => {
               <span className="nav-service nav-service-active">
                 Allergy Care
               </span>
-              <span className="nav-service">Weight Loss</span>
+              <span className="nav-service" onClick={()=>{navigator("/weight-loss")}}>Weight Loss</span>
             </div>
             <button className="nav-cta-button">Am I eligible?</button>
           </div>
