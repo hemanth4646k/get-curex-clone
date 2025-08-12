@@ -25,14 +25,14 @@ const DropsForFoodAllergies: React.FC = () => {
       <div className="main-content">
         <div className="image-section">
           <div className="family-image-container">
-            <img src="" alt="Mother and child" className="family-image" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/655740da8ffbd8c3210cea98_mom-with-children-homely-atmosphere%201-p-1080.webp" alt="Mother and child" className="family-image" />
           </div>
         </div>
         
         <div className="video-section">
           <div className="video-container">
             <div className="video-thumbnail">
-              <img src="" alt="Sublingual Immunotherapy for Treatment of Food Allergy" className="video-image" />
+              <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/652e8cfbb1b80741ea039757_Rectangle%201942-p-1080.webp" alt="Sublingual Immunotherapy for Treatment of Food Allergy" className="video-image" />
               <div className="play-button">
                 <div className="play-icon">▶</div>
               </div>
@@ -80,7 +80,7 @@ const DropsForFoodAllergies: React.FC = () => {
         <h3 className="subsection-heading">How Sublingual Drops Can Ease Your Allergy Symptoms</h3>
         
         <div className="family-scene">
-          <img src="" alt="Mother helping child with allergies" className="family-scene-image" />
+          <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/655740da8ffbd8c3210cea98_mom-with-children-homely-atmosphere%201-p-1080.webp" alt="Mother helping child with allergies" className="family-scene-image" />
         </div>
       </div>
     </div>

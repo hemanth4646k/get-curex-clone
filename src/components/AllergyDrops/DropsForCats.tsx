@@ -31,7 +31,7 @@ const DropsForCats: React.FC = () => {
         
         <div className="image-section">
           <div className="cat-owner-image">
-            <img src="" alt="Happy woman holding cat" className="woman-cat-image" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/65573e928992b2764fd77561_image%2097-p-1080.webp" alt="Happy woman holding cat" className="woman-cat-image" />
           </div>
         </div>
       </div>

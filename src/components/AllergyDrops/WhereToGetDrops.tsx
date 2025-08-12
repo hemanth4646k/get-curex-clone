@@ -21,10 +21,7 @@ const WhereToGetDrops: React.FC = () => {
         <div className="image-section">
           <div className="product-container">
             <div className="product-box">
-              <img src="" alt="Curex allergy drops package" className="package-image" />
-            </div>
-            <div className="bottle-image">
-              <img src="" alt="Allergy drops bottle with dropper" className="bottle" />
+              <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/65573d6cd0de7397c78a586a_health-care-medicine-concept%201-p-1080.webp" alt="Curex allergy drops package" className="package-image" />
             </div>
           </div>
         </div>
@@ -33,7 +30,7 @@ const WhereToGetDrops: React.FC = () => {
       <div className="dog-section" id='Allergy-Drops-For-Dog-Allergies'>
         <div className="dog-content">
           <div className="dog-image-container">
-            <img src="" alt="Happy dog with person" className="dog-image" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/654c827c8627503eaa07bb2f_woman-with-dog-p-1080.jpg" alt="Happy dog with person" className="dog-image" />
           </div>
           
           <div className="dog-text-section">

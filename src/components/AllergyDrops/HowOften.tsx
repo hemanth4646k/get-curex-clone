@@ -11,8 +11,8 @@ interface HowOftenProps {
 const HowOften: React.FC<HowOftenProps> = ({
   title = "How Often Do You Take Allergy Drops?",
   description = "The frequency of allergy drop administration depends on several factors, including the severity of your allergies, the type of allergen extract you are receiving, and your doctor's recommendations. Typically, allergy drops are taken daily. Some more diluted doses of allergies are taken 3 times per day. Your doctor will prescribe you a specific protocol that is likely to be the most effective for you. Like with most medications, it's important to follow your prescription.",
-  imageSrc = "",
-  imageAlt = ""
+  // imageSrc = "",
+  // imageAlt = ""
 }) => {
   return (
     <div className="padding-global">
@@ -42,9 +42,8 @@ const HowOften: React.FC<HowOftenProps> = ({
               
               <div className="how-often_image-wrapper">
                 <img 
-                  src={imageSrc} 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/652e8cfbb1b80741ea039757_Rectangle%201942-p-1080.webp" 
                   loading="lazy" 
-                  alt={imageAlt} 
                   className="how-often_image"
                 />
               </div>

@@ -19,6 +19,7 @@ const AllergyNutshell: React.FC = () => {
         <div className="allergy-nutshell-content">
           <div className="allergy-nutshell-image-section">
             <img 
+              src='https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/626b110125c10c7fec477041_43c82f5f8d661d008f9fc719d32d53cc-min-p-2000.jpeg'
               className="allergy-nutshell-image" 
               alt="Woman opening Curex box with blue background"
             />

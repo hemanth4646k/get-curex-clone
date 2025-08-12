@@ -27,6 +27,7 @@ function Immunotherapy101() {
         <div className="immunotherapy-101-right-section">
           <div className="immunotherapy-101-image-container">
             <img 
+              src='https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/6285164f77bde724f7eeba58_Curex-2461%20(1)-p-2000.jpeg'
               className="immunotherapy-101-image" 
               alt="Woman working on laptop with green background"
             />
