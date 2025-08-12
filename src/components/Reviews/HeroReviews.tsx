@@ -4,128 +4,120 @@ function HeroReviews() {
       style={{
         position: "relative",
         width: "100%",
-        height: "500px",
-        backgroundImage: "url('https://via.placeholder.com/800x400')",
-        backgroundSize: "cover",
+        height: "600px",
+        backgroundColor: "#fff",
         backgroundPosition: "center",
-        borderRadius: "16px",
         overflow: "hidden",
+        display: "flex",
+        padding: "0 40px",
       }}
     >
-      {/* Yellow banner */}
+      {/* Left Content */}
       <div
         style={{
-          position: "absolute",
-          top: "32px",
-          left: "32px",
-          background: "#fff700",
-          padding: "4px 16px",
-          borderRadius: "6px",
-          transform: "rotate(-2deg)",
-          fontWeight: "bold",
-          fontSize: "18px"
-        }}
-      >
-        CUREX REVIEWS
-      </div>
-
-      {/* Content area */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 32,
-          left: 32,
-          color: "#fff",
-          maxWidth: 520,
-          zIndex: 2,
+          flex: "1",
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          justifyContent: "center",
+          position: "relative",
+          paddingRight: "40px",
         }}
       >
+        <div style={{ marginBottom: "20px" }}>
+          <img
+            src="/public/icons/pink_spring.png"
+            alt="Pink spring"
+            style={{
+              width: "60px",
+              position: "absolute",
+              top: "80px",
+              left: "0",
+            }}
+          />
+        </div>
         <h1
           style={{
-            fontSize: 32,
-            margin: 0,
-            fontWeight: 700,
-            fontFamily: "Georgia, serif",
-            lineHeight: 1.1,
-            letterSpacing: "-1px",
-            color: "#fff",
-            textShadow: "0 2px 12px rgba(0,0,0,0.25)",
+            fontSize: "64px",
+            lineHeight: "1.1",
+            fontWeight: "700",
+            color: "#000",
+            marginBottom: "20px",
+            maxWidth: "600px",
           }}
         >
-          Allergy Sufferers{' '}
-          <span
-            style={{
-              color: "transparent",
-              textShadow: "0 0 #ffb4d2, 0 2px 8px #ffb4d2",
-              fontSize: 36,
-              verticalAlign: "middle",
-              margin: "0 2px",
-              display: "inline-block",
-              fontFamily: "inherit",
-            }}
-            className="larger-heart"
-          >
-            ♥︎
-          </span>
-          {' '}Curex
+          50,000+ users who LOVE Curex and have said goodbye to their allergies!
         </h1>
-        <div
+        <p
           style={{
-            fontSize: 15,
-            margin: "10px 0 0 0",
-            fontWeight: 400,
-            textShadow: "0 2px 8px rgba(0,0,0,0.18)",
-            color: "#fff",
-            letterSpacing: 0.1,
+            fontSize: "18px",
+            color: "#666",
+            marginBottom: "30px",
           }}
-          className="hero-subheader is-white"
         >
-          Curex is the most c<span>on</span>venient way to t<span>re</span>at allergies.
-        </div>
-        {/* Senja embed */}
-        <div style={{ width: "100%", margin: "10px 0 0 0" }}>
-          <script src="https://widget.senja.io/widget/990f99aa-48e4-4380-be4c-2fb16e54c883/platform.js" type="text/javascript" async></script>
-          <div className="senja-embed" data-id="990f99aa-48e4-4380-be4c-2fb16e54c883" data-mode="shadow" data-lazyload="false" style={{ display: "block", width: "100%" }}></div>
-        </div>
-        {/* Button */}
-        <a
-          id="Big-Header-Button"
-          data-analytics-on="click"
-          href="/checkout"
-          className="alt-btn hero w-button"
+          #1 Alternative to allergy shots.
+        </p>
+        <button
           style={{
-            marginTop: 14,
-            background: "#14d964",
-            color: "#fff",
+            backgroundColor: "#FF69B4",
+            color: "white",
             border: "none",
-            borderRadius: 22,
-            padding: "8px 22px",
-            fontSize: 15,
-            fontWeight: 600,
+            borderRadius: "30px",
+            padding: "15px 30px",
+            fontSize: "18px",
+            fontWeight: "600",
             cursor: "pointer",
-            boxShadow: "0 2px 12px rgba(20,217,100,0.18)",
-            textDecoration: "none",
-            display: "inline-block",
+            width: "fit-content",
           }}
         >
-          Start a Free Quiz
-        </a>
+          Take the Free Quiz
+        </button>
       </div>
-      
-      {/* Dark overlay */}
+
+      {/* Right Content */}
       <div
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: "linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%)",
+          flex: "1",
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
-      ></div>
+      >
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "90%",
+              height: "80%",
+              backgroundColor: "#FFB6C1",
+              borderRadius: "20px",
+            }}
+          />
+          <img
+            src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/63b5516226e16f63b9b1674b_image2.avif"
+            alt="Happy person"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "90%",
+              height: "80%",
+              objectFit: "cover",
+              borderRadius: "20px",
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 }
