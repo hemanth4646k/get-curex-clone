@@ -7,6 +7,7 @@ const Immuno101Testimonials: React.FC = () => {
       id: 1,
       name: "Allie, Nevada",
       nameColor: "green",
+      src: "https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/61e036cf1a240e58aa7e249a_Allie.jpg",
       quote: "I have two cats I can finally cuddle!",
       allergyTypes: ["Cat and dog allergies"],
       icons: ["🐱", "🐶"]
@@ -15,6 +16,7 @@ const Immuno101Testimonials: React.FC = () => {
       id: 2,
       name: "Zachary, Texas",
       nameColor: "yellow",
+      src: "https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/61e036cf1a240e4eb97e248d_Zach.jpg",
       quote: "I can breathe through my nose for the first time in like 20 years!",
       allergyTypes: ["Dust and mold allergies"],
       icons: ["🌪️", "🦠"]
@@ -23,6 +25,7 @@ const Immuno101Testimonials: React.FC = () => {
       id: 3,
       name: "Erika, New York",
       nameColor: "blue",
+      src: "https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/61e036cf1a240e24e67e2492_Erika.jpg",
       quote: "I've noticed less sneezing and shortness of breath.",
       allergyTypes: ["Tree and grass allergies"],
       icons: ["🌳", "🌿"]
@@ -31,6 +34,7 @@ const Immuno101Testimonials: React.FC = () => {
       id: 4,
       name: "Richard, Texas",
       nameColor: "pink",
+      src: "https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/61e036cf1a240ecded7e2495_Richard.jpg",
       quote: "I love the convenience!",
       allergyTypes: ["Tree and cat allergies"],
       icons: ["🌳", "🐱"]
@@ -61,6 +65,7 @@ const Immuno101Testimonials: React.FC = () => {
               <div className="immuno-testimonials-avatar-section">
                 <div className="immuno-testimonials-avatar">
                   <img 
+                    src={testimonial.src}
                     className="immuno-testimonials-avatar-image" 
                     alt={`${testimonial.name} profile photo`}
                   />
