@@ -68,7 +68,7 @@ const ReviewsAndSteps: React.FC = () => {
             <div className="step-card">
               <div className="step-image">
                 <img 
-                  src="" 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/652e8cfbb1b80741ea039757_Rectangle%201942-p-500.webp" 
                   alt="Curex test kit box with dropper bottle on yellow background" 
                   className="step-image-img"
                 />
@@ -83,7 +83,7 @@ const ReviewsAndSteps: React.FC = () => {
             <div className="step-card">
               <div className="step-image">
                 <img 
-                  src="" 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/63d28d24ba70d63f87bb63a3_how-it-works-1.webp" 
                   alt="Medical professional conducting allergy test with patient" 
                   className="step-image-img"
                 />
@@ -98,7 +98,7 @@ const ReviewsAndSteps: React.FC = () => {
             <div className="step-card">
               <div className="step-image">
                 <img 
-                  src="" 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/62273a13cb6d641444cc5420_61ed4dc36e7fdbb8f5dc50e0_61dfcdfb4274b06facf162f9_61dd1468389f23dc971cfaf3_Curex-1198_50%402x.jpg" 
                   alt="Person holding customized treatment formula bottles with smile" 
                   className="step-image-img"
                 />

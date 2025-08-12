@@ -7,10 +7,11 @@ const AllergyImmunotherapyBlog: React.FC = () => {
   return (
     <div>
       <BlogHero
-        imgSrc="/dandelion.avif" // Update with actual image path in public folder
+        imgSrc="https://cdn.prod.website-files.com/61bcf7a199a6ef4fbfb9ee04/61f291d7587e201005ca2664_613aa8969ab5d60992fbac5d_allergy%2520immunotherapy-p-1080.avif" // Update with actual image path in public folder
         imgAlt="Close-up of a dandelion seedhead with delicate white seeds ready to be blown away, representing allergy triggers in nature"
         date="May 9, 2022"
         title="Allergy immunotherapy: Everything you Need to Know"
+        className='w-full'
       />
       {/* Main Content */}
       <section className="blog-main-content">

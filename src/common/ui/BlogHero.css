@@ -1,7 +1,7 @@
 .blog-hero {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  align-self: center;
   height: 600px;
   overflow: hidden;
   border-radius: 0;
