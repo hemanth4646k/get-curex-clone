@@ -22,7 +22,7 @@ const WhyCurex: React.FC = () => {
             <p>We accept prior allergy test results, if available.</p>
           </>
         }
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/654c827c8627503eaa07bb2f_woman-with-dog-p-800.jpg"
         imagePosition="right"
       ></DescCard>
 
@@ -39,7 +39,7 @@ const WhyCurex: React.FC = () => {
               <div className="testing-card">
                 <div className="card-image">
                   <img
-                    src=""
+                    src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/654c8ecb578e1e69395880f5_woman-using-test-p-1600.jpg"
                     alt="Woman using at-home test kit with automatic blood collection device"
                     className="card-image-img"
                   />
@@ -60,7 +60,7 @@ const WhyCurex: React.FC = () => {
               <div className="testing-card">
                 <div className="card-image">
                   <img
-                    src=""
+                    src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/654c8ecc3dffee07f784f6d7_Quest-Diagnostics-logo%201.avif"
                     alt="Quest Diagnostics and Labcorp laboratory logos for in-lab testing"
                     className="card-image-img"
                   />
@@ -78,7 +78,7 @@ const WhyCurex: React.FC = () => {
               <div className="testing-card">
                 <div className="card-image">
                   <img
-                    src=""
+                    src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/62c739969e1e9f8047bdea7e_image20-p-1600.jpeg"
                     alt="Medical professional visiting patient at home for concierge blood draw service"
                     className="card-image-img"
                   />
