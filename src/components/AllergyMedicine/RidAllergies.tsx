@@ -1,93 +1,165 @@
-import React from 'react';
-import './RidAllergies.css';
+import React from "react";
+import "./RidAllergies.css";
 
 const RidAllergies: React.FC = () => {
   return (
     <section className="rid-allergies">
-      <div className="rid-allergies-container" id='How-to-Get-Rid-of-Allergies'>
+      <div className="rid-allergies-container" id="How-to-Get-Rid-of-Allergies">
         {/* Header Section */}
         <div className="rid-allergies-header">
-          <h1 className="rid-allergies-title">
-            How to Get Rid of Allergies?
-          </h1>
+          <h1 className="rid-allergies-title">How to Get Rid of Allergies?</h1>
           <p className="rid-allergies-subtitle">
             5 ways to Get Rid of Allergies
           </p>
         </div>
-        
+
         {/* Cards Grid */}
         <div className="rid-allergies-grid">
           {/* Card 1 - Identify and Avoid Triggers */}
           <div className="rid-allergies-card">
             <div className="card-icon">
-              <img src="" alt="Weather icon with sun and cloud symbol" className="card-icon-img" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+              >
+                <path
+                  d="M26.15 54.7998C22.3789 54.7998 18.6926 53.6816 15.5571 51.5865C12.4216 49.4915 9.97777 46.5136 8.53466 43.0297C7.09155 39.5457 6.71396 35.712 7.44965 32.0134C8.18534 28.3149 10.0013 24.9175 12.6678 22.251C15.3343 19.5845 18.7317 17.7686 22.4302 17.0329C26.1288 16.2972 29.9625 16.6748 33.4465 18.1179C36.9304 19.561 39.9082 22.0048 42.0033 25.1403C44.0984 28.2758 45.2166 31.9621 45.2166 35.7332C45.2111 40.7883 43.2005 45.6348 39.626 49.2093C36.0515 52.7838 31.2051 54.7943 26.15 54.7998ZM26.15 20.8332C23.203 20.8332 20.3223 21.707 17.872 23.3443C15.4217 24.9815 13.5119 27.3086 12.3842 30.0312C11.2564 32.7538 10.9613 35.7497 11.5363 38.64C12.1112 41.5303 13.5303 44.1853 15.6141 46.2691C17.6979 48.3529 20.3528 49.772 23.2431 50.3469C26.1334 50.9218 29.1293 50.6267 31.852 49.499C34.5746 48.3712 36.9016 46.4615 38.5389 44.0112C40.1761 41.5609 41.05 38.6801 41.05 35.7332C41.0456 31.7828 39.4743 27.9955 36.681 25.2022C33.8877 22.4088 30.1003 20.8376 26.15 20.8332Z"
+                  fill="black"
+                ></path>
+                <path
+                  d="M49.65 67.8832C47.1794 67.8823 44.807 66.9166 43.0382 65.1918C41.2694 63.467 40.2443 61.1196 40.1812 58.6499C40.1182 56.1802 41.0223 53.7836 42.7008 51.9708C44.3792 50.158 46.6994 49.0725 49.1666 48.9457C49.378 48.9344 49.5851 48.8814 49.776 48.7899C49.967 48.6984 50.1379 48.5701 50.2791 48.4123C50.4229 48.2564 50.5339 48.0731 50.6055 47.8734C50.677 47.6737 50.7078 47.4616 50.6958 47.2498C50.6071 44.7654 51.4979 42.3457 53.1763 40.5118C54.8547 38.678 57.1863 37.5768 59.6688 37.4457C62.1514 37.3145 64.586 38.1639 66.4483 39.8107C68.3106 41.4575 69.4514 43.7699 69.625 46.2498C69.9076 51.6956 68.0178 57.0309 64.3704 61.0846C60.723 65.1382 55.616 67.5789 50.1708 67.8707L49.65 67.8832ZM60.1541 41.4373H59.8666C58.4611 41.5138 57.1433 42.1445 56.2021 43.1911C55.2608 44.2378 54.7731 45.6149 54.8458 47.0207C54.9253 48.5509 54.3942 50.0501 53.3692 51.1891C52.3443 52.3281 50.9092 53.0138 49.3791 53.0957C47.9915 53.1956 46.6985 53.8359 45.7779 54.8789C44.8573 55.9219 44.3825 57.2844 44.4556 58.6737C44.5288 60.0629 45.1439 61.3681 46.1689 62.3087C47.194 63.2493 48.547 63.7503 49.9375 63.704C54.2801 63.4704 58.3526 61.5231 61.261 58.2898C64.1693 55.0565 65.6759 50.8012 65.45 46.4582C65.3765 45.1021 64.787 43.8256 63.8022 42.8904C62.8174 41.9552 61.5122 41.4323 60.1541 41.429V41.4373Z"
+                  fill="black"
+                ></path>
+                <path
+                  d="M56.7666 27.9665H56.5958C53.004 27.89 49.5806 26.429 47.0403 23.8887C44.4999 21.3483 43.039 17.9249 42.9625 14.3332C42.9344 13.4318 43.085 12.5339 43.4056 11.691C43.7262 10.8482 44.2105 10.0771 44.8305 9.4223C45.4505 8.76748 46.1939 8.24186 47.018 7.87573C47.8421 7.5096 48.7305 7.3102 49.6321 7.28903C50.5336 7.26786 51.4304 7.42533 52.2707 7.75238C53.1111 8.07942 53.8784 8.56957 54.5285 9.19456C55.1785 9.81955 55.6985 10.567 56.0583 11.3939C56.4181 12.2208 56.6107 13.1107 56.625 14.0123C56.626 14.0894 56.6571 14.1629 56.7116 14.2174C56.766 14.2719 56.8396 14.3029 56.9166 14.304C57.8267 14.2939 58.7295 14.4656 59.5723 14.8092C60.415 15.1527 61.1807 15.6612 61.8243 16.3046C62.4678 16.9481 62.9764 17.7137 63.3201 18.5564C63.6638 19.399 63.8357 20.3019 63.8257 21.2119C63.8157 22.122 63.624 23.0208 63.2619 23.8558C62.8998 24.6907 62.3745 25.4449 61.717 26.0741C61.0594 26.7033 60.2828 27.1948 59.4327 27.5198C58.5826 27.8447 57.6762 27.9966 56.7666 27.9665ZM49.7916 11.3457C49.6761 11.3465 49.5606 11.3535 49.4458 11.3665C48.7758 11.4797 48.1703 11.8342 47.7436 12.363C47.3168 12.8918 47.0983 13.5585 47.1291 14.2373C47.1835 16.76 48.2113 19.1639 49.9974 20.9462C51.7836 22.7284 54.1897 23.751 56.7125 23.7998C57.3909 23.8289 58.0566 23.6097 58.585 23.1833C59.1135 22.7568 59.4684 22.1524 59.5833 21.4832C59.6311 21.1071 59.5985 20.7251 59.4875 20.3626C59.3765 20.0001 59.1897 19.6653 58.9395 19.3804C58.6893 19.0956 58.3815 18.8671 58.0363 18.7103C57.6911 18.5535 57.3166 18.4718 56.9375 18.4707C55.7554 18.4696 54.622 17.9995 53.7862 17.1636C52.9503 16.3278 52.4802 15.1944 52.4791 14.0123C52.4789 13.6345 52.3981 13.2611 52.2422 12.9169C52.0863 12.5728 51.8588 12.2658 51.575 12.0165C51.0853 11.5778 50.449 11.3384 49.7916 11.3457Z"
+                  fill="black"
+                ></path>
+              </svg>
             </div>
-            <h3 className="card-title">
-              Identify and Avoid Triggers:
-            </h3>
+            <h3 className="card-title">Identify and Avoid Triggers:</h3>
             <p className="card-description">
-              Determine specific allergens causing your symptoms (e.g., pollen, dust mites, pet dander). 
-              Take steps to minimize exposure to these allergens at home and in your environment.
+              Determine specific allergens causing your symptoms (e.g., pollen,
+              dust mites, pet dander). Take steps to minimize exposure to these
+              allergens at home and in your environment.
             </p>
           </div>
 
           {/* Card 2 - Keep Your Living Space Clean */}
           <div className="rid-allergies-card">
             <div className="card-icon">
-              <img src="" alt="House icon representing clean living space" className="card-icon-img" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+              >
+                <path
+                  d="M39.9999 7.39994L8.23319 31.1499V66.8166H71.7665V31.1374L39.9999 7.39994ZM47.9165 62.6374H32.0832V43.7499H47.9165V62.6374ZM67.5999 62.6374H52.0832V39.5833H27.9165V62.6374H12.3999V33.2249L39.9999 12.5999L67.5999 33.2249V62.6374Z"
+                  fill="black"
+                ></path>
+              </svg>{" "}
             </div>
-            <h3 className="card-title">
-              Keep Your Living Space Clean:
-            </h3>
+            <h3 className="card-title">Keep Your Living Space Clean:</h3>
             <p className="card-description">
-              Regularly clean and dust your home. Use allergen-proof mattress and pillow covers. 
-              Wash bedding, curtains, and rugs frequently in hot water.
+              Regularly clean and dust your home. Use allergen-proof mattress
+              and pillow covers. Wash bedding, curtains, and rugs frequently in
+              hot water.
             </p>
           </div>
 
           {/* Card 3 - Manage Indoor Humidity */}
           <div className="rid-allergies-card">
             <div className="card-icon">
-              <img src="" alt="Cat face icon for pet allergen management" className="card-icon-img" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+              >
+                <path
+                  d="M46.5834 61.1498C45.6616 61.1514 44.7628 60.8623 44.0148 60.3237C43.2668 59.7852 42.7076 59.0245 42.4167 58.1498L42.4459 58.129L43.6625 57.0915C44.1658 56.6624 44.5258 56.0896 44.6941 55.45C44.8625 54.8105 44.8312 54.1347 44.6045 53.5134C44.3777 52.8921 43.9664 52.355 43.4256 51.9743C42.8848 51.5935 42.2405 51.3872 41.5792 51.3832H39.1417C38.4803 51.3872 37.836 51.5935 37.2953 51.9743C36.7545 52.355 36.3431 52.8921 36.1164 53.5134C35.8897 54.1347 35.8584 54.8105 36.0267 55.45C36.1951 56.0896 36.5551 56.6624 37.0584 57.0915L37.9167 57.8457C37.6516 58.8788 37.019 59.7799 36.1373 60.38C35.2555 60.9802 34.1853 61.2383 33.1269 61.1059C32.0685 60.9735 31.0948 60.4598 30.388 59.661C29.6812 58.8622 29.29 57.8331 29.2875 56.7665H25.1209C25.1197 58.5087 25.6513 60.2097 26.6444 61.6411C27.6376 63.0726 29.0446 64.1661 30.677 64.7751C32.3093 65.384 34.0888 65.4793 35.7769 65.048C37.4649 64.6168 38.9806 63.6796 40.1209 62.3623C41.2611 63.6796 42.7768 64.6168 44.4648 65.048C46.1529 65.4793 47.9324 65.384 49.5647 64.7751C51.1971 64.1661 52.6042 63.0726 53.5973 61.6411C54.5904 60.2097 55.122 58.5087 55.1208 56.7665H50.9542C50.9531 57.9265 50.4926 59.0389 49.6735 59.8604C48.8544 60.6818 47.7434 61.1454 46.5834 61.1498Z"
+                  fill="black"
+                ></path>
+                <path
+                  d="M55.1292 20.5082C50.4151 18.7329 45.4247 17.8033 40.3875 17.7623C35.2761 17.6544 30.196 18.5843 25.4542 20.4957L8.83752 9.44567V45.1998C8.83752 53.5077 12.1378 61.4754 18.0124 67.35C23.887 73.2245 31.8546 76.5248 40.1625 76.5248C48.4704 76.5248 56.4381 73.2245 62.3126 67.35C68.1872 61.4754 71.4875 53.5077 71.4875 45.1998V9.39984L55.1292 20.5082ZM67.3209 45.1998C67.3209 52.4027 64.4595 59.3105 59.3664 64.4037C54.2732 69.4969 47.3654 72.3582 40.1625 72.3582C32.9597 72.3582 26.0519 69.4969 20.9587 64.4037C15.8655 59.3105 13.0042 52.4027 13.0042 45.1998V17.2207L25.1334 25.2832L26.2209 24.7165C26.2792 24.6873 31.9292 21.7998 40.3292 21.929C48.7292 22.0582 54.4 24.7207 54.4542 24.7457L55.5333 25.2665L67.3209 17.2665V45.1998Z"
+                  fill="black"
+                ></path>
+                <path
+                  d="M26.0418 49.3582C28.1957 49.3582 29.9418 47.6121 29.9418 45.4582C29.9418 43.3043 28.1957 41.5582 26.0418 41.5582C23.8878 41.5582 22.1418 43.3043 22.1418 45.4582C22.1418 47.6121 23.8878 49.3582 26.0418 49.3582Z"
+                  fill="black"
+                ></path>
+                <path
+                  d="M54.2834 49.3582C56.4373 49.3582 58.1834 47.6121 58.1834 45.4582C58.1834 43.3043 56.4373 41.5582 54.2834 41.5582C52.1294 41.5582 50.3834 43.3043 50.3834 45.4582C50.3834 47.6121 52.1294 49.3582 54.2834 49.3582Z"
+                  fill="black"
+                ></path>
+              </svg>{" "}
             </div>
-            <h3 className="card-title">
-              Manage Indoor Humidity:
-            </h3>
+            <h3 className="card-title">Manage Indoor Humidity:</h3>
             <p className="card-description">
-              Limit exposure to pets or create pet-free zones in your home. Bathe and groom pets 
-              regularly.
+              Limit exposure to pets or create pet-free zones in your home.
+              Bathe and groom pets regularly.
             </p>
           </div>
 
           {/* Card 4 - Antihistamines */}
           <div className="rid-allergies-card">
             <div className="card-icon">
-              <img src="" alt="Pill or medication capsule icon" className="card-icon-img" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="68"
+                height="68"
+                viewBox="0 0 68 68"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.09885 29.9012C2.07827 23.8806 2.07827 14.1194 8.09886 8.09877C14.1194 2.07819 23.8807 2.07819 29.9013 8.09877L59.9534 38.1508C65.9739 44.1714 65.9739 53.9327 59.9534 59.9533C53.9328 65.9738 44.1715 65.9738 38.1509 59.9533L8.09885 29.9012ZM43.7488 27.8388L57.0071 41.0971C61.4005 45.4905 61.4005 52.6136 57.0071 57.007C52.6137 61.4004 45.4906 61.4004 41.0972 57.007L27.8389 43.7487L43.7488 27.8388ZM40.8025 24.8925L26.955 11.045C22.5616 6.65165 15.4385 6.65165 11.0451 11.045C6.65174 15.4384 6.65174 22.5615 11.0451 26.9549L24.8926 40.8024L40.8025 24.8925Z"
+                  fill="black"
+                ></path>
+              </svg>{" "}
             </div>
             <h3 className="card-title">
               Antihistamines (e.g., loratadine, cetirizine)
             </h3>
             <p className="card-description">
-              Can provide relief from symptoms. Decongestants may help alleviate nasal congestion. 
-              Prescription Medications
+              Can provide relief from symptoms. Decongestants may help alleviate
+              nasal congestion. Prescription Medications
             </p>
           </div>
 
           {/* Card 5 - Immunotherapy */}
           <div className="rid-allergies-card">
             <div className="card-icon">
-              <img src="" alt="Syringe or injection icon for immunotherapy" className="card-icon-img" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="71"
+                height="70"
+                viewBox="0 0 71 70"
+                fill="none"
+              >
+                <path
+                  d="M60.0839 44.3793L25.6522 9.94768L24.2217 11.3783L17.9696 5.12616L12.9032 10.1925L2.82932 0.118652L0.130127 2.81784L10.204 12.8917L5.14033 17.9554L11.3924 24.2075L9.96186 25.6381L44.3935 60.0697L51.4842 52.9789L60.7544 62.2491L56.2279 66.7756L58.9616 69.5094L70.3981 58.0729L67.6643 55.3392L63.1378 59.8657L53.8676 50.5955L60.0839 44.3793ZM10.5733 17.99L18.0068 10.5564L21.5252 14.0747L14.0916 21.5083L10.5733 17.99ZM15.3948 25.6726L25.6868 15.3806L33.5108 23.2046L29.1408 27.5746L31.8746 30.3084L36.2446 25.9384L39.4403 29.1341L35.0703 33.5041L37.8041 36.2379L42.1741 31.8679L45.1621 34.8559L40.7921 39.2259L43.5258 41.9596L47.8958 37.5896L54.6509 44.3447L44.3589 54.6367L15.3948 25.6726Z"
+                  fill="black"
+                ></path>
+              </svg>{" "}
             </div>
             <h3 className="card-title">
               Immunotherapy (Allergy Shots or SLIT)
             </h3>
             <p className="card-description">
-              Consider allergen immunotherapy if allergies are severe and persistent. This involves 
-              regular injections or sublingual tablets to desensitize the immune system.
+              Consider allergen immunotherapy if allergies are severe and
+              persistent. This involves regular injections or sublingual tablets
+              to desensitize the immune system.
             </p>
           </div>
         </div>
-        
+
         {/* CTA Button */}
         <div className="rid-allergies-cta">
           <button className="rid-allergies-button">

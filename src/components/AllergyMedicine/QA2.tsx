@@ -8,21 +8,21 @@ function QA2() {
       <DescCard
         heading="How to Get Rid of Cat Allergies Naturally?"
         desc="If you're seeking a natural solution to alleviate cat allergies, Curex provides an innovative approach through sublingual immunotherapy. Cat allergies are often triggered by proteins in a cat's skin, saliva, and urine. Curex's specialized treatment involves administering allergen extracts under the tongue, gradually desensitizing the immune system to specific triggers. This personalized approach begins with an online consultation to assess your allergy history and symptoms. Customized sublingual drops are then conveniently self-administered at home, allowing for flexibility and minimal disruption to your routine. The process aims for long-term relief by addressing the root cause of allergies. Curex's commitment to personalized care, ongoing support, and accessibility through online services makes it a convenient and effective option for those looking to naturally manage and potentially reduce cat allergies."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/656a590409413dfd3fe6d103_image_5.jpg"
         imagePosition="right"
         id="How-to-Get-Rid-of-Cat-Allergies-Naturally"
       />
       <DescCard
         heading="Pet Allergy Medicine"
         desc="While there are various forms of pet allergy medicine available, including antihistamines and nasal sprays, Curex specializes in a unique approach—sublingual immunotherapy. Our personalized online consultations allow us to understand your specific pet allergy symptoms and sensitivities. Unlike traditional medications, Curex's sublingual immunotherapy involves placing allergen extracts under the tongue, gradually desensitizing the immune system to pet allergens. This long-term solution can be conveniently self-administered at home, providing flexibility in your treatment plan. What sets Curex apart is not just the innovation of sublingual immunotherapy but also our commitment to ongoing support and personalized care. As you embark on your journey to find the best pet allergy medicine, choose Curex for a natural, effective, and tailored approach to lasting relief."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/656a59ae34bf7c34888f77af_image_6.jpg"
         id="Pet-Allergy-Medicine"
       />
       <NaturalRemedies />
       <DescCard
         heading="Natural Allergy Medicine"
         desc="There are various remedies for allergies including dietary changes, herbal supplements, and saline nasal rinses. However, immunotherapy is the number one recommended natural allergy relief. Curex specializes in sublingual immunotherapy, a groundbreaking approach to allergy relief. Through personalized online consultations, we tailor a treatment plan based on your specific allergy triggers. Unlike some traditional remedies, sublingual immunotherapy addresses the root cause of allergies by desensitizing the immune system to allergens. The convenience of self-administered sublingual drops at home sets Curex apart, ensuring flexibility in your allergy management. What makes Curex the best choice is not only our innovative approach and natural ingredients but also our commitment to ongoing support and personalized care. Experience the natural and long-term relief you've been seeking with Curex."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/656a6082b3a70af1fb4de063_image.jpg"
         id="Natural-Allergy-Relief"
       />
       <DescCard
@@ -54,7 +54,7 @@ function QA2() {
             by gradually desensitizing the immune system to specific allergens.
           </>
         }
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/656a60e1555f5fdbb735346c_image%20103.jpg"
         imagePosition="right"
         id="Best-Pet-Allergy-for-Humans"
       />
@@ -62,27 +62,27 @@ function QA2() {
       <DescCard
         heading="Which Allergy Medicine Works Best?"
         desc="The effectiveness of allergy medicine can vary based on individual needs and preferences. There are various options available, such as antihistamines, nasal sprays, and sublingual immunotherapy. Antihistamines are commonly used for immediate relief of symptoms like sneezing and itching, while nasal sprays can provide targeted relief for congestion. Sublingual immunotherapy, as offered by Curex, stands out as a long-term solution, addressing the root cause of allergies by gradually desensitizing the immune system to specific allergens. The best allergy medicine depends on factors like the type and severity of allergies, convenience, and individual response. It's advisable to consult with a healthcare professional to determine the most suitable option for your specific situation. For those seeking a natural and personalized approach, sublingual immunotherapy from Curex may offer a comprehensive and effective solution."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/656c946d0882f1e95c3e9eca_curex-p-1080.avif"
         imagePosition="right"
         id="Which-Allergy-Medicine-Works-Best"
       />
       <DescCard
         heading="What is Epinephrine and How Does it Help with Severe Allergic Reactions?"
         desc="Epinephrine is a vital medication for treating severe allergic reactions, known as anaphylaxis. It works by quickly relaxing the muscles in the airways, tightening the blood vessels, and stimulating the heart, effectively reversing the symptoms of anaphylaxis. At Curex, we understand the importance of having access to life-saving medications like epinephrine. While our focus is on allergy prevention and management through sublingual immunotherapy, we offer prescriptions for emergencies with epinephrine."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795e9b9c75daab9b4d6dab_EpiPen.webp"
         id="What-is-Epinephrine-and-How-Does-it-Help-with-Severe-Allergic-Reactions"
       />
       <DescCard
         heading="How Can an EpiPen Save Your Life During an Allergic Emergency?"
         desc="The EpiPen is one of the most widely recognized and trusted auto-injectors for delivering epinephrine during an allergic emergency. Designed for ease of use, the EpiPen can be a lifesaver in critical moments, providing quick and effective relief from severe allergic reactions. It is encouraged patients carry an EpiPen if they are at risk of anaphylaxis, complementing their long-term allergy management plan with our convenient, at-home allergy drops."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795e9b6d8e6c3abd0c930b_epinephrine.jpg"
         imagePosition="right"
         id="How-Can-an-EpiPen-Save-Your-Life-During-an-Allergic-Emergency"
       />
       <DescCard
         heading="What is AUVI-Q?"
         desc="AUVI-Q is another innovative epinephrine auto-injector that stands out with its user-friendly design and voice instructions, guiding users through the injection process. Its compact size makes it easy to carry, ensuring that individuals with severe allergies are always prepared."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795e9c8596c4587d345eee_auviq-p-1080.jpg"
         buttonEle={
             <a href="#learn-more-about-AUVI-Q" className="DescCard-btn" style={{background:'#22c55e',color:'#fff',padding:'10px 24px',borderRadius:8,textDecoration:'none',fontWeight:600}}>Learn More About AUVI-Q</a>
         }
@@ -91,20 +91,20 @@ function QA2() {
       <DescCard
         heading="What is Neffy (ARS-1)"
         desc="Neffy (ARS-1) is an emerging intranasal epinephrine spray currently under development, offering a needle-free alternative for treating anaphylaxis. This innovative approach aims to provide a fast, effective, and convenient method of administering epinephrine, particularly for those who are needle-averse."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795e9be841bbf56bfda0a5_neffy.jpg"
         imagePosition="right"
         id="What-is-Neffy-ARS-1"
       />
       <DescCard
         heading="Why is Adrenaline Crucial for Treating Severe Allergic Reactions?"
         desc="Adrenaline, also known as epinephrine, is the cornerstone of emergency treatment for severe allergic reactions. It acts swiftly to counteract the symptoms of anaphylaxis, providing critical time to seek further medical help."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795e9b2608a890b5941098_Severe%20Allergic%20Reactions.jpg"
         id="Why-is-Adrenaline-Crucial-for-Treating-Severe-Allergic-Reactions"
       />
       <DescCard
         heading="What is Sublingual Epinephrine (AQST-109) and How Does it Work?"
         desc="Sublingual epinephrine, such as AQST-109 from Aquestive Therapeutics, represents a promising advancement in the treatment of anaphylaxis. This formulation is designed to dissolve quickly under the tongue, offering a rapid and needle-free administration of epinephrine. At Curex, we are excited about the potential of sublingual epinephrine to enhance the safety and convenience of emergency allergy treatment, aligning with our mission to make allergy management as easy and effective as possible."
-        imgSrc=""
+        imgSrc="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/66795e9b7cb9dd5f295795cd_AQST-109.jpg"
         imagePosition="right"
         id="What-is-Sublingual-Epinephrine-AQST-109-and-How-Does-it-Work"
       />

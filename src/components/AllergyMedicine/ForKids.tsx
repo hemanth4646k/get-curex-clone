@@ -22,7 +22,7 @@ const ForKids: React.FC = () => {
           <div className="for-kids-card">
             <div className="card-image">
               <img 
-                src="" 
+                src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/656c9241e0e11e567b0c39cf_Cetirizine%20(Zyrtec)%20or%20Loratadine%20(Claritin).jpg" 
                 alt="Children's Zyrtec allergy medication box - green package with cartoon character" 
                 className="card-image-img"
               />
@@ -40,7 +40,7 @@ const ForKids: React.FC = () => {
           <div className="for-kids-card">
             <div className="card-image">
               <img 
-                src="" 
+                src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/656c92a4807bedc3f3d31dba_Diphenhydramine%20(Benadryl).jpg" 
                 alt="Benadryl Allergy medication - pink package with diphenhydramine HCI" 
                 className="card-image-img"
               />
@@ -58,7 +58,7 @@ const ForKids: React.FC = () => {
           <div className="for-kids-card">
             <div className="card-image">
               <img 
-                src="" 
+                src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/656c934582442225532c1997_Nasal%20Corticosteroid%20Sprays.jpg" 
                 alt="Woman using nasal spray - profile view showing proper nasal spray technique" 
                 className="card-image-img"
               />
