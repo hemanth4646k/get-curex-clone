@@ -131,7 +131,9 @@ h3 {
   background-color: white;
 }
 
-.w-embed {
+/* NOTE: Previously this file applied a GLOBAL .w-embed flex rule that broke layout across the site. */
+/* Scoped the centering to only embeds inside the value1_item-icon-wrapper for this component. */
+.value1_item-icon-wrapper > .w-embed {
   width: 100%;
   height: 100%;
   display: flex;
@@ -139,7 +141,7 @@ h3 {
   justify-content: center;
 }
 
-.w-embed img {
+.value1_item-icon-wrapper > .w-embed img {
   width: 3rem;
   height: 3rem;
   object-fit: contain;

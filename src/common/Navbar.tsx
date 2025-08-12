@@ -27,11 +27,11 @@ const Navbar = () => {
   const learnItems = [
     { label: 'Sign Up for a Free Webinar', href: 'https://calendly.com/webinar-curex/allergy-immunotherapy' },
     { label: 'Reviews', href: '/reviews' },
-    { label: 'Immunotherapy 101', href: '/immunotherapy101' },
+    { label: 'Immunotherapy 101', href: '/immunotherapy-101' },
     { label: 'Science', href: '/immuno-science' },
     { label: 'Allergy Drops', href: '/allergy-drops' },
     { label: 'Allergy Shots', href: '/allergy-shots' },
-    { label: 'Allergy Clinic', href: '/allergy-clinic' },
+    { label: 'Allergy Clinic', href: '/best-allergy-clinic' },
     { label: 'Allergy Medicine', href: '/allergy-medicine' },
     { label: 'Blog', href: '/blogs' },
     { label: 'For Doctors', href: '/partners' }
@@ -59,10 +59,15 @@ const navigator = useNavigate();
                 />
               </div>
             </Link>
-            <div className="nav-phone">
+            <a
+              className="nav-phone"
+              href="tel:8572401080"
+              onClick={() => { window.location.href = "tel:8572401080"; }}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
               <span className="nav-phone-icon">📞</span>
               <span className="nav-phone-number">(857) 240-1080</span>
-            </div>
+            </a>
           </div>
 
           {/* Right side - Services and CTA */}
@@ -73,7 +78,7 @@ const navigator = useNavigate();
               </span>
               <span className="nav-service" onClick={()=>{navigator("/weight-loss")}}>Weight Loss</span>
             </div>
-            <button className="nav-cta-button">Am I eligible?</button>
+            <button className="nav-cta-button" onClick={()=>{navigator("/quiz")}}>Am I eligible?</button>
           </div>
         </div>
       </header>
@@ -118,7 +123,7 @@ const navigator = useNavigate();
             <span className="nav-promo-strike">$49</span>
             <span className="nav-promo-price">$4.99</span>
           </span>
-          <button className="nav-promo-button">Get started today</button>
+          <button className="nav-promo-button" onClick={()=>{navigator("/quiz")}}>Get started today</button>
         </div>
       </div>
     </div>

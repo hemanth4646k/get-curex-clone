@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 
 // Restored rich button + icon components to match original design structure
 const ArrowCartIcon: React.FC = () => (
@@ -65,7 +65,69 @@ const QuickieHeaderItem: React.FC<QuickieHeaderItemProps> = ({ children, id }) =
 );
 
 export default function Quickie(){
-return <>
+  // FAQ data & state (moved out of render IIFE to comply with hooks rules)
+  const faqs: { q: string; a: string }[] = [
+    {
+      q: "How fast does the Quickie Nasal Spray work?",
+      a: "Most patients feel relief within 15 minutes. We have both short-term relief ingredients as well as longer-term relief to keep you feeling better, longer. Some say it’s like turning off their allergies.",
+    },
+    {
+      q: "What symptoms does the Nasal Spray treat?",
+      a: "Sneezing runny nose, nasal congestion, post-nasal drip, sinus pressure, itchy nose. Great for outdoor allergies, indoor dust, or when pollen spikes unexpectedly.",
+    },
+    {
+      q: "Will it cause rebound congestion like Afrin?",
+      a: "No, this formula uses a microdose of oxymetazoline, balanced with anti-inflammatory and moisturizing ingredients to reduce the risk of rebound congestion. Clinical studies over the last decade show that when oxymetazoline is combined with a corticosteroid, it can be used safely over the long term without causing rebound symptoms.",
+    },
+    {
+      q: "What’s the difference between this and over-the-counter sprays?",
+      a: "Quickie Spray combines up to five prescription-strength ingredients into a single, personalized formula — targeting multiple symptoms like congestion, post-nasal drip, and inflammation. OTC sprays typically address just one symptom and lack the synergy of a customized blend.",
+    },
+    {
+      q: "Does it have a bad taste or drip down the throat?",
+      a: "Some ingredients like azelastine may cause a slight taste, but many patients find it milder than traditional OTC sprays. Proper spray technique (head forward, not tilted back) helps minimize drip. We also offer an alternative formulation with olopatadine, which has a gentler taste profile and may be preferred by taste-sensitive patients.",
+    },
+    {
+      q: "Can I use it with my other allergy meds?",
+      a: "Quickie is designed to replace most other allergy medications. But it is designed to compliment allergy immunotherapy for long-term relief. If you’re currently taking other antihistamines or nasal sprays, tell your Curex provider, so we can adjust your formula to avoid overlap or interactions.",
+    },
+    {
+      q: "Is this FDA-approved?",
+      a: "No, Quickie is a personalized compounded prescription prepared by licensed U.S. pharmacies based on your doctor’s evaluation. Compounded medications are not FDA-approved as commercial products, but they are regulated under federal and state pharmacy laws.",
+    },
+    {
+      q: "Are there any side effects?",
+      a: "Possible side effects include nasal dryness, mild irritation, or occasional nosebleeds. These are typically mild and manageable. Let your Curex provider know about any bothersome or serious effects, so we can fine-tune your prescription if needed.",
+    },
+    {
+      q: "How long should I use it for?",
+      a: "Quickie is safe for daily use, especially during the first 3–6 months of allergy immunotherapy, when symptoms are still active. Your Curex provider may adjust your dose or frequency as your immune system builds tolerance.",
+    },
+    {
+      q: "Will it make me drowsy?",
+      a: "Quickie is designed to be non-sedating, so you can use it before work, school, or exercise without feeling groggy or foggy. In rare cases where drowsiness is reported, let your Curex provider know—we can easily adjust the formula to better suit your needs.",
+    },
+    {
+      q: "Can my child use Quickie Nasal Spray?",
+      a: "Yes, Quickie Spray can be prescribed for children aged 6 and up, based on your provider’s clinical evaluation.",
+    },
+    {
+      q: "How often should I use it?",
+      a: "Follow the instructions from your Curex provider. Most patients are advised to use one spray per nostril, twice daily — morning and evening — for consistent relief.",
+    },
+  ];
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const toggle = useCallback((i: number) => {
+    setOpenIndex(prev => (prev === i ? null : i));
+  }, []);
+  const onKey = (e: React.KeyboardEvent, i: number) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggle(i);
+    }
+  };
+
+  return <>
   {/* Last Published: Wed Aug 06 2025 17:33:17 GMT+0000 (Coordinated Universal Time) */}
   <meta charSet="utf-8" />
   <title>Curex | Quickie</title>
@@ -90,11 +152,6 @@ return <>
     content="1xHN0hg3C5CqwNIKryBFli66wm3M8oB03I4o4B35CwE"
     name="google-site-verification"
   />
-  <link
-    href="/Curex _ Quickie_files/curex-dotcom.shared.e7fd9f0ba.min.css"
-    rel="stylesheet"
-    type="text/css"
-  />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link
     href="https://fonts.gstatic.com"
@@ -116,73 +173,9 @@ return <>
     name="ahrefs-site-verification"
     content="3b8a7b31073afc29a4425b7694728bf7d489881dd28f9d5d06c6fefdbcdd89bf"
   />
-  <style
-    dangerouslySetInnerHTML={{
-      __html:
-        '\n  body {\n    overflow-wrap: anywhere;\n  }\n  .faqs {\n    counter-reset: faqIndex;\n  }\n\n  .faq-index::before {\n    counter-increment: faqIndex;\n    content: counter(faqIndex) ".";\n  }\n\n  .faq-group-header .faq-group-expander::before,\n  .faq-group-header .faq-group-expander::after {\n    content: "";\n    position: absolute;\n    transition: transform .33s ease;\n    width: 1.0625rem;\n    height: .1875rem;\n    background-color: #0573be;\n    transform: rotate(0);\n    top: 1rem;\n  }\n\n  .faq-group-header .faq-group-expander::before {\n    transform: rotate(90deg);\n  }\n\n  .faq-group-header.faq-group-header--expanded .faq-group-expander::before {\n    transform: rotate(0);\n  }\n\n  .cx-hidden {\n    display: none !important;\n  }\n\n  a.w-webflow-badge.w-webflow-badge {\n    display: none !important;\n    visibility: hidden !important;\n  }\n\n  {\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    -webkit-appearance: none;\n  }\n'
-    }}
-  />
+  {/* Removed inline style block (migrated to quickie.css) */}
   <div className="page-wrapper font-v2">
-    <div className="global-styles w-embed">
-      <style
-        // Fixed: switched to template literal to avoid breaking on single quotes within CSS (e.g., url('...'))
-        dangerouslySetInnerHTML={{
-          __html: `
-/* Get rid of top margin on first element in any rich text element */
-.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
-  margin-top: 0 !important;
-}
-/* Get rid of bottom margin on last element in any rich text element */
-.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
-  margin-bottom: 0 !important;
-}
-/* Typography inheritance reset */
-a, p, .w-input, .w-select, .w-tab-link, .w-nav-link, .w-dropdown-btn, .w-dropdown-toggle, .w-dropdown-link {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: inherit;
-}
-.pointer-events-off { pointer-events: none; }
-.pointer-events-on { pointer-events: auto; }
-.div-square::after { content: ""; display: block; padding-bottom: 100%; }
-main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
-.container-medium, .container-small, .container-large { margin-right: auto !important; margin-left: auto !important; }
-.w-input, .w-select, a { color: inherit; text-decoration: inherit; font-size: inherit; }
-.text-style-3lines { display: -webkit-box; overflow: hidden; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
-.text-style-2lines { display: -webkit-box; overflow: hidden; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-.truncate-width { width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.no-scrollbar { -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.display-inlineflex { display: inline-flex; }
-.hide { display: none !important; }
-@media screen and (max-width: 991px), screen and (max-width: 767px), screen and (max-width: 479px) { .hide, .hide-tablet { display: none !important; } }
-@media screen and (max-width: 767px) { .hide-mobile-landscape { display: none !important; } }
-@media screen and (max-width: 479px) { .hide-mobile { display: none !important; } }
-.margin-0 { margin: 0 !important; }
-.padding-0 { padding: 0 !important; }
-.spacing-clean { padding:0 !important; margin:0 !important; }
-.margin-top { margin-right:0 !important; margin-bottom:0 !important; margin-left:0 !important; }
-.padding-top { padding-right:0 !important; padding-bottom:0 !important; padding-left:0 !important; }
-.margin-right { margin-top:0 !important; margin-bottom:0 !important; margin-left:0 !important; }
-.padding-right { padding-top:0 !important; padding-bottom:0 !important; padding-left:0 !important; }
-.margin-bottom { margin-top:0 !important; margin-right:0 !important; margin-left:0 !important; }
-.padding-bottom { padding-top:0 !important; padding-right:0 !important; padding-left:0 !important; }
-.margin-left { margin-top:0 !important; margin-right:0 !important; margin-bottom:0 !important; }
-.padding-left { padding-top:0 !important; padding-right:0 !important; padding-bottom:0 !important; }
-.margin-horizontal { margin-top:0 !important; margin-bottom:0 !important; }
-.padding-horizontal { padding-top:0 !important; padding-bottom:0 !important; }
-.margin-vertical { margin-right:0 !important; margin-left:0 !important; }
-.padding-vertical { padding-right:0 !important; padding-left:0 !important; }
-.text-rich-text-legal ul li { list-style-image: url('/Curex _ Quickie_files/66fd697798d5c6da67325fa3_circle-disc.svg'); }
-.text-rich-text-legal ol ol { list-style-type: lower-alpha; padding-left:20px; }
-.text-rich-text-legal ol ul { padding-left:20px; margin-left:-30px; }
-.btn_main_wrap.is-nav-text.w--current .btn_main_underline { opacity:1; }
-.text-rich-text_bold-pink strong { color: var(--brand--peony); }
-.text-rich-text_bold-pink2 h1 strong, .text-rich-text_bold-pink2 h2 strong, .text-rich-text_bold-pink2 h3 strong, .text-rich-text_bold-pink2 h4 strong { color: var(--brand--peony); font-weight:500; }
-`
-        }}
-      />
-    </div>
+  {/* Removed embedded global styles (migrated to quickie.css) */}
     <div
       data-animation="default"
       className="navbar6_component w-nav"
@@ -375,14 +368,7 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                       />
                     </div>
                   </div>
-                  <div className="w-embed">
-                    <style
-                      dangerouslySetInnerHTML={{
-                        __html:
-                          "\n.gallery_nav .w-slider-dot {\n\twidth: 100%;\n  height: auto;\n  aspect-ratio: 1 / 1;\n  margin-left: 0px;\n  margin-right: 0px;\n  margin: 0 0;\n  opacity: 0;\n}\n\n.gallery_nav .w-slider-nav {\n height: auto;\n padding-top: 0px;\n position: static;\n}\n\n@media screen and (max-width:767px) { .gallery_nav .w-slider-dot { \n\t/* width: 1rem; */\n} }\n\n"
-                      }}
-                    />
-                  </div>
+                  {/* Gallery nav custom styles moved to quickie.css */}
                 </div>
                 <div className="quickie_header_list-wrapper is-tablet">
                   <div>
@@ -975,15 +961,7 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                     </p>
                   </div>
                 </div>
-                <div className="quickie_compare_css w-embed">
-                  {/* Scroll bar styling*/}
-                  <style
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        "\n/* Width */\n::-webkit-scrollbar {\n width: 8px;\n height: 8px;\n}\n\n/* Track */\n::-webkit-scrollbar-track {\n background: #fff;\n border-radius: 10px;\n}\n\n/* Handle */\n::-webkit-scrollbar-thumb {\n background: var(--_brand-v2---brand--pink);\n border-radius: 10px;\n}\n\n/* Handle Hover */\n::-webkit-scrollbar-thumb:hover {\n background: #555;\n}\n"
-                    }}
-                  />
-                </div>
+                {/* Scrollbar styling moved to quickie.css */}
               </div>
             </div>
           </div>
@@ -1694,7 +1672,6 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                   data-id="ecf4aa83-a985-4dff-99dc-bdc198596172"
                   data-mode="shadow"
                   data-lazyload="false"
-                  style={{ display: "block", width: "100%" }}
                 />
               </div>
             </div>
@@ -2061,117 +2038,44 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
                       </div>
                     </div>
                   </div>
-                  {(() => {
-                    // FAQ data kept outside of JSX mapping logic for readability
-                    const faqs: { q: string; a: string }[] = [
-                      {
-                        q: "How fast does the Quickie Nasal Spray work?",
-                        a: "Most patients feel relief within 15 minutes. We have both short-term relief ingredients as well as longer-term relief to keep you feeling better, longer. Some say it’s like turning off their allergies.",
-                      },
-                      {
-                        q: "What symptoms does the Nasal Spray treat?",
-                        a: "Sneezing runny nose, nasal congestion, post-nasal drip, sinus pressure, itchy nose. Great for outdoor allergies, indoor dust, or when pollen spikes unexpectedly.",
-                      },
-                      {
-                        q: "Will it cause rebound congestion like Afrin?",
-                        a: "No, this formula uses a microdose of oxymetazoline, balanced with anti-inflammatory and moisturizing ingredients to reduce the risk of rebound congestion. Clinical studies over the last decade show that when oxymetazoline is combined with a corticosteroid, it can be used safely over the long term without causing rebound symptoms.",
-                      },
-                      {
-                        q: "What’s the difference between this and over-the-counter sprays?",
-                        a: "Quickie Spray combines up to five prescription-strength ingredients into a single, personalized formula — targeting multiple symptoms like congestion, post-nasal drip, and inflammation. OTC sprays typically address just one symptom and lack the synergy of a customized blend.",
-                      },
-                      {
-                        q: "Does it have a bad taste or drip down the throat?",
-                        a: "Some ingredients like azelastine may cause a slight taste, but many patients find it milder than traditional OTC sprays. Proper spray technique (head forward, not tilted back) helps minimize drip. We also offer an alternative formulation with olopatadine, which has a gentler taste profile and may be preferred by taste-sensitive patients.",
-                      },
-                      {
-                        q: "Can I use it with my other allergy meds?",
-                        a: "Quickie is designed to replace most other allergy medications. But it is designed to compliment allergy immunotherapy for long-term relief. If you’re currently taking other antihistamines or nasal sprays, tell your Curex provider, so we can adjust your formula to avoid overlap or interactions.",
-                      },
-                      {
-                        q: "Is this FDA-approved?",
-                        a: "No, Quickie is a personalized compounded prescription prepared by licensed U.S. pharmacies based on your doctor’s evaluation. Compounded medications are not FDA-approved as commercial products, but they are regulated under federal and state pharmacy laws.",
-                      },
-                      {
-                        q: "Are there any side effects?",
-                        a: "Possible side effects include nasal dryness, mild irritation, or occasional nosebleeds. These are typically mild and manageable. Let your Curex provider know about any bothersome or serious effects, so we can fine-tune your prescription if needed.",
-                      },
-                      {
-                        q: "How long should I use it for?",
-                        a: "Quickie is safe for daily use, especially during the first 3–6 months of allergy immunotherapy, when symptoms are still active. Your Curex provider may adjust your dose or frequency as your immune system builds tolerance.",
-                      },
-                      {
-                        q: "Will it make me drowsy?",
-                        a: "Quickie is designed to be non-sedating, so you can use it before work, school, or exercise without feeling groggy or foggy. In rare cases where drowsiness is reported, let your Curex provider know—we can easily adjust the formula to better suit your needs.",
-                      },
-                      {
-                        q: "Can my child use Quickie Nasal Spray?",
-                        a: "Yes, Quickie Spray can be prescribed for children aged 6 and up, based on your provider’s clinical evaluation.",
-                      },
-                      {
-                        q: "How often should I use it?",
-                        a: "Follow the instructions from your Curex provider. Most patients are advised to use one spray per nostril, twice daily — morning and evening — for consistent relief.",
-                      },
-                    ];
-                    const [openIndex, setOpenIndex] = useState<number | null>(0);
-                    const answerRefs = useRef<(HTMLDivElement | null)[]>([]);
-                    const [heights, setHeights] = useState<number[]>([]);
-                    useEffect(() => {
-                      const newHeights = answerRefs.current.map(el => el ? el.scrollHeight : 0);
-                      setHeights(newHeights);
-                    }, [faqs.length]);
-                    const toggle = useCallback((i: number) => {
-                      setOpenIndex(prev => prev === i ? null : i);
-                    }, []);
-                    const onKey = (e: React.KeyboardEvent, i: number) => {
-                      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(i); }
-                    };
-                    return (
-                      <div className="weight-loss_faq_list">
-                        {faqs.map((item, i) => {
-                          const open = openIndex === i;
-                          return (
-                            <div key={item.q} className="weight-loss_faq_accordion">
-                              <div
-                                className="weight-loss_faq_question"
-                                role="button"
-                                tabIndex={0}
-                                aria-expanded={open}
-                                aria-controls={`faq-answer-${i}`}
-                                id={`faq-question-${i}`}
-                                onClick={() => toggle(i)}
-                                onKeyDown={(e) => onKey(e, i)}
-                                style={{ cursor: 'pointer' }}
-                              >
-                                <div className="text-size-medium2 text-weight-semibold">{item.q}</div>
-                                <div className="weight-loss_faq_icon-wrapper" style={{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform .3s ease' }}>
-                                  <div className="weight-loss_faq_icon w-embed">
-                                    <svg width="100%" height="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z" fill="currentColor" /></svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                id={`faq-answer-${i}`}
-                                role="region"
-                                aria-labelledby={`faq-question-${i}`}
-                                className="weight-loss_faq_answer"
-                                style={{ width: '100%', overflow: 'hidden', height: open ? (heights[i] ?? 'auto') : 0, transition: 'height .35s ease' }}
-                              >
-                                <div
-                                  className="weight-loss_faq_answer-wrapper"
-                                  ref={(el) => { answerRefs.current[i] = el; }}
-                                >
-                                  <div className="text-rich-text2 w-richtext">
-                                    <p>{item.a}</p>
-                                  </div>
-                                </div>
+                  <div className="weight-loss_faq_list">
+                    {faqs.map((item, i) => {
+                      const open = openIndex === i;
+                      return (
+                        <div key={item.q} className={`weight-loss_faq_accordion ${open ? "is-open" : ""}`}>
+                          <div
+                            className="weight-loss_faq_question"
+                            role="button"
+                            tabIndex={0}
+                            aria-expanded={open}
+                            aria-controls={`faq-answer-${i}`}
+                            id={`faq-question-${i}`}
+                            onClick={() => toggle(i)}
+                            onKeyDown={(e) => onKey(e, i)}
+                          >
+                            <div className="text-size-medium2 text-weight-semibold">{item.q}</div>
+                            <div className="weight-loss_faq_icon-wrapper">
+                              <div className="weight-loss_faq_icon w-embed">
+                                <svg width="100%" height="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 25.6667L10 15.6667L11.9721 13.6946L20 21.7221L28.0279 13.6946L30 15.6667L20 25.6667Z" fill="currentColor" /></svg>
                               </div>
                             </div>
-                          );
-                        })}
-                      </div>
-                    );
-                  })()}
+                          </div>
+                          <div
+                            id={`faq-answer-${i}`}
+                            role="region"
+                            aria-labelledby={`faq-question-${i}`}
+                            className="weight-loss_faq_answer"
+                          >
+                            <div className="weight-loss_faq_answer-wrapper">
+                              <div className="text-rich-text2 w-richtext">
+                                <p>{item.a}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -2405,5 +2309,5 @@ main:focus-visible { outline: -webkit-focus-ring-color auto 0px; }
       </div>
     </footer>
   </div>
-</>
+</>;
 }

@@ -1,0 +1,380 @@
+if (typeof window.curex !== "object") {
+  throw new TypeError("Curex library is not loaded, blame marketing");
+}
+
+curex.init().then(() => {
+  if (curex.user.isAuthenticated) {
+    try {
+      document.querySelector("#NavLogin").classList.add("cx-hidden");
+      document.querySelector("#NavLogout").classList.remove("cx-hidden");
+      document.querySelector("#NavMyCurex").classList.remove("cx-hidden");
+      document.querySelector("#NavLoginMobile")?.classList.add("cx-hidden");
+      document.querySelector("#NavLogoutMobile")?.classList.remove("cx-hidden");
+      document.querySelector("#NavMyCurexMobile")?.classList.remove("cx-hidden");
+    } catch (e) {
+      console.error("No navbar found: ", e);
+    }
+  } else {
+    try {
+      document.querySelector("#NavLogin").classList.remove("cx-hidden");
+      document.querySelector("#NavLogout").classList.add("cx-hidden");
+      document.querySelector("#NavMyCurex").classList.add("cx-hidden");
+      document.querySelector("#NavLoginMobile")?.classList.remove("cx-hidden");
+      document.querySelector("#NavLogoutMobile")?.classList.add("cx-hidden");
+      document.querySelector("#NavMyCurexMobile")?.classList.add("cx-hidden");
+    } catch (e) {
+      console.error("No navbar found: ", e);
+    }
+  }
+});
+
+!(function () {
+  const webflowBadge = document.querySelector("a.w-webflow-badge");
+
+  if (webflowBadge) {
+    webflowBadge.setAttribute("style", "display:none !important");
+    webflowBadge.classList.add("cx-hidden");
+  }
+})();
+
+!(function () {
+  const element = document.createElement("style");
+
+  let styles = ".cx-hidden {";
+  styles += "display: none !important;";
+  styles += "}";
+
+  document.head.appendChild(element);
+  element.sheet.insertRule(styles, 0);
+})();
+
+!(function () {
+  try {
+    if (!window?.location?.host?.includes("preview.")) {
+      return;
+    }
+
+    const existingRobotsMetaTag = Array?.from(document.querySelectorAll("meta")).find(
+      (meta) => meta?.name === "robots",
+    );
+    if (existingRobotsMetaTag) {
+      existingRobotsMetaTag.setAttribute("name", "robots");
+      existingRobotsMetaTag.setAttribute("content", "noindex");
+      return;
+    }
+
+    const newMetaTag = document.createElement("meta");
+    newMetaTag.setAttribute("name", "robots");
+    newMetaTag.setAttribute("content", "noindex, nofollow");
+    document.head.appendChild(newMetaTag);
+  } catch (e) {
+    console.error(e);
+  }
+})();
+
+!(function () {
+  const element = document.createElement("style");
+
+  let styles = ".cx-promo-banner {";
+  styles += "background-color: #fffea4;";
+  styles += "text-align: center;";
+  styles += "padding: 8px 6px 6px 6px;";
+  styles += "line-height: 1;";
+  styles += "margin: 0;";
+  styles += "}";
+
+  let stylesTwo = " .cx-promo-banner a {";
+  stylesTwo += "font-weight: bold;";
+  stylesTwo += "text-decoration: underline;";
+  stylesTwo += "color: #333;";
+  stylesTwo += "}";
+
+  let stylesThree = " .cx-promo-banner-notice {";
+  stylesThree += "font-size: 90%;";
+  stylesThree += "}";
+
+  let stylesFour = " @media (min-width: 768px) {";
+  stylesFour += ".cx-hidden-desktop {";
+  stylesFour += "display: none !important;";
+  stylesFour += "}";
+
+  let stylesFive = " @media (max-width: 768px) {";
+  stylesFive += ".cx-hidden-mobile {";
+  stylesFive += "display: none !important;";
+  stylesFive += "}";
+
+  document.head.appendChild(element);
+  element.sheet.insertRule(styles, 0);
+  element.sheet.insertRule(stylesTwo, 1);
+  element.sheet.insertRule(stylesThree, 2);
+  element.sheet.insertRule(stylesFour, 3);
+  element.sheet.insertRule(stylesFive, 4);
+})();
+
+!(function () {
+  const modal = document.getElementById("get-started-now-modal");
+  if (!modal) {
+    return;
+  }
+
+  if (localStorage?.getItem("get-started-now-modal")) {
+    return;
+  }
+
+  localStorage?.setItem("get-started-now-modal", true);
+
+  if (location.href.includes("/getting-started")) {
+    return;
+  }
+
+  const showModal = () => {
+    modal.style.display = "block";
+  };
+
+  const closeModal = () => {
+    modal.style.display = "none";
+  };
+
+  showModal();
+
+  const overlay = document.getElementById("get-started-now-modal-overlay");
+  overlay.addEventListener("click", closeModal, false);
+
+  const close = document.getElementById("get-started-now-modal-close");
+  close.addEventListener("click", closeModal, false);
+
+  const getStarted = document.getElementById("get-started-now-modal-button");
+  getStarted.addEventListener(
+    "click",
+    () => {
+      curex.analyticsService.track("Get Started Now Popup Clicked");
+      window.open("/getting-started", "_self");
+    },
+    false,
+  );
+})();
+
+!(function () {
+  try {
+    if (!window.location.pathname.includes("/weightloss")) {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/quiz")) {
+        link.href = "/demographics/weight-loss";
+        link.rel = "prerender";
+      }
+    });
+
+    document.querySelectorAll("link").forEach((link) => {
+      if (link?.href?.includes("/quiz")) {
+        link.href = `${window.location.protocol}//${window.location.hostname}/demographics/weight-loss`;
+      }
+    });
+  } catch (e) {
+    console.error("weight loss error", e);
+  }
+})();
+
+!(function () {
+  try {
+    if (
+      !window.location.pathname.includes("/compounded-tirzepatide") ||
+      window.location.pathname.includes("/compounded-tirzepatide-odt")
+    ) {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/demographics/weight-loss")) {
+        link.href = "/demographics/weight-loss?funnel=weight_loss_tirzepatide";
+        link.rel = "prerender";
+      }
+    });
+
+    document.querySelectorAll("link").forEach((link) => {
+      if (link?.href?.includes("/quiz")) {
+        link.href = `${window.location.protocol}//${window.location.hostname}/demographics/weight-loss?funnel=weight_loss_tirzepatide`;
+      }
+    });
+  } catch (e) {
+    console.error("Weight loss tirzepatide error", e);
+  }
+})();
+
+!(function () {
+  try {
+    if (!window.location.pathname.includes("/compounded-semaglutide-odt")) {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/demographics/weight-loss")) {
+        link.href = "/demographics/weight-loss?funnel=weight_loss_semaglutide_odt";
+        link.rel = "prerender";
+      }
+    });
+
+    document.querySelectorAll("link").forEach((link) => {
+      if (link?.href?.includes("/quiz")) {
+        link.href = `${window.location.protocol}//${window.location.hostname}/demographics/weight-loss?funnel=weight_loss_semaglutide_odt`;
+      }
+    });
+  } catch (e) {
+    console.error("Weight loss semaglutide odt error", e);
+  }
+})();
+
+!(function () {
+  try {
+    if (!window.location.pathname.includes("/compounded-tirzepatide-odt")) {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/demographics/weight-loss")) {
+        link.href = "/demographics/weight-loss?funnel=weight_loss_tirzepatide_odt";
+        link.rel = "prerender";
+      }
+    });
+
+    document.querySelectorAll("link").forEach((link) => {
+      if (link?.href?.includes("/quiz")) {
+        link.href = `${window.location.protocol}//${window.location.hostname}/demographics/weight-loss?funnel=weight_loss_tirzepatide_odt`;
+      }
+    });
+  } catch (e) {
+    console.error("Weight loss tirzepatide odt error", e);
+  }
+})();
+
+!(function () {
+  try {
+    if (!window.location.pathname.includes("/jung")) {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/quiz")) {
+        link.href = "/demographics/partners?funnel=employer_jung";
+        link.rel = "prerender";
+      }
+    });
+
+    document.querySelectorAll("link").forEach((link) => {
+      if (link?.href?.includes("/quiz")) {
+        link.href = `${window.location.protocol}//${window.location.hostname}/partners?funnel=employer_jung`;
+      }
+    });
+  } catch (e) {
+    console.error("employer jung error", e);
+  }
+})();
+
+!(function () {
+  try {
+    if (!window.location.pathname.includes("/rlws")) {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/quiz")) {
+        link.href = "/demographics/partners?funnel=employer_rlws";
+        link.rel = "prerender";
+      }
+    });
+
+    document.querySelectorAll("link").forEach((link) => {
+      if (link?.href?.includes("/quiz")) {
+        link.href = `${window.location.protocol}//${window.location.hostname}/partners?funnel=employer_rlws `;
+      }
+    });
+  } catch (e) {
+    console.error("employer jung error", e);
+  }
+})();
+
+!(function () {
+  try {
+    if (!["/epipenrx", "/auviq"].includes(window.location.pathname)) {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/quiz")) {
+        link.href = "/demographics/auviq";
+        link.rel = "prerender";
+      }
+    });
+
+    document.querySelectorAll("link").forEach((link) => {
+      if (link?.href?.includes("/quiz")) {
+        link.href = `${window.location.protocol}//${window.location.hostname}/demographics/auviq`;
+      }
+    });
+  } catch (e) {
+    console.error("auviq error", e);
+  }
+})();
+
+!(function () {
+  try {
+    if (window.location.pathname !== "/ac") {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/quiz")) {
+        link.href = "/demographics/allergychoices";
+        link.rel = "prerender";
+      }
+    });
+
+    document.querySelectorAll("link").forEach((link) => {
+      if (link?.href?.includes("/quiz")) {
+        link.href = `${window.location.protocol}//${window.location.hostname}/demographics/allergychoices`;
+      }
+    });
+  } catch (e) {
+    console.error("lacrosse error", e);
+  }
+})();
+
+!(function () {
+  try {
+    if (window.location.pathname !== "/drimam") {
+      return;
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.href.includes("/quiz")) {
+        link.href = "/quiz?funnel=dr_imam";
+      }
+    });
+  } catch (e) {
+    console.error("drimam error", e);
+  }
+})();
+
+// add this to the head
+/*
+!(function () {
+  const isProduction = () => {
+    return !window?.location?.hostname?.includes?.("preview.");
+  };
+
+  if (isProduction()) {
+    return;
+  }
+
+  try {
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex, nofollow";
+    document.getElementsByTagName("head")[0].appendChild(meta);
+  } catch (e) {
+    console.error("noindex error", e);
+  }
+})();
+*/
