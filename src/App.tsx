@@ -1,7 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Footer from './common/footer'
-import Navbar from './common/Navbar'
 import ScrollToTop from './common/ScrollToTop'
 import Home from './pages/home'
 import Immunotherapy101 from './pages/Immunotherapy101'
@@ -36,14 +34,17 @@ import Partners from './pages/header/Partners'
 import FoodAnaphylaxis from './pages/header/FoodAnaphylaxis'
 import FoodAllergiesAndSensitivities from './pages/header/FoodAllergiesAndSensitivities'
 import Quickie from './pages/header/Quickie'
+import WeightLoss from './pages/header/WeightLoss'
+import CustomLayout from './common/Layouts/CustomLayout'
+import CommonLayout from './common/Layouts/CommonLayout'
 
 function App() {
   
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Navbar />
       <Routes>
+        <Route element={<CommonLayout/>}>
         <Route path="/" element={<Home />} />
         <Route path="/immunotherapy101" element={<Immunotherapy101 />} />
         <Route path="/immuno-science" element={<ImmunoScience />} />
@@ -75,10 +76,13 @@ function App() {
         <Route path="/see-our-reviews-kids" element={<KidsReviews />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/food-anaphylaxis" element={<FoodAnaphylaxis />} />
-        <Route path="/quickie" element={<Quickie />} />
         <Route path="/food-allergies-and-sensitivities" element={<FoodAllergiesAndSensitivities />} />
+      </Route>
+      <Route element={<CustomLayout />}>
+        <Route path="/quickie" element={<Quickie />} />
+        <Route path="/weight-loss" element={<WeightLoss />} />
+      </Route>
       </Routes>
-      <Footer />
     </BrowserRouter>
   )
 }
