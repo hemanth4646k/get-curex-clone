@@ -7,6 +7,7 @@
 
 .content-wrapper {
   max-width: 1200px;
+  padding: 30px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -25,9 +25,6 @@ const HowLongToWork: React.FC = () => {
           
           <div className="product-showcase">
             <div className="curex-box">
-              <div className="curex-logo">
-                <img src="" alt="Curex logo" className="logo-image" />
-              </div>
               <div className="product-info">
                 <span className="product-label">Custom Allergy</span>
                 <span className="product-subtitle">Immunotherapy Drops</span>
@@ -35,7 +32,7 @@ const HowLongToWork: React.FC = () => {
               </div>
             </div>
             <div className="dropper-bottle">
-              <img src="" alt="Allergy drops bottle" className="bottle-image" />
+              <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/652e8cfb476bc291b58ad285_Rectangle%201944-p-1080.webp" alt="Allergy drops bottle" className="bottle-image" />
             </div>
           </div>
         </div>
@@ -43,7 +40,7 @@ const HowLongToWork: React.FC = () => {
       
       <div className="lower-section" id='Can-You-Get-Allergy-Drops-Over-the-Counter'>
         <div className="food-display">
-          <img src="" alt="Healthy foods" className="food-image" />
+          <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/65573b923e061acd4c681914_Rectangle%202016-p-1080.webp" alt="Healthy foods" className="food-image" />
         </div>
         
         <div className="otc-section">

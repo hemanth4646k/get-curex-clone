@@ -41,9 +41,7 @@ const DropCost: React.FC = () => {
               </div>
             </div>
             
-            <div className="product-box">
-              <img src="" alt="Allergy drops bottles in yellow box" className="product-image" />
-            </div>
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/64f9e04619ff434a07d497c2_Rectangle%201905-p-800.webp" alt="Allergy drops bottles in yellow box" className="product-image" />
           </div>
         </div>
       </div>

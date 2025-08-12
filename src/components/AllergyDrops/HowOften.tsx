@@ -42,7 +42,7 @@ const HowOften: React.FC<HowOftenProps> = ({
               
               <div className="how-often_image-wrapper">
                 <img 
-                  src={imageSrc} 
+                  src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/652e8cfbb1b80741ea039757_Rectangle%201942-p-1080.webp" 
                   loading="lazy" 
                   alt={imageAlt} 
                   className="how-often_image"

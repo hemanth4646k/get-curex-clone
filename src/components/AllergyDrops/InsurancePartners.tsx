@@ -19,22 +19,22 @@ const InsurancePartners: React.FC = () => {
         
         <div className="insurance-logos">
           <div className="logo-item">
-            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/672d01e4aadf10f830b1cb4c_unitedHealthcare.svg" alt="UnitedHealthcare" className="insurance-logo" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/628e508ce87c24a18f60b486_images.avif" alt="UnitedHealthcare" className="insurance-logo" />
           </div>
           <div className="logo-item">
-            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/672d01e4098e7b5b40b5e9b0_aetna.svg" alt="Aetna" className="insurance-logo" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/628e504fe1f79d915b9436fd_download.avif" alt="Aetna" className="insurance-logo" />
           </div>
           <div className="logo-item">
-            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/672d01e48ae8cf7e9c80f72f_blueCross.svg" alt="Blue Cross Blue Shield" className="insurance-logo" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/628e50a63a11a19a6024c27d_download.avif" alt="Blue Cross Blue Shield" className="insurance-logo" />
           </div>
           <div className="logo-item">
-            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/672d01e45d79e9f1d0b1b8d0_anthem.svg" alt="Anthem" className="insurance-logo" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/628e50e99a5e4531e8c6dc12_download.avif" alt="Anthem" className="insurance-logo" />
           </div>
           <div className="logo-item">
-            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/672d01e4cd5c5a15e0a3c95c_centene.svg" alt="Centene" className="insurance-logo" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/628e510dd9b30693aa78cd06_2560px-Centene_Corporation_Logo.svg-p-1600.webp" alt="Centene" className="insurance-logo" />
           </div>
           <div className="logo-item">
-            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/672d01e4b8d6b6e0e8abf7a7_humana.svg" alt="Humana" className="insurance-logo" />
+            <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/628e51275c662cfb0e0cc40a_Humana.avif" alt="Humana" className="insurance-logo" />
           </div>
         </div>
         
