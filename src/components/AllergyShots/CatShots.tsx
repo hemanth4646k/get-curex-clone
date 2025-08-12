@@ -7,7 +7,7 @@ const CatShots: React.FC = () => (
       {/* Left: Image */}
       <div className="catshots-image-col">
         <img
-          src=""
+          src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/655f33261903fb447d5856dc_Mask%20group-p-1080.webp"
           alt="Woman cuddling cat on couch with Curex allergy drops and box in foreground"
           className="catshots-img"
         />

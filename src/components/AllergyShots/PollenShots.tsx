@@ -16,7 +16,7 @@ const PollenShots: React.FC = () => (
       <div className="pshots-image-col">
         <div className="pshots-image-wrap">
           <img
-            src=""
+            src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/648311ea1f4ec6248ada2838_Header%20image-p-1600.webp"
             alt="Sunset over field representing pollen season"
             className="pshots-image"
           />

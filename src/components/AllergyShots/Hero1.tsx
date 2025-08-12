@@ -21,7 +21,7 @@ const Hero1: React.FC<Hero1Props> = ({ className = '' }) => {
           <div className="hero-stats">
             <div className="stat-item">
               <div className="stat-icon">
-                <img src="" alt="Bar chart icon showing clinic ranking" />
+                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/64be9b8f052089fb35eb989e_chart.svg" alt="Bar chart icon showing clinic ranking" />
               </div>
               <div className="stat-text">
                 <span className="stat-number">#1 Online</span>
@@ -31,9 +31,9 @@ const Hero1: React.FC<Hero1Props> = ({ className = '' }) => {
             
             <div className="stat-item">
               <div className="stat-avatars">
-                <img src="" alt="User avatar 1" className="avatar" />
-                <img src="" alt="User avatar 2" className="avatar" />
-                <img src="" alt="User avatar 3" className="avatar" />
+                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/64be9b90ce56126260163aec_image%20116.webp" alt="User avatar 1" className="avatar" />
+                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/64be9b90ce56126260163aec_image%20116.webp" alt="User avatar 2" className="avatar" />
+                <img src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/64be9b90ce56126260163aec_image%20116.webp" alt="User avatar 3" className="avatar" />
               </div>
               <div className="stat-text">
                 <span className="stat-number">50,000+</span>
@@ -45,13 +45,13 @@ const Hero1: React.FC<Hero1Props> = ({ className = '' }) => {
         
         <div className="hero-image">
           <img 
-            src="" 
+            src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/655f33263af0622a2a9b6d74_DSCF6127%202-p-1080.webp" 
             alt="Medical professional administering allergy shot injection to patient's arm" 
             className="main-image"
           />
           
           <div className="brand-logo">
-            <img src="" alt="Brand logo in pink" />
+            <img src="public\icons\pink_spring.png" alt="Brand logo in pink" />
           </div>
         </div>
       </div>

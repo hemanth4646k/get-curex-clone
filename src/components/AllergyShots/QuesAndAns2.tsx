@@ -49,11 +49,7 @@ const QuesAndAns2: React.FC = () => (
     <div className="qna2-inner">
       {qaData.map((item) => (
         <div className="qna2-block" id={formatId(item.title)} key={item.title}>
-          {item.withImg && (
-            <div className="qna2-img">
-              <img src="" alt={item.imgAlt || "Related icon"} />
-            </div>
-          )}
+          \
           <div className="qna2-content">
             <h2 className="qna2-title">{item.title.replace(/([A-Z])/g, ' $1').trim()}</h2>
             <div className="qna2-text">{item.content}</div>

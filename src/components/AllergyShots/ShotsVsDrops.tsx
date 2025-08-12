@@ -8,17 +8,12 @@ const ShotsVsDrops: React.FC = () => (
       <div className="svd-imgcol">
         <div className="svd-box">
           <div className="svd-box-inner">
-            <div className="svd-box-lid">
-              <span className="svd-free-text">Be free.</span>
-              {/* (cloud/sky background - add as background via CSS or image if desired) */}
-            </div>
-            <div className="svd-box-bottles">
-              <img
-                src=""
+            <img
+                src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/64f9e04619ff434a07d497c2_Rectangle%201905-p-800.webp"
                 alt="Open box containing four blue allergy treatment bottles with pipettes and yellow tray"
                 className="svd-box-img"
+                style={{ width: '340px', height: 'auto', maxWidth: '100%' }}
               />
-            </div>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ const AreShotsWorthIt: React.FC = () => (
       {/* Right Image */}
       <div className="asw-right">
         <img
-          src=""
+          src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/629f7e905eabc4379a47eeed_image1-p-1080.webp"
           alt="Allergist preparing to give an injection to a patient's upper arm"
           className="asw-image"
         />

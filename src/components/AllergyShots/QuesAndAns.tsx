@@ -5,6 +5,7 @@ interface QAItem {
   heading: string;
   id: string;
   content: React.ReactNode;
+  imgSrc?: string;
   imgAlt: string;
   imgPosition: 'left' | 'right';
 }
@@ -20,6 +21,7 @@ const qaItems: QAItem[] = [
         </p>
       </>
     ),
+    imgSrc: "https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/655f33267184ee519e4394a8_Rectangle%202052-p-800.webp",
     imgAlt: 'Medical professional administering allergy shot injection to patient’s arm',
     imgPosition: 'left',
   },
@@ -33,6 +35,7 @@ const qaItems: QAItem[] = [
         </p>
       </>
     ),
+    imgSrc: "https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/655f33263ba564f6bf7716e2_Mask%20group-2-p-800.webp",
     imgAlt: 'Hand showing a box with allergy shot vials',
     imgPosition: 'right',
   },
@@ -49,7 +52,7 @@ const QuesAndAns: React.FC = () => (
           className="qna-item"
         >
           <div className={`qna-image qna-image-${item.imgPosition}`}>
-            <img src="" alt={item.imgAlt} />
+            <img src={item.imgSrc} alt={item.imgAlt} className="allergy-shots-img"/>
           </div>
           <div className="qna-content">
             <h2 className="qna-heading">{item.heading.replace(/([A-Z])/g, ' $1').trim()}</h2>
@@ -64,7 +67,7 @@ const QuesAndAns: React.FC = () => (
     {/* LEFT: Side Effects */}
     <div className="allergy-shots-col" id='allergy-shots-side-effects'>
       <img
-        src=""
+        src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/655f33251903fb447d5856a2_Rectangle%202054-p-800.webp"
         alt="Person's arm with visible localized allergic reaction redness"
         className="allergy-shots-img"
       />
@@ -76,7 +79,7 @@ const QuesAndAns: React.FC = () => (
     {/* RIGHT: What Allergies Can Be Treated */}
     <div className="allergy-shots-col" id='what-allergies-can-be-treated-with-shots'>
       <img
-        src=""
+        src="https://cdn.prod.website-files.com/61bbbbd3e287ff6cf9bcbda8/655f3326833e5d966b172c49_Mask%20group-1-p-800.webp"
         alt="Person with tissues next to happy dog, showing pet allergy context"
         className="allergy-shots-img"
       />
